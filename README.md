@@ -6,16 +6,10 @@
 
 This project backs most content (soon to be) available on [feriekolonien.no](http://feriekolonien.no/)
 
-## Installing / Getting started
+## Getting started
 
-A quick introduction of the minimal setup you need to get a hello world up &
-running.
-
-```shell
-yarn start
-```
-
-This fires up an instance of Sanity Studio connected to the production dataset.
+Edit schemas in this repository to create new content types.
+Add content using the online editor Sanity Studio available on [feriekolonien.sanity.studio/](https://feriekolonien.sanity.studio/).
 
 ## Developing
 
@@ -27,13 +21,11 @@ Sanity.io and React
 
 ### Prerequisites
 
-<!-- What is needed to set up the dev environment. For instance, global dependencies or any other tools. include download links. -->
-
-### Setting up Dev
-
 Here's a what you need to get started:
 
 1. Access to [the dataset](https://manage.sanity.io/). Ask @rix1 for access.
+
+### Setting up local dev environment
 
 ```shell
 git clone https://github.com/feriekolonien/cms.git feriekolonien-cms
