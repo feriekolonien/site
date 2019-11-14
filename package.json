@@ -8,7 +8,8 @@
   "license": "MIT",
   "scripts": {
     "start": "echo 'WARNING: Starting in production' &&  export NODE_ENV=production; sanity start && echo '\u001b[0;31m'",
-    "test": "sanity check"
+    "test": "sanity check",
+    "eslint": "eslint --cache ."
   },
   "keywords": [
     "sanity",
@@ -26,7 +27,18 @@
     "react": "^16.2",
     "react-dom": "^16.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@otovo/eslint-config-otovo": "^3.0.0",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.6.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.5.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-react": "^7.16.0",
+    "prettier": "^1.19.1"
+  },
   "repository": {
     "type": "git",
     "url": "git@github.com:feriekolonien/cms.git"
