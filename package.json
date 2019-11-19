@@ -8,6 +8,7 @@
   "license": "MIT",
   "scripts": {
     "start": "echo 'WARNING: Starting in production' &&  export NODE_ENV=production; sanity start && echo '\u001b[0;31m'",
+    "dev": "sanity start",
     "test": "sanity check",
     "eslint": "eslint --cache ."
   },
