@@ -25,8 +25,9 @@
     "@sanity/desk-tool": "^0.144.3",
     "@sanity/vision": "^0.144.2",
     "prop-types": "^15.6",
-    "react": "^16.2",
-    "react-dom": "^16.2"
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-icons": "^3.8.0"
   },
   "devDependencies": {
     "@otovo/eslint-config-otovo": "^3.0.0",
