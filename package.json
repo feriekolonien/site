@@ -20,6 +20,7 @@
     "@sanity/base": "^0.144.1",
     "@sanity/components": "^0.144.2",
     "@sanity/core": "^0.144.0",
+    "@sanity/dashboard": "^0.144.1",
     "@sanity/default-layout": "^0.144.2",
     "@sanity/default-login": "^0.144.0",
     "@sanity/desk-tool": "^0.144.3",
@@ -27,7 +28,9 @@
     "prop-types": "^15.6",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-icons": "^3.8.0"
+    "react-icons": "^3.8.0",
+    "sanity-plugin-dashboard-widget-document-chart": "^0.0.4",
+    "sanity-plugin-dashboard-widget-document-list": "^0.0.8"
   },
   "devDependencies": {
     "@otovo/eslint-config-otovo": "^3.0.0",
