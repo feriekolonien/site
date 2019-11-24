@@ -1,18 +1,18 @@
-var moment = require('moment');
-moment.locale('nb');
+const moment = require("moment");
+moment.locale("nb");
 
 // Countdowm to next camp or signup deadline?
- 
-const Countdown = () => {
-    var eventDate = moment("2019-11-24"); 
-    var todaysDate = moment();
-    var daysRemaining = eventDate.to(todaysDate, true);
 
-    return (
-        <h3 className="ttu f4 white">
-            <span>{daysRemaining}</span> til neste parti
-        </h3>
-    );
+const Countdown = () => {
+  const eventDate = moment("2019-12-24");
+  const todaysDate = moment();
+  const daysRemaining = eventDate.to(todaysDate, true);
+
+  return (
+    <h3 className="ttu f4 white">
+      <span>{daysRemaining}</span> til julaften!
+    </h3>
+  );
 };
 
 export default Countdown;
