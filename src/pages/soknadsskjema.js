@@ -1,14 +1,29 @@
 import Page from "../components/Page";
+import {
+  PageTitle,
+  CTA,
+  PageContent,
+  Text
+} from "../components/PageComponents";
+import Footer from "../components/Footer";
+import Countdown from "../components/Countdown";
+import Navigation from "../components/Navigation";
 
-const Application = () => {
+function ApplicationPage() {
   return (
-    <Page
-      title="Søknadsskjema"
-      subtitle="Søk om plass til et av partiene i 2020 her"
-    >
-      <h1></h1>
+    <Page title="Søknadsskjema">
+      <Navigation color="black" />
+      <PageContent>
+        <div className="tc">
+          <PageTitle>Søknadsskjema</PageTitle>
+          <Text>TODO</Text>
+          <Countdown />
+          <CTA>Søknadsskjema</CTA>
+        </div>
+      </PageContent>
+      <Footer />
     </Page>
   );
-};
+}
 
-export default Application;
+export default ApplicationPage;
