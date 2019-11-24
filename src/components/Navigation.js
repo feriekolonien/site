@@ -1,16 +1,18 @@
 import Link from "next/link";
 
-const NavLink = ({ children, ...rest }) => {
+const NavLink = ({ children, color, ...rest }) => {
   return (
     <Link {...rest}>
-      <a className="f6 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3">
+      <a
+        className={`f6 fw4 hover-${color} no-underline ${color}-70 dn dib-ns pv2 ph3`}
+      >
         {children}
       </a>
     </Link>
   );
 };
 
-const Navigation = ({ children }) => {
+const Navigation = ({ children, color = "white" }) => {
   return (
     <nav className="flex w-100 mw8 center">
       <div className="pa3 mr-auto">
@@ -25,9 +27,18 @@ const Navigation = ({ children }) => {
         </Link>
       </div>
       <div className="tr pa3">
-        <NavLink href="/historie">Historie</NavLink>
-        <NavLink href="/kontakt">Kontakt</NavLink>
-        <NavLink href="/soknadsskjema">Søknadsskjema</NavLink>
+        <NavLink color={color} href="/om-oss">
+          Om oss
+        </NavLink>
+        <NavLink color={color} href="/info">
+          Praktisk informasjon
+        </NavLink>
+        <NavLink color={color} href="/kontakt">
+          Kontakt
+        </NavLink>
+        <NavLink color={color} href="/soknadsskjema">
+          Søknadsskjema
+        </NavLink>
       </div>
     </nav>
   );
