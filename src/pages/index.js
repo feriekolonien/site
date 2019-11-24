@@ -1,16 +1,16 @@
-import Page from "../../components/Page";
+import Page from "../components/Page";
 import {
   PageTitle,
   PageLead,
   CTA,
   HeroContent,
   HeroImage
-} from "../../components/PageComponents";
-import Footer from "../../components/Footer";
-import Countdown from "../../components/Countdown";
-import Navigation from "../../components/Navigation";
+} from "../components/PageComponents";
+import Footer from "../components/Footer";
+import Countdown from "../components/Countdown";
+import Navigation from "../components/Navigation";
 
-function Home() {
+function HomePage() {
   return (
     <Page>
       <HeroImage>
@@ -32,4 +32,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default HomePage;
