@@ -1,6 +1,7 @@
 import Page from "../../components/Page";
 
-function Home() {
+function Home(props) {
+  console.log(props);
   return (
     <Page
       title="Sommerferie på Filtvet Feriekoloni"
