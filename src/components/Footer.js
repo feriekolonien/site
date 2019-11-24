@@ -1,6 +1,14 @@
-const Footer = ({ children }) => {
-  const footerClasses = "f6 dib ph2 link mid-gray dim";
+import Link from "next/link";
 
+const FooterLink = ({ children, ...rest }) => {
+  return (
+    <Link {...rest}>
+      <a className="f6 dib ph2 link mid-gray dim">{children}</a>
+    </Link>
+  );
+};
+
+const Footer = ({ children }) => {
   return (
     <footer className="pv4 ph3 ph5-m ph6-l mid-gray">
       <small className="f6 db tc">
@@ -8,24 +16,11 @@ const Footer = ({ children }) => {
         {new Date().getFullYear()}
       </small>
       <div className="tc mt3">
-        <a className={footerClasses} href="/">
-          Hjem
-        </a>
-        <a className={footerClasses} href="/om">
-          Om oss
-        </a>
-        <a className={footerClasses} href="/historie">
-          Historien
-        </a>
-        <a className={footerClasses} href="/galleri">
-          Galleri
-        </a>
-        <a className={footerClasses} href="/kontakt">
-          Kontakt
-        </a>
-        <a className={footerClasses} href="/soknadsskjema">
-          Søknadsskjema
-        </a>
+        <FooterLink href="/">Hjem</FooterLink>
+        <FooterLink href="/info">Praktisk informasjon</FooterLink>
+        <FooterLink href="/om-oss">Om oss</FooterLink>
+        <FooterLink href="/kontakt">Kontakt</FooterLink>
+        <FooterLink href="/soknadsskjema">Søknadsskjema</FooterLink>
       </div>
     </footer>
   );
