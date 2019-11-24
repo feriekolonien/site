@@ -10,7 +10,7 @@ import Footer from "../../components/Footer";
 import Countdown from "../../components/Countdown";
 import Navigation from "../../components/Navigation";
 
-function Home(props) {
+function Home() {
   return (
     <Page>
       <HeroImage>
