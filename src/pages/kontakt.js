@@ -52,6 +52,14 @@ const ContactPage = () => {
             </AddressLink>
           </Office>
         </div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1010.3920560176697!2d10.615535!3d59.570004!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x925117cbcb2e407!2sTrefoldighet%20Feriekoloni!5e0!3m2!1sen!2sus!4v1574633386221!5m2!1sen!2sus"
+          width="100%"
+          height="400"
+          frameborder="0"
+          style={{ border: 0 }}
+          allowfullscreen=""
+        ></iframe>
       </PageContent>
       <Footer />
     </Page>
