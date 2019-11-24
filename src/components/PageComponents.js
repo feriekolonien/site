@@ -10,8 +10,8 @@ export const CTA = ({ children }) => {
   );
 };
 
-export const PageTitle = ({ children }) => {
-  return <h1 className="f2 f1-l fw2 white-90 mb0 lh-title">{children}</h1>;
+export const PageTitle = ({ children, color = "white-90" }) => {
+  return <h1 className={`f2 f1-l fw2 mb0 lh-title ${color}`}>{children}</h1>;
 };
 
 export const PageLead = ({ children }) => {
