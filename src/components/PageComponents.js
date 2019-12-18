@@ -1,4 +1,5 @@
-// @flow
+import { localize } from "pseudo-localization";
+
 export const CTA = ({ children }) => {
   return (
     <a
@@ -22,7 +23,10 @@ export const HeroContent = ({ children }) => {
   return <div className="tc-l mt4 mt5-m mt6-l ph3 mw8 center">{children}</div>;
 };
 
-export const Text = ({ children }) => {
+export const Text = ({ children, pseudo = false }) => {
+  if (pseudo && typeof children === "string") {
+    return <p className="fw3 lh-copy">{localize(children)}</p>;
+  }
   return <p className="fw3 lh-copy">{children}</p>;
 };
 

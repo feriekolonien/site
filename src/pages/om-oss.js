@@ -17,7 +17,9 @@ const AboutPage = () => {
         <Navigation />
         <HeroContent>
           <PageTitle>130 år med feriekoloni</PageTitle>
-          <PageLead>Feriekolonien ble startet av Gina Aulie i 1890</PageLead>
+          <PageLead>
+            <Text pseudo>Feriekolonien ble startet av Gina Aulie i 1890</Text>
+          </PageLead>
         </HeroContent>
       </HeroImage>
       <PageContent article>
