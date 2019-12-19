@@ -69,3 +69,20 @@ export const HeroImage = ({
     </div>
   );
 };
+
+export const FixedBackground = ({
+  children,
+  imageUrl = '/static/img/IMG_6409.jpg',
+  className = 'bg-black-60 pb5 pb6-m pb7-l',
+}) => {
+  return (
+    <div
+      className="cf"
+      style={{
+        background: `url(${imageUrl}) no-repeat center center fixed`,
+        backgroundSize: 'cover',
+      }}>
+      <div className={className}>{children}</div>
+    </div>
+  );
+};
