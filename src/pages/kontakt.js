@@ -1,13 +1,13 @@
-import Page from "../components/Page";
-import Navigation from "../components/Navigation";
-import Footer from "../components/Footer";
-import { PageTitle, PageContent, Text } from "../components/PageComponents";
+import Page from '../components/Page';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { PageTitle, PageContent, Text } from '../components/PageComponents';
 import {
   AddressLink,
   Phone,
   Office,
-  AddressLine
-} from "../components/AddressComponents";
+  AddressLine,
+} from '../components/AddressComponents';
 
 const ContactPage = () => {
   return (
@@ -27,9 +27,9 @@ const ContactPage = () => {
             <AddressLine>Postboks 3, 3480 Filtvet</AddressLine>
 
             <div className="f5 fw6 pv3 black-70">
-              Tlf:{" "}
-              <Phone title="Ring feriekoloniens fasttelefon">32796270</Phone>{" "}
-              <span className="fw4">|</span>{" "}
+              Tlf:{' '}
+              <Phone title="Ring feriekoloniens fasttelefon">32796542</Phone>{' '}
+              <span className="fw4">|</span>{' '}
               <Phone title="Ring feriekoloniens andre fasttelefon">
                 32796270
               </Phone>
@@ -45,7 +45,7 @@ const ContactPage = () => {
             <AddressLine>St. Olavs Plass, 0130 Oslo</AddressLine>
 
             <div className="f5 fw6 pv3 black-70">
-              Elins tlf: <Phone title="Ring Elin">48111106</Phone>
+              Tlf: <Phone title="Ring Elin">48111106</Phone> (Elin)
             </div>
             <AddressLink href="mailTo:feriekolonien@feriekolonien.no">
               feriekolonien@feriekolonien.no
@@ -58,8 +58,7 @@ const ContactPage = () => {
           height="400"
           frameborder="0"
           style={{ border: 0 }}
-          allowfullscreen=""
-        ></iframe>
+          allowfullscreen=""></iframe>
       </PageContent>
       <Footer />
     </Page>

@@ -1,14 +1,15 @@
-import Page from "../components/Page";
+import Page from '../components/Page';
 import {
   HeroImage,
   HeroContent,
   PageTitle,
   PageLead,
   Text,
-  PageContent
-} from "../components/PageComponents";
-import Navigation from "../components/Navigation";
-import Footer from "../components/Footer";
+  PageContent,
+} from '../components/PageComponents';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import FAQ from '../components/FAQ';
 
 const AboutPage = () => {
   return (
@@ -18,7 +19,7 @@ const AboutPage = () => {
         <HeroContent>
           <PageTitle>130 år med feriekoloni</PageTitle>
           <PageLead>
-            <Text pseudo>Feriekolonien ble startet av Gina Aulie i 1890</Text>
+            <Text>Feriekolonien ble startet av Gina Aulie i 1890</Text>
           </PageLead>
         </HeroContent>
       </HeroImage>
@@ -50,6 +51,54 @@ const AboutPage = () => {
           Feriekolonien har noe for enhver, og hos oss er man stort sett bare
           med på det man vil.
         </Text>
+        <hr className="b--black-05 ba mv5 " />
+        <h3>Dette trenger du å vite</h3>
+        <Text>Vi deler opp sommeren i 3 partier.</Text>
+        <Text>
+          Hvert parti er på totalt 11 dager (ink. reisedager). Dette for å
+          imøtekomme etterspørselen for kortere opphold. For dere som
+          liker/trenger et lengre opphold, er det fullt mulig å søke om opphold
+          på to partier dersom plass er tilgjengelig.
+        </Text>
+        <Text>Tilbudet vårt er for barn i aldersgruppen 5-12 år.</Text>
+        <Text>Søknadsfrist for sommeren er satt til 15. april.</Text>
+        <Text>
+          Vi vil ta imot søknader etter denne datoen dersom det er plass, men de
+          som har søkt innen tidsfristen vil bli prioritert.
+        </Text>
+
+        <Text>
+          Det er hyggelig og viktig å få post hjemmefra når man er på
+          feriekoloni. Send veldig gjerne kort, pakke, et blad eller to, men
+          ikke så mye godteri, for dette kjøper barna selv i kiosken, i tillegg
+          til at vi har dessert til middagen hver dag.
+        </Text>
+
+        <Text>
+          Det at foresatte ønsker å snakke med barna skjønner vi svært godt, men
+          det blir problematisk for oss dersom 20-30-40 barn hver dag må hentes
+          inn fra lek eller aktiviteter for å snakke i telefonen. Det er bare
+          hyggelig med telefoner, så ring gjerne hver dag og snakk med en av oss
+          som jobber her. Vi kjenner barnet ditt godt og kan formidle alle
+          beskjeder. Dersom et barn ikke skulle slå seg til ro etter et par
+          dager og ha hjemlengsel, er vi raske med å ringe hjem og si ifra om
+          dette. Det samme gjelder hvis noen blir syke. Som regel er det da
+          greiest at barna drar hjem og er der til de er friske, og etter det
+          kan fortsette ferien med oss på Filtvet.
+        </Text>
+        <Text>
+          Vi som jobber her har årlig kursing i førstehjelp og brannvern med
+          våre ansatte. På turer på vann og land er vi alltid påpasselige med å
+          bruke redningsvest og sykkelhjelm – store og små.
+        </Text>
+
+        <Text>
+          Vi ser fram til å se dere på feriekolonien, og til aktive og hyggelige
+          sommerdager på Filtvet!
+        </Text>
+        <hr className="b--black-05 ba mv5 " />
+        <h3 className="">Ofte stilte spørsmål</h3>
+        <FAQ />
       </PageContent>
       <Footer />
     </Page>

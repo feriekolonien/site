@@ -1,8 +1,8 @@
-import Head from "next/head";
-import Navigation from "../components/Navigation";
-import { HeroImage, HeroContent } from "../components/PageComponents";
+import Head from 'next/head';
+import Navigation from '../components/Navigation';
+import { HeroImage, HeroContent } from '../components/PageComponents';
 
-const Page = ({ children, title = "Feriekolonien" }) => {
+const Page = ({ children, title = 'Feriekolonien' }) => {
   return (
     <div className="sans-serif">
       <Head>

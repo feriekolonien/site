@@ -1,18 +1,17 @@
-import Link from "next/link";
+import Link from 'next/link';
 
 const NavLink = ({ children, color, ...rest }) => {
   return (
     <Link {...rest}>
       <a
-        className={`f6 fw4 hover-${color} no-underline ${color}-70 dn dib-ns pv2 ph3`}
-      >
+        className={`f6 fw4 hover-${color} no-underline ${color}-70 dn dib-ns pv2 ph3`}>
         {children}
       </a>
     </Link>
   );
 };
 
-const Navigation = ({ children, color = "white" }) => {
+const Navigation = ({ children, color = 'white' }) => {
   return (
     <nav className="flex w-100 mw8 center">
       <div className="pa3 mr-auto">
@@ -30,14 +29,14 @@ const Navigation = ({ children, color = "white" }) => {
         <NavLink color={color} href="/om-oss">
           Om oss
         </NavLink>
-        <NavLink color={color} href="/info">
-          Praktisk informasjon
+        <NavLink color={color} href="/historien">
+          Historien
         </NavLink>
         <NavLink color={color} href="/kontakt">
           Kontakt
         </NavLink>
         <NavLink color={color} href="/soknadsskjema">
-          Søknadsskjema
+          Søk her
         </NavLink>
       </div>
     </nav>
