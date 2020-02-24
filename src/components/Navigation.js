@@ -29,8 +29,8 @@ const Navigation = ({ children, color = 'white' }) => {
         <NavLink color={color} href="/om-oss">
           Om oss
         </NavLink>
-        <NavLink color={color} href="/historien">
-          Historien
+        <NavLink color={color} href="/bilder">
+          Bilder
         </NavLink>
         <NavLink color={color} href="/kontakt">
           Kontakt

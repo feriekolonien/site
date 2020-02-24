@@ -17,7 +17,9 @@
     "next": "^9.1.3",
     "pseudo-localization": "^2.1.1",
     "react": "^16.11.0",
-    "react-dom": "^16.11.0"
+    "react-dom": "^16.11.0",
+    "react-images": "1.0.0",
+    "react-photo-gallery": "8.0.0"
   },
   "devDependencies": {
     "@otovo/eslint-config-otovo": "^3.0.0",
