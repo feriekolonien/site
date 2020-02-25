@@ -3,9 +3,10 @@
     "browser": true
   },
   "parser": "babel-eslint",
-  "extends": ["@otovo/eslint-config-otovo/react-flow-recommended"],
+  "extends": ["@otovo/eslint-config-otovo/react-recommended"],
   "plugins": ["react-hooks"],
   "rules": {
+    "react/react-in-jsx-scope": "off",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
     "react/jsx-props-no-spreading": [

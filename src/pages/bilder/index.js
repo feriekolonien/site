@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import Link from 'next/link';
+
 import Page from '../../components/Page';
 import {
   HeroImage,
@@ -7,11 +9,19 @@ import {
 } from '../../components/PageComponents';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
-import Link from 'next/link';
+import { fetchAlbums } from '../../lib/sanity';
 
+const AlbumList = () => {
+  const [albums, setAlbums] = useState([]);
 
-const Gallery = () => {
-  console.log('GalleryPage says hi');
+  useEffect(() => {
+    // TODO: Move this to server side (i.e. AlbumList.getInitialProps())
+    async function doFetch() {
+      const sanityAlbums = await fetchAlbums();
+      setAlbums(sanityAlbums);
+    }
+    doFetch();
+  }, []);
   return (
     <Page title="Bilder">
       <HeroImage>
@@ -21,11 +31,16 @@ const Gallery = () => {
         </HeroContent>
       </HeroImage>
       <HeroContent>
-        <Link href="/bilder/2019">2019</Link>
+        {albums.map(el => (
+          <Link key={el.title} href={`/bilder/${el.title}`}>
+            {/* eslint-disable-next-line */}
+            <a className="db f1">{el.title}</a>
+          </Link>
+        ))}
       </HeroContent>
       <Footer />
     </Page>
   );
 };
 
-export default Gallery;
+export default AlbumList;
