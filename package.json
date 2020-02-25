@@ -8,6 +8,7 @@
   "license": "MIT",
   "scripts": {
     "start": "echo 'WARNING: Starting in production' &&  export NODE_ENV=production; sanity start && echo '\u001b[0;31m'",
+    "dev": "sanity start",
     "test": "sanity check",
     "eslint": "eslint --cache ."
   },
@@ -19,13 +20,17 @@
     "@sanity/base": "^0.144.1",
     "@sanity/components": "^0.144.2",
     "@sanity/core": "^0.144.0",
+    "@sanity/dashboard": "^0.144.1",
     "@sanity/default-layout": "^0.144.2",
     "@sanity/default-login": "^0.144.0",
     "@sanity/desk-tool": "^0.144.3",
     "@sanity/vision": "^0.144.2",
     "prop-types": "^15.6",
-    "react": "^16.2",
-    "react-dom": "^16.2"
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-icons": "^3.8.0",
+    "sanity-plugin-dashboard-widget-document-chart": "^0.0.4",
+    "sanity-plugin-dashboard-widget-document-list": "^0.0.8"
   },
   "devDependencies": {
     "@otovo/eslint-config-otovo": "^3.0.0",
@@ -37,6 +42,8 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-react": "^7.16.0",
+    "fast-glob": "^3.1.1",
+    "nanoid": "^2.1.9",
     "prettier": "^1.19.1"
   },
   "repository": {
