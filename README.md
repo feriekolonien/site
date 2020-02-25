@@ -6,34 +6,35 @@
 
 This project backs most content (soon to be) available on [feriekolonien.no](http://feriekolonien.no/)
 
-## Getting started
-
-Edit schemas in this repository to create new content types.
-Add content using the online editor Sanity Studio available on [feriekolonien.sanity.studio/](https://feriekolonien.sanity.studio/).
-
-## Developing
-
-TODO
-
-### Built With
-
-Sanity.io and React
-
 ### Prerequisites
 
 Here's a what you need to get started:
 
 1. Access to [the dataset](https://manage.sanity.io/). Ask @rix1 for access.
 
-### Setting up local dev environment
+### Getting started
 
-```shell
-git clone https://github.com/feriekolonien/cms.git feriekolonien-cms
-cd feriekolonien-cms/
-yarn install
+```sh
+npm install -g @sanity/cli
+
+git clone git@github.com:feriekolonien/cms.git
+cd cms && yarn install
 ```
 
-<!-- And state what happens step-by-step. If there is any virtual environment, local server or database feeder needed, explain here. -->
+This will install the sanity command line interface globally, clone the repo and install dependencies.
+
+```sh
+yarn dev # this starts the studio and connects it to the development dataset
+```
+
+### Developing
+
+Edit schemas in this repository to create new content types.
+Add content using the online editor Sanity Studio available on [feriekolonien.sanity.studio/](https://feriekolonien.sanity.studio/).
+
+### Built With
+
+Sanity.io and React
 
 ### Building and deploying
 
@@ -45,6 +46,6 @@ sanity deploy
 
 This builds and uploads the built files to Sanity's own servers. After a while it will be available on [feriekolonien.sanity.studio/](https://feriekolonien.sanity.studio/).
 
-## Licensing
+### Licensing
 
 [MIT Licence](https://github.com/feriekolonien/cms/blob/master/LICENSE)
