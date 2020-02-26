@@ -1,5 +1,8 @@
 import React, { useCallback, useState } from 'react';
+import useSWR from 'swr';
 import Gallery from 'react-photo-gallery';
+import { useRouter } from 'next/router';
+
 import Carousel, { Modal, ModalGateway } from 'react-images';
 
 import Page from '../../components/Page';
@@ -10,11 +13,21 @@ import {
 } from '../../components/PageComponents';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
-import { fetchSingleAlbum, getImageSizes } from '../../lib/sanity';
+import { fetchSanityDocument, getImageSizes } from '../../lib/sanity';
 import RenderInBrowser from '../../components/RenderInBrowser';
 
 // eslint-disable-next-line react/prop-types
-const AlbumPage = ({ album = { images: [] } }) => {
+const AlbumPage = () => {
+  const router = useRouter();
+  const { title = '' } = router.query;
+  const { data, error } = useSWR(
+    /* groq */ `
+    *[_type == "album" && title == "${title}"]
+     {title, "images": images[]{asset->{...}}}[0]
+    `,
+    fetchSanityDocument,
+  );
+
   const [currentImage, setCurrentImage] = useState(0);
   const [viewerIsOpen, setViewerIsOpen] = useState(false);
 
@@ -28,28 +41,37 @@ const AlbumPage = ({ album = { images: [] } }) => {
     setViewerIsOpen(false);
   };
 
+  const images = (data && data.images.map(getImageSizes)) || [];
+  const albumTitle = (data && data.title) || '';
+
   return (
-    <Page title={album.title}>
+    <Page title={`Album: ${albumTitle}`}>
       <HeroImage>
         <Navigation />
         <HeroContent>
-          <PageTitle>Dette er et album: {album.title} </PageTitle>
+          <PageTitle>Dette er et album: {albumTitle} </PageTitle>
         </HeroContent>
       </HeroImage>
       <RenderInBrowser>
-        <Gallery
-          onClick={openLightbox}
-          photos={album.images.map(img => ({
-            src: img.source.thumbnail,
-            height: 1,
-            width: img.aspectRatio,
-          }))}
-        />
+        <div className="mw8 center">
+          {data && (
+            <Gallery
+              onClick={openLightbox}
+              photos={images.map(img => ({
+                src: img.source.thumbnail,
+                height: 1,
+                width: img.aspectRatio,
+              }))}
+            />
+          )}
+          {!data && 'Laster...'}
+          {error && <div>Det har skjedd en feil</div>}
+        </div>
       </RenderInBrowser>
       <ModalGateway>
         {viewerIsOpen ? (
           <Modal onClose={closeLightbox}>
-            <Carousel currentIndex={currentImage} views={album.images} />
+            <Carousel currentIndex={currentImage} views={images} />
           </Modal>
         ) : null}
       </ModalGateway>
@@ -57,17 +79,6 @@ const AlbumPage = ({ album = { images: [] } }) => {
       <Footer />
     </Page>
   );
-};
-
-AlbumPage.getInitialProps = async context => {
-  const album = await fetchSingleAlbum(context.query.title);
-  const { images = [] } = album;
-  return {
-    album: {
-      ...album,
-      images: images.map(img => getImageSizes(img)),
-    },
-  };
 };
 
 export default AlbumPage;

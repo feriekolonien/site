@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import useSWR from 'swr';
 import Link from 'next/link';
 
 import Page from '../../components/Page';
@@ -9,19 +10,15 @@ import {
 } from '../../components/PageComponents';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
-import { fetchAlbums } from '../../lib/sanity';
+import { fetchSanityDocument } from '../../lib/sanity';
 
 const AlbumList = () => {
-  const [albums, setAlbums] = useState([]);
+  const { data, error } = useSWR(
+    /* groq */ `*[_type == "album"]
+    {title, "coverPhoto": images[0]{asset -> {...}}}`,
+    fetchSanityDocument,
+  );
 
-  useEffect(() => {
-    // TODO: Move this to server side (i.e. AlbumList.getInitialProps())
-    async function doFetch() {
-      const sanityAlbums = await fetchAlbums();
-      setAlbums(sanityAlbums);
-    }
-    doFetch();
-  }, []);
   return (
     <Page title="Bilder">
       <HeroImage>
@@ -31,12 +28,15 @@ const AlbumList = () => {
         </HeroContent>
       </HeroImage>
       <HeroContent>
-        {albums.map(el => (
-          <Link key={el.title} href={`/bilder/${el.title}`}>
-            {/* eslint-disable-next-line */}
-            <a className="db f1">{el.title}</a>
-          </Link>
-        ))}
+        {error && <div>Kunne ikke hente album</div>}
+        {!data && <div>Laster album...</div>}
+        {data &&
+          data.map(el => (
+            <Link key={el.title} href={`/bilder/${el.title}`}>
+              {/* eslint-disable-next-line */}
+              <a className="db f1">{el.title}</a>
+            </Link>
+          ))}
       </HeroContent>
       <Footer />
     </Page>

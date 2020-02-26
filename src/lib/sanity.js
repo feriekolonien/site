@@ -7,25 +7,9 @@ export const client = sanityClient({
   useCdn: true, // `false` if you want to ensure fresh data
 });
 
-// Get a pre-configured url-builder from your sanity client
-export const urlBuilder = imageUrlBuilder(client);
+export const fetchSanityDocument = url => client.fetch(url);
 
-export function fetchAlbums() {
-  const query =
-    '*[_type == "album"]{title, "coverPhoto": images[0]{asset -> {...}}}';
-
-  return client.fetch(query).then(results => {
-    return results;
-  });
-}
-
-export function fetchSingleAlbum(albumName) {
-  const query = `*[_type == "album" && title == "${albumName}"]{title, "images": images[]{asset->{...}}}[0]`;
-
-  return client.fetch(query).then(results => {
-    return results;
-  });
-}
+const urlBuilder = imageUrlBuilder(client);
 
 export function getImageSizes(img) {
   return {
