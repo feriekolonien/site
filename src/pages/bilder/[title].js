@@ -11,6 +11,7 @@ import {
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
 import { fetchSingleAlbum, getImageSizes } from '../../lib/sanity';
+import RenderInBrowser from '../../components/RenderInBrowser';
 
 // eslint-disable-next-line react/prop-types
 const AlbumPage = ({ album = { images: [] } }) => {
@@ -35,15 +36,16 @@ const AlbumPage = ({ album = { images: [] } }) => {
           <PageTitle>Dette er et album: {album.title} </PageTitle>
         </HeroContent>
       </HeroImage>
-      <Gallery
-        onClick={openLightbox}
-        photos={album.images.map(img => ({
-          src: img.source.thumbnail,
-          height: 1,
-          width: img.aspectRatio,
-        }))}
-      />
-
+      <RenderInBrowser>
+        <Gallery
+          onClick={openLightbox}
+          photos={album.images.map(img => ({
+            src: img.source.thumbnail,
+            height: 1,
+            width: img.aspectRatio,
+          }))}
+        />
+      </RenderInBrowser>
       <ModalGateway>
         {viewerIsOpen ? (
           <Modal onClose={closeLightbox}>
