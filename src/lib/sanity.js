@@ -2,8 +2,8 @@ import sanityClient from '@sanity/client';
 import imageUrlBuilder from '@sanity/image-url';
 
 export const client = sanityClient({
-  projectId: 'bvwemm0b',
-  dataset: 'development',
+  projectId: process.env.SANITY_PROJECT_ID,
+  dataset: process.env.SANITY_DATASET,
   useCdn: true, // `false` if you want to ensure fresh data
 });
 
