@@ -26,7 +26,7 @@ export function getImageSizes(img) {
         .url(),
       thumbnail: urlBuilder
         .image(img)
-        .height(300)
+        .height(400)
         .url(),
     },
   };
