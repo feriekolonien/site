@@ -8,6 +8,7 @@ import {
   PageContent,
 } from '../components/PageComponents';
 import CampDates from '../components/CampDates';
+import WaveDivider from '../components/WaveDivider';
 import Footer from '../components/Footer';
 import Navigation from '../components/Navigation';
 import FAQ from '../components/FAQ';
@@ -31,6 +32,7 @@ function HomePage() {
           <CTA>Søk nå</CTA>
           <PageLead>Søknadsfrist: 15. april 2020!</PageLead>
         </HeroContent>
+        <WaveDivider />
       </HeroImage>
       <PageContent>
         <h3 className="">Ofte stilte spørsmål</h3>

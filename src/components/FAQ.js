@@ -29,8 +29,8 @@ const Question = ({ children }) => {
           background: none;
           color: transparent;
         }
-        summary:focus {
-          border: 1px dotted gray;
+        summary:focus > .dropdown {
+          font-size: 115%;
         }
       `}</style>
       <span
