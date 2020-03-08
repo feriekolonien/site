@@ -97,7 +97,7 @@ const AboutPage = () => {
           sommerdager på Filtvet!
         </Text>
         <hr className="b--black-05 ba mv5 " />
-        <h3 className="">Ofte stilte spørsmål</h3>
+        <h3 className="f3">Ofte stilte spørsmål</h3>
         <FAQ />
       </PageContent>
       <Footer />

@@ -39,7 +39,7 @@ export const Text = ({ children, pseudo = false }) => {
 export const PageContent = ({ children, article = false }) => {
   return (
     <section
-      className={`mw8 center f4 relative ${article ? 'nt6-l bg-white' : ''}`}>
+      className={`mw8 center relative ${article ? 'nt6-l bg-white' : ''}`}>
       {article && (
         <div
           className="absolute w-100"
