@@ -4,7 +4,7 @@ import { HeroImage, HeroContent } from '../components/PageComponents';
 
 const Page = ({ children, title = 'Feriekolonien' }) => {
   return (
-    <div className="sans-serif">
+    <main>
       <Head>
         <title>{title}</title>
         <meta charSet="utf-8" />
@@ -13,9 +13,13 @@ const Page = ({ children, title = 'Feriekolonien' }) => {
           rel="stylesheet"
           href="https://unpkg.com/tachyons/css/tachyons.min.css"
         />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway:wght@400;600&display=swap"
+          rel="stylesheet"
+        />
       </Head>
       {children}
-    </div>
+    </main>
   );
 };
 
