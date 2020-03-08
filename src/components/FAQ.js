@@ -7,9 +7,12 @@ const Question = ({ children }) => {
   }
 
   return (
+    // eslint-disable-next-line jsx-a11y/click-events-have-key-events
     <summary
+      tabIndex="0"
+      role="button"
       onClick={toggleState}
-      className="f4 relative"
+      className="f4 relative outline-0"
       style={{ cursor: 'pointer' }}>
       <style jsx>{`
         .rotate-90 {
@@ -17,6 +20,17 @@ const Question = ({ children }) => {
         }
         .dropdown {
           transition: all 90ms ease-in;
+        }
+        summary {
+          list-style-image: none;
+        }
+
+        summary::-webkit-details-marker {
+          background: none;
+          color: transparent;
+        }
+        summary:focus {
+          border: 1px dotted gray;
         }
       `}</style>
       <span
