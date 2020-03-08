@@ -78,7 +78,6 @@ async function runScript() {
     `Will upload ${entries.length} files in ${paginated.length} batches. Continue? (y/N) `,
     async answer => {
       if (answer && answer.toLowerCase() === 'y') {
-        const uploadedImages = [];
         for (let index = 0; index < paginated.length; index++) {
           console.log(
             `starting batch #${index} (${paginated[index].length} files)`,
@@ -88,21 +87,19 @@ async function runScript() {
           ); // returns promise
 
           // eslint-disable-next-line no-await-in-loop
-          const images = await Promise.all(waitForFileUpload);
-          uploadedImages.push(images);
+          const uploadedImages = await Promise.all(waitForFileUpload);
 
-          // eslint-disable-next-line no-await-in-loop
-        }
-        const flattened = uploadedImages.flat();
-        const [, id] = process.argv.slice(2);
-        if (id) {
-          console.log(`Adding images to album ${id}`);
-          const addToAlbums = flattened.map(image =>
-            addImageToAlbum(id, image),
-          );
-          await Promise.all(addToAlbums);
-        } else {
-          console.log('Ok, will not add to album. Exiting.');
+          const [, id] = process.argv.slice(2);
+          if (id) {
+            console.log(`Adding images to album ${id}`);
+            const addToAlbums = uploadedImages.map(image =>
+              addImageToAlbum(id, image),
+            );
+            // eslint-disable-next-line no-await-in-loop
+            await Promise.all(addToAlbums);
+          } else {
+            console.log('Will not add images to album.');
+          }
         }
       } else {
         console.log('Ok, will not do anything. Exiting.');
