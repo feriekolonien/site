@@ -1,13 +1,38 @@
+import { useState } from 'react';
+
 const Question = ({ children }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  function toggleState() {
+    setIsOpen(prevState => !prevState);
+  }
+
   return (
-    <summary className="f3" style={{ cursor: 'pointer' }}>
-      {children}
+    <summary
+      onClick={toggleState}
+      className="f4 relative"
+      style={{ cursor: 'pointer' }}>
+      <style jsx>{`
+        .rotate-90 {
+          transform: rotate(90deg);
+        }
+        .dropdown {
+          transition: all 90ms ease-in;
+        }
+      `}</style>
+      <span
+        aria-label="pointer"
+        role="img"
+        className={`dropdown absolute top-0 left-0 mr-3 ${isOpen &&
+          'rotate-90'}`}>
+        👉
+      </span>{' '}
+      <div className="dib">{children}</div>
     </summary>
   );
 };
 
 const FAQElement = ({ children }) => {
-  return <details className="f4 fw3 mb3 lh-copy">{children}</details>;
+  return <details className="f5 fw3 mb3 lh-copy">{children}</details>;
 };
 
 const FAQ = ({ children }) => {

@@ -5,12 +5,12 @@ import {
   CTA,
   HeroContent,
   HeroImage,
+  PageContent,
 } from '../components/PageComponents';
 import CampDates from '../components/CampDates';
 import Footer from '../components/Footer';
-import Countdown from '../components/Countdown';
 import Navigation from '../components/Navigation';
-import Video from '../components/Video';
+import FAQ from '../components/FAQ';
 
 function HomePage() {
   return (
@@ -32,6 +32,10 @@ function HomePage() {
           <PageLead>Søknadsfrist: 15. april 2020!</PageLead>
         </HeroContent>
       </HeroImage>
+      <PageContent>
+        <h3 className="">Ofte stilte spørsmål</h3>
+        <FAQ />
+      </PageContent>
       <Footer />
     </Page>
   );
