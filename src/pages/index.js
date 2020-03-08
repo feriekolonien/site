@@ -15,30 +15,36 @@ import FAQ from '../components/FAQ';
 
 function HomePage() {
   return (
-    <Page>
-      <HeroImage imageUrl="/static/img/IMG_5962.jpg">
+    <Page style={{ backgroundColor: '#2C72AC' }}>
+      <div style={{ backgroundColor: '#46B3D9' }}>
         <Navigation />
         <HeroContent>
-          <PageTitle>Sommerferie på Filtvet Feriekoloni</PageTitle>
-          <PageLead>
-            <p>
-              Hei! Velkommen til Trefoldighet Feriekolonis hjemmeside. Vi er
-              norges eldste aktive feriekoloni – eller sommerleir om du vil! I
-              over 125 år har barn og unge vært på ferie hos oss. Kanskje du
-              også vil komme til sommeren? Datoer for 2020:
-            </p>
-            <CampDates />
-          </PageLead>
-          <CTA>Søk nå</CTA>
-          <PageLead>Søknadsfrist: 15. april 2020!</PageLead>
+          <img src="/static/img/logo.png" alt="Kolomåke" />
+          <div className="ml4-l">
+            <PageTitle>Sommerferie på Filtvet Feriekoloni</PageTitle>
+            <PageLead>
+              <p>
+                Trefoldighet Feriekoloni er norges eldste aktive feriekoloni –
+                eller sommerleir om du vil!
+              </p>
+              <p>
+                I over 125 år har barn og unge vært på ferie hos oss. Kanskje du
+                også vil komme til sommeren?{' '}
+              </p>
+              <CampDates />
+            </PageLead>
+            <CTA>Søk nå</CTA>
+            <PageLead>Søknadsfrist: 15. april 2020!</PageLead>
+          </div>
         </HeroContent>
-        <WaveDivider />
-      </HeroImage>
-      <PageContent>
+        <WaveDivider color="#2C72AC" />
+      </div>
+      <PageContent bgColor="#2C72AC" color="white">
+        <img src="ml4-l" />
         <h3 className="">Ofte stilte spørsmål</h3>
         <FAQ />
       </PageContent>
-      <Footer />
+      <Footer bgColor="#2C72AC" color="white" />
     </Page>
   );
 }

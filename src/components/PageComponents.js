@@ -5,11 +5,12 @@ export const CTA = ({ children }) => {
     <>
       <style jsx>{`
         a {
-          letter-spacing: 3px;
+          background-color: #fc9c0c;
+          font-weight: bold;
         }
       `}</style>
       <a
-        className="ttu f3 no-underline grow dib v-mid white ba ph3 pv2 mb3"
+        className="f2 grow no-underline br-pill ph5 pv2 mb2 dib white"
         href="/soknadsskjema">
         {children}
       </a>
@@ -18,15 +19,17 @@ export const CTA = ({ children }) => {
 };
 
 export const PageTitle = ({ children, color = 'white-90' }) => {
-  return <h1 className={`f2 f1-l fw2 mb0 lh-title ${color}`}>{children}</h1>;
+  return <h1 className={`f3 f2-l fw2 mb0 lh-title ${color}`}>{children}</h1>;
 };
 
 export const PageLead = ({ children }) => {
-  return <div className="fw1 f3 white-80 mt3 mb4 lh-title">{children}</div>;
+  return <div className="fw1 f4 white-80 mt3 mb4 lh-title">{children}</div>;
 };
 
 export const HeroContent = ({ children }) => {
-  return <div className="tc-l mt4 mt5-m mt6-l ph3 mw8 center">{children}</div>;
+  return (
+    <div className="tc-l mt4 mt5-m mt4-l ph3 mw8 center flex">{children}</div>
+  );
 };
 
 export const Text = ({ children, pseudo = false }) => {
@@ -36,10 +39,16 @@ export const Text = ({ children, pseudo = false }) => {
   return <p className="fw3 lh-copy">{children}</p>;
 };
 
-export const PageContent = ({ children, article = false }) => {
+export const PageContent = ({
+  children,
+  article = false,
+  bgColor = 'white',
+  color = 'white',
+}) => {
   return (
     <section
-      className={`mw8 center relative ${article ? 'nt6-l bg-white' : ''}`}>
+      style={{ backgroundColor: bgColor }}
+      className={`${color} center relative ${article ? 'nt6-l bg-white' : ''}`}>
       {article && (
         <div
           className="absolute w-100"
@@ -49,7 +58,7 @@ export const PageContent = ({ children, article = false }) => {
           }}
         />
       )}
-      <div className="measure center ph3 pt4 mb4">{children}</div>
+      <div className="measure center ph3 pt4 pb4">{children}</div>
     </section>
   );
 };
