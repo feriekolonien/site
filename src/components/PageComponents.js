@@ -57,7 +57,7 @@ export const PageContent = ({ children, article = false }) => {
 export const HeroImage = ({
   children,
   imageUrl = '/static/img/IMG_6409.jpg',
-  className = 'bg-black-60 pb5 pb6-m pb7-l',
+  className = 'bg-black-60  relative',
 }) => {
   return (
     <div
