@@ -10,19 +10,23 @@ export default {
       type: 'string',
       validation: Rule => Rule.required(),
     },
+    {
+      name: 'coverImage',
+      type: 'image',
+    },
     { type: 'array', name: 'images', of: [{ type: 'image' }] },
   ],
   preview: {
     select: {
       title: 'title',
-      images: 'images',
+      coverImage: 'coverImage',
     },
     prepare(selection) {
-      const { title, images } = selection;
+      const { title, coverImage } = selection;
 
       return {
         title,
-        media: images[0] || undefined,
+        media: coverImage || undefined,
       };
     },
   },
