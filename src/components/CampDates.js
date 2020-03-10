@@ -1,10 +1,15 @@
 const CampDates = () => {
   return (
     <>
-      <h2 className="mb0">Datoer for 2020</h2>
+      <h2 className="mb0 mt4 f3">Datoer for 2020</h2>
 
       <div className="flex justify-center-l tl">
-        <ul className="pl0">
+        <ul className="pl0 mt3">
+          <style jsx>{`
+            li {
+              line-height: 1.8;
+            }
+          `}</style>
           <li className="db">
             <span className="b">1. parti:</span> 23. juni – 3. juli
           </li>

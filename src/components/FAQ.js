@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const Question = ({ children }) => {
+const Question = ({ children, icon = '👉' }) => {
   const [isOpen, setIsOpen] = useState(false);
   function toggleState() {
     setIsOpen(prevState => !prevState);
@@ -15,9 +15,6 @@ const Question = ({ children }) => {
       className="f4 relative outline-0"
       style={{ cursor: 'pointer' }}>
       <style jsx>{`
-        .rotate-90 {
-          transform: rotate(90deg);
-        }
         .dropdown {
           transition: all 90ms ease-in;
         }
@@ -38,7 +35,7 @@ const Question = ({ children }) => {
         role="img"
         className={`dropdown absolute top-0 left-0 mr-3 ${isOpen &&
           'rotate-90'}`}>
-        👉
+        {isOpen ? '👉' : icon}
       </span>{' '}
       <div className="dib">{children}</div>
     </summary>
@@ -78,7 +75,7 @@ const FAQ = () => {
       </FAQElement>
 
       <FAQElement>
-        <Question>Hvem er feriekolonien for?</Question>
+        <Question icon="👨‍👦‍👦">Hvem er feriekolonien for?</Question>
         <p>
           Alle gutter og jenter i alderen 5-12 år kan søke om plass på
           feriekolonien. Her vil man treffe nye venner eller kanskje noen man
@@ -89,7 +86,7 @@ const FAQ = () => {
       </FAQElement>
 
       <FAQElement>
-        <Question>Hva skal man ha med seg?</Question>
+        <Question icon="👕">Hva skal man ha med seg?</Question>
         <p>I løpet av 11 raske dager tar du kun med deg det du trenger.</p>
         <p>
           Feriekolonien har mye fine og rene klær i alle størrelser som barna
@@ -104,7 +101,7 @@ const FAQ = () => {
       </FAQElement>
 
       <FAQElement>
-        <Question>Hvem jobber på feriekolonien?</Question>
+        <Question icon="🙋‍♀️">Hvem jobber på feriekolonien?</Question>
         <p>
           Hver sommer er det 50 barn på feriekolonien av gangen i 3 x 11 dager.
         </p>
