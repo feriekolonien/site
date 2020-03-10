@@ -4,7 +4,7 @@ const NavLink = ({ children, href, color }) => {
   return (
     <Link href={href}>
       <a
-        className={`f6 fw4 hover-${color} no-underline ${color}-70 dn dib-ns pv2 ph3`}>
+        className={`f5 fw5 hover-${color} no-underline ${color} dn dib-ns pv2 ph3`}>
         {children}
       </a>
     </Link>

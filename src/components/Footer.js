@@ -1,25 +1,35 @@
 import Link from 'next/link';
 
-const FooterLink = ({ children, href }) => {
+const FooterLink = ({ children, color, ...rest }) => {
   return (
-    <Link href={href}>
-      <a className="f6 dib ph2 link mid-gray dim">{children}</a>
+    <Link {...rest}>
+      <a className={`f6 dib ph2 link ${color} dim`}>{children}</a>
     </Link>
   );
 };
 
-const Footer = () => {
+const Footer = ({ children, bgColor = 'white', color = 'mid-gray' }) => {
   return (
-    <footer className="pv4 ph3 ph5-m ph6-l mid-gray">
+    <footer
+      style={{ backgroundColor: bgColor }}
+      className={`pv4 ph3 ph5-m ph6-l ${color}`}>
       <small className="f6 db tc">
         <span className="ttu">FILTVET FERIEKOLONI</span>{' '}
         {new Date().getFullYear()}
       </small>
       <div className="tc mt3">
-        <FooterLink href="/">Hjem</FooterLink>
-        <FooterLink href="/om-oss">Om oss</FooterLink>
-        <FooterLink href="/kontakt">Kontakt</FooterLink>
-        <FooterLink href="/soknadsskjema">Søknadsskjema</FooterLink>
+        <FooterLink color={color} href="/">
+          Hjem
+        </FooterLink>
+        <FooterLink color={color} href="/om-oss">
+          Om oss
+        </FooterLink>
+        <FooterLink color={color} href="/kontakt">
+          Kontakt
+        </FooterLink>
+        <FooterLink color={color} href="/soknadsskjema">
+          Søknadsskjema
+        </FooterLink>
       </div>
     </footer>
   );
