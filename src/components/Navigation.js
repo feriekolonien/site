@@ -17,11 +17,7 @@ const Navigation = ({ color = 'white' }) => {
       <div className="pa3 mr-auto">
         <Link href="/">
           <a className="dib grow-large border-box">
-            <img
-              src="/logo_hvit.png"
-              className="h3 w3"
-              alt="Filtvet feriekoloni"
-            />
+            <img src="/logo.png" className="w5" alt="Filtvet feriekoloni" />
           </a>
         </Link>
       </div>
