@@ -4,7 +4,6 @@ import {
   PageLead,
   CTA,
   HeroContent,
-  HeroImage,
   PageContent,
 } from '../components/PageComponents';
 import CampDates from '../components/CampDates';
@@ -13,16 +12,35 @@ import Footer from '../components/Footer';
 import Navigation from '../components/Navigation';
 import FAQ from '../components/FAQ';
 
+import colors from '../styles/colors';
+
 function HomePage() {
   return (
-    <Page style={{ backgroundColor: '#2C72AC' }}>
-      <div style={{ backgroundColor: '#46B3D9' }}>
+    <Page style={{ backgroundColor: colors.primary }}>
+      <div style={{ backgroundColor: colors.secondary }}>
         <Navigation />
-        <HeroContent>
-          <img src="/static/img/logo.png" alt="Kolomåke" />
-          <div className="ml4-l">
-            <PageTitle>Sommerferie på Filtvet Feriekoloni</PageTitle>
-            <PageLead>
+        <div className="mt4 mt5-m mt4-l ph3 mw8 center flex flex-column-reverse flex-row-ns">
+          <div className="w-100 tc mb4">
+            <img
+              className="db-ns w5 w-auto-ns"
+              src="/static/img/logo.png"
+              alt="Kolomåke"
+            />
+          </div>
+
+          <div className="ml4-l tc-ns">
+            <style jsx>{`
+              * {
+                color: ${colors.darkBlue};
+              }
+
+              p,
+              ul > li {
+                line-height: 1.5;
+              }
+            `}</style>
+            <h1 className="mb0 lh-title">Sommerferie på Filtvet Feriekoloni</h1>
+            <div className="fw1 f4 white-80 mt3 mb4 lh-title">
               <p>
                 Trefoldighet Feriekoloni er norges eldste aktive feriekoloni –
                 eller sommerleir om du vil!
@@ -32,19 +50,20 @@ function HomePage() {
                 også vil komme til sommeren?{' '}
               </p>
               <CampDates />
-            </PageLead>
+            </div>
             <CTA>Søk nå</CTA>
-            <PageLead>Søknadsfrist: 15. april 2020!</PageLead>
+            <span className="fw1 f4 mt3 mb4 lh-title db">
+              Søknadsfrist: 15. april 2020!
+            </span>
           </div>
-        </HeroContent>
-        <WaveDivider color="#2C72AC" />
+        </div>
+        <WaveDivider color={colors.primary} />
       </div>
-      <PageContent bgColor="#2C72AC" color="white">
-        <img src="ml4-l" />
+      <PageContent bgColor={colors.primary} color="white">
         <h3 className="">Ofte stilte spørsmål</h3>
         <FAQ />
       </PageContent>
-      <Footer bgColor="#2C72AC" color="white" />
+      <Footer bgColor={colors.primary} color="white" />
     </Page>
   );
 }

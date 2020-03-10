@@ -1,5 +1,7 @@
 import { localize } from 'pseudo-localization';
 
+import colors from '../styles/colors';
+
 export const CTA = ({ children }) => {
   return (
     <>
@@ -41,23 +43,13 @@ export const Text = ({ children, pseudo = false }) => {
 
 export const PageContent = ({
   children,
-  article = false,
   bgColor = 'white',
-  color = 'white',
+  color = colors.darkBlue,
 }) => {
   return (
     <section
       style={{ backgroundColor: bgColor }}
-      className={`${color} center relative ${article ? 'nt6-l bg-white' : ''}`}>
-      {article && (
-        <div
-          className="absolute w-100"
-          style={{
-            height: '12rem',
-            boxShadow: '0px -20px 13px 6px rgba(0,0,0,0.2)',
-          }}
-        />
-      )}
+      className={`${color} center relative`}>
       <div className="measure center ph3 pt4 pb4">{children}</div>
     </section>
   );

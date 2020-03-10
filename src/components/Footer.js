@@ -8,7 +8,7 @@ const FooterLink = ({ children, color, ...rest }) => {
   );
 };
 
-const Footer = ({ children, bgColor = "white", color="mid-gray" }) => {
+const Footer = ({ children, bgColor = 'white', color = 'mid-gray' }) => {
   return (
     <footer
       style={{ backgroundColor: bgColor }}
@@ -18,10 +18,18 @@ const Footer = ({ children, bgColor = "white", color="mid-gray" }) => {
         {new Date().getFullYear()}
       </small>
       <div className="tc mt3">
-        <FooterLink color="white" href="/">Hjem</FooterLink>
-        <FooterLink color="white" href="/om-oss">Om oss</FooterLink>
-        <FooterLink color="white" href="/kontakt">Kontakt</FooterLink>
-        <FooterLink color="white" href="/soknadsskjema">Søknadsskjema</FooterLink>
+        <FooterLink color={color} href="/">
+          Hjem
+        </FooterLink>
+        <FooterLink color={color} href="/om-oss">
+          Om oss
+        </FooterLink>
+        <FooterLink color={color} href="/kontakt">
+          Kontakt
+        </FooterLink>
+        <FooterLink color={color} href="/soknadsskjema">
+          Søknadsskjema
+        </FooterLink>
       </div>
     </footer>
   );
