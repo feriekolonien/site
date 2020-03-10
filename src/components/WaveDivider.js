@@ -3,7 +3,7 @@ const WaveDivider = ({ color = "white" }) => {
     <>
       <style jsx>{`
         svg {
-          margin-bottom: -4px;
+          margin-bottom: -6px;
         }
       `}</style>
       <svg viewBox="0 0 1367 120" xmlns="http://www.w3.org/2000/svg">

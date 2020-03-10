@@ -12,6 +12,7 @@ import {
   PageTitle,
 } from '../../components/PageComponents';
 import Navigation from '../../components/Navigation';
+import WaveDivider from '../../components/WaveDivider';
 import Footer from '../../components/Footer';
 import { fetchSanityDocument, getImageSizes } from '../../lib/sanity';
 import RenderInBrowser from '../../components/RenderInBrowser';
@@ -54,8 +55,9 @@ const AlbumPage = () => {
       <HeroImage imageUrl={coverImage}>
         <Navigation />
         <HeroContent>
-          <PageTitle>Dette er et album: {albumTitle} </PageTitle>
+          <PageTitle>{albumTitle}</PageTitle>
         </HeroContent>
+        <WaveDivider color="white" />
       </HeroImage>
       <RenderInBrowser>
         <div className="mw8 center">

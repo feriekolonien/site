@@ -10,6 +10,7 @@ import {
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import FAQ from '../components/FAQ';
+import WaveDivider from '../components/WaveDivider';
 
 const AboutPage = () => {
   return (
@@ -18,10 +19,8 @@ const AboutPage = () => {
         <Navigation />
         <HeroContent>
           <PageTitle>130 år med feriekoloni</PageTitle>
-          <PageLead>
-            <Text>Feriekolonien ble startet av Gina Aulie i 1890</Text>
-          </PageLead>
         </HeroContent>
+        <WaveDivider color="white" />
       </HeroImage>
       <PageContent article>
         <Text>

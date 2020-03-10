@@ -9,6 +9,7 @@ import {
   PageTitle,
 } from '../../components/PageComponents';
 import Navigation from '../../components/Navigation';
+import WaveDivider from '../../components/WaveDivider';
 import Footer from '../../components/Footer';
 import { fetchSanityDocument } from '../../lib/sanity';
 import SanityImage from '../../components/SanityImage';
@@ -35,47 +36,22 @@ const AlbumList = () => {
         <HeroContent>
           <PageTitle>Bilder fra feriekolonien</PageTitle>
         </HeroContent>
+        <WaveDivider color="white" />
       </HeroImage>
 
       {error && <div>Kunne ikke hente album</div>}
       {!data && <div>Laster album...</div>}
 
-      <section className="mw7 center avenir">
-        <article className="bt bb b--black-10">
+      <section className="mw7 center">
+        <article className="bt bb b--black-10 flex flex-wrap justify-between">
           {data &&
             data.map((album, index) => (
               <Link key={album.title} href={`/bilder/${album.title}`}>
                 {/* eslint-disable-next-line */}
-                <a className="db pv4 ph3 ph0-l no-underline black dim">
-                  <div className="flex flex-column flex-row-ns">
-                    <div
-                      className={`mb4 mb0-ns w-100 w-40-ns ${evenOddClasses(
-                        index,
-                        ['order-1 pl  3-ns', 'order-0 pr3-ns'],
-                      )}`}>
-                      <SanityImage image={album.coverImage} />
-                    </div>
-                    <div
-                      className={`w-100 w-60-ns ${evenOddClasses(index, [
-                        'order-0 pr3-ns',
-                        'order-1 pl3-ns',
-                      ])}`}>
-                      <h1 className="f3 fw1 baskerville mt0 lh-title">
-                        {album.title}
-                      </h1>
-                      <p className="f6 f5-l lh-copy">
-                        {album.description}
-                        Dagene går unna på feriekolonien og aktivitetsnivået er
-                        høyt mellom frokost, lunsj og middag. Etter kveldsmaten
-                        så roer det seg, og vi har fine stunder sammen med bok,
-                        småprat eller sang på rommene før leggetid.
-                      </p>
-                      {/* Note: Author is not used/supported yet */}
-                      <p className="f6 lh-copy mv0">
-                        {album.author}
-                        Rikard Eide
-                      </p>
-                    </div>
+                <a className="no-underline black dim w-50 pa3">
+                  <div className="mb4 mb0-ns w-100">
+                    <SanityImage image={album.coverImage} />
+                    <h1 className="f3 fw1 mt0 lh-title w-100">{album.title}</h1>
                   </div>
                 </a>
               </Link>
