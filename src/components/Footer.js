@@ -1,14 +1,14 @@
 import Link from 'next/link';
 
-const FooterLink = ({ children, ...rest }) => {
+const FooterLink = ({ children, href }) => {
   return (
-    <Link {...rest}>
+    <Link href={href}>
       <a className="f6 dib ph2 link mid-gray dim">{children}</a>
     </Link>
   );
 };
 
-const Footer = ({ children }) => {
+const Footer = () => {
   return (
     <footer className="pv4 ph3 ph5-m ph6-l mid-gray">
       <small className="f6 db tc">
