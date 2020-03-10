@@ -24,7 +24,7 @@ const evenOddClasses = (number, classes) => {
 const AlbumList = () => {
   const { data, error } = useSWR(
     /* groq */ `*[_type == "album"]
-    {title, "coverPhoto": images[0]{asset -> {...}}}`,
+    {title, coverImage {asset -> {...}}}`,
     fetchSanityDocument,
   );
 
@@ -53,7 +53,7 @@ const AlbumList = () => {
                         index,
                         ['order-1 pl  3-ns', 'order-0 pr3-ns'],
                       )}`}>
-                      <SanityImage image={album.coverPhoto} />
+                      <SanityImage image={album.coverImage} />
                     </div>
                     <div
                       className={`w-100 w-60-ns ${evenOddClasses(index, [

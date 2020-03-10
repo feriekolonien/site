@@ -23,7 +23,7 @@ const AlbumPage = () => {
   const { data, error } = useSWR(
     /* groq */ `
     *[_type == "album" && title == "${title}"]
-     {title, "images": images[]{asset->{...}}}[0]
+     {title, coverImage{asset->{...}}, "images": images[]{asset->{...}}}[0]
     `,
     fetchSanityDocument,
   );
@@ -44,9 +44,14 @@ const AlbumPage = () => {
   const images = (data && data.images.map(getImageSizes)) || [];
   const albumTitle = (data && data.title) || '';
 
+  const coverImage =
+    data && data.coverImage
+      ? getImageSizes(data.coverImage).source.fullscreen
+      : undefined;
+
   return (
     <Page title={`Album: ${albumTitle}`}>
-      <HeroImage>
+      <HeroImage imageUrl={coverImage}>
         <Navigation />
         <HeroContent>
           <PageTitle>Dette er et album: {albumTitle} </PageTitle>
