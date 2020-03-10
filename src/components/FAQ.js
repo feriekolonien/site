@@ -49,7 +49,7 @@ const FAQElement = ({ children }) => {
   return <details className="f5 fw3 mb3 lh-copy">{children}</details>;
 };
 
-const FAQ = ({ children }) => {
+const FAQ = () => {
   return (
     <>
       <FAQElement>

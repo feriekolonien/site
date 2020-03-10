@@ -1,6 +1,4 @@
 import Head from 'next/head';
-import Navigation from '../components/Navigation';
-import { HeroImage, HeroContent } from '../components/PageComponents';
 
 const Page = ({ children, title = 'Feriekolonien' }) => {
   return (

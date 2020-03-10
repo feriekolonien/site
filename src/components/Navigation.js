@@ -1,8 +1,8 @@
 import Link from 'next/link';
 
-const NavLink = ({ children, color, ...rest }) => {
+const NavLink = ({ children, href, color }) => {
   return (
-    <Link {...rest}>
+    <Link href={href}>
       <a
         className={`f6 fw4 hover-${color} no-underline ${color}-70 dn dib-ns pv2 ph3`}>
         {children}
@@ -11,7 +11,7 @@ const NavLink = ({ children, color, ...rest }) => {
   );
 };
 
-const Navigation = ({ children, color = 'white' }) => {
+const Navigation = ({ color = 'white' }) => {
   return (
     <nav className="flex w-100 mw8 center">
       <div className="pa3 mr-auto">
