@@ -23,6 +23,7 @@
     "react-dom": "^16.12.0",
     "react-images": "^1.1.0-beta.3",
     "react-photo-gallery": "8.0.0",
+    "react-youtube": "^7.9.0",
     "swr": "^0.1.18"
   },
   "devDependencies": {
