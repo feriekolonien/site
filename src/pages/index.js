@@ -62,8 +62,10 @@ function HomePage() {
       </div>
       <PageContent bgColor={colors.primary} color="white">
         <LandingPageVideo />
-        <h3 className="">Ofte stilte spørsmål</h3>
-        <FAQ />
+        <div className="ml6-ns">
+          <h3>Ofte stilte spørsmål</h3>
+          <FAQ />
+        </div>
       </PageContent>
       <Footer bgColor={colors.primary} color="white" />
     </Page>
