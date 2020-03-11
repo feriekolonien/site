@@ -47,9 +47,6 @@ const ContactPage = () => {
             <div className="f5 fw6 pv3 black-70">
               Tlf: <Phone title="Ring Elin">48111106</Phone> (Elin)
             </div>
-            <AddressLink href="mailTo:feriekolonien@feriekolonien.no">
-              feriekolonien@feriekolonien.no
-            </AddressLink>
           </Office>
         </div>
         <iframe

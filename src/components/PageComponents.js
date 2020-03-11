@@ -50,7 +50,7 @@ export const PageContent = ({
     <section
       style={{ backgroundColor: bgColor }}
       className={`${color} center relative`}>
-      <div className="measure center ph3 pt4 pb4">{children}</div>
+      <div className="measure-wide center ph3 pt4 pb4">{children}</div>
     </section>
   );
 };
