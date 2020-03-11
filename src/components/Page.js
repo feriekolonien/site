@@ -11,6 +11,7 @@ const Page = ({ children, title = 'Feriekolonien' }) => {
           rel="stylesheet"
           href="https://unpkg.com/tachyons/css/tachyons.min.css"
         />
+        <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link
           href="https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway:wght@400;600&display=swap"
           rel="stylesheet"
