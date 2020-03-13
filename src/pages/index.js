@@ -1,11 +1,5 @@
 import Page from '../components/Page';
-import {
-  PageTitle,
-  PageLead,
-  CTA,
-  HeroContent,
-  PageContent,
-} from '../components/PageComponents';
+import { CTA, PageContent } from '../components/PageComponents';
 import CampDates from '../components/CampDates';
 import WaveDivider from '../components/WaveDivider';
 import Footer from '../components/Footer';

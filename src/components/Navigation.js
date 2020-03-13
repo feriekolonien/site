@@ -17,9 +17,16 @@ const Navigation = ({ color = 'white' }) => {
       <div className="pa3 mr-auto-ns">
         <Link href="/">
           <a className="dib grow-large border-box">
+            <style jsx>{`
+              @media screen and (min-width: 30em) {
+                img {
+                  width: 10rem;
+                }
+              }
+            `}</style>
             <img
               src="/logo.png"
-              className="w-50 w5-ns"
+              className="w-50 w4-ns"
               alt="Filtvet feriekoloni"
             />
           </a>
