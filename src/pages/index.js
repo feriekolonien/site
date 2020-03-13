@@ -10,6 +10,7 @@ import CampDates from '../components/CampDates';
 import WaveDivider from '../components/WaveDivider';
 import Footer from '../components/Footer';
 import Navigation from '../components/Navigation';
+import LandingPageVideo from '../components/LandingPageVideo';
 import FAQ from '../components/FAQ';
 
 import colors from '../styles/colors';
@@ -60,8 +61,11 @@ function HomePage() {
         <WaveDivider color={colors.primary} />
       </div>
       <PageContent bgColor={colors.primary} color="white">
-        <h3 className="">Ofte stilte spørsmål</h3>
-        <FAQ />
+        <LandingPageVideo />
+        <div className="ml6-ns">
+          <h3>Ofte stilte spørsmål</h3>
+          <FAQ />
+        </div>
       </PageContent>
       <Footer bgColor={colors.primary} color="white" />
     </Page>
