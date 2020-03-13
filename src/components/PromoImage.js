@@ -1,7 +1,6 @@
-// const shadowColor = 'rgba(0, 0, 0, 0.12)';
 const shadowColor = 'rgba(13, 42, 78, 0.24)';
 
-const VideoPoster = ({ ...rest }) => {
+const PromoImage = ({ ...rest }) => {
   return (
     <>
       <style jsx>{`
@@ -24,4 +23,4 @@ const VideoPoster = ({ ...rest }) => {
   );
 };
 
-export default VideoPoster;
+export default PromoImage;

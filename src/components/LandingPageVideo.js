@@ -4,7 +4,7 @@ import { ModalGateway, Modal } from 'react-images/lib';
 
 import useOnClickOutside from './useOnClickOutside';
 import useYoutubeVideo from './useYoutubeVideo';
-import VideoPoster from './VideoPoster';
+import PromoImage from './PromoImage';
 
 const LandingPageVideo = () => {
   const [openModal, setOpenModal] = useState(false);
@@ -15,7 +15,7 @@ const LandingPageVideo = () => {
 
   return (
     <div>
-      <VideoPoster
+      <PromoImage
         className="mb4"
         src="/static/poster.jpg"
         onClick={() => setOpenModal(true)}

@@ -50,8 +50,8 @@ const AlbumList = () => {
                 {/* eslint-disable-next-line */}
                 <a className="no-underline black dim w-50 pa3">
                   <div className="mb4 mb0-ns w-100">
-                    <SanityImage image={album.coverImage} />
                     <h1 className="f3 fw1 mt0 lh-title w-100">{album.title}</h1>
+                    <SanityImage image={album.coverImage} />
                   </div>
                 </a>
               </Link>
