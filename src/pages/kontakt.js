@@ -1,7 +1,9 @@
 import Page from '../components/Page';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { PageTitle, PageContent, Text } from '../components/PageComponents';
+import { Text } from '../components/Text';
+import { PageTitle } from '../components/PageTitle';
+import { PageContent } from '../components/PageContent';
 import {
   AddressLink,
   Phone,

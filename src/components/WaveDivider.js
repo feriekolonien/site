@@ -1,9 +1,10 @@
-const WaveDivider = ({ color = 'white' }) => {
+const WaveDivider = ({ color = 'white', className = '' }) => {
   return (
     <>
       <style jsx>{`
         svg {
           margin-bottom: -6px;
+          margin-top: auto;
         }
       `}</style>
       <svg viewBox="0 0 1367 120" xmlns="http://www.w3.org/2000/svg">

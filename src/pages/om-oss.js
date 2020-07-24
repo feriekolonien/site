@@ -1,12 +1,8 @@
 import Page from '../components/Page';
-import {
-  HeroImage,
-  HeroContent,
-  PageTitle,
-  PageLead,
-  Text,
-  PageContent,
-} from '../components/PageComponents';
+import { HeroImage, HeroContent } from '../components/PageComponents';
+import { PageContent } from '../components/PageContent';
+import { PageTitle } from '../components/PageTitle';
+import { Text } from '../components/Text';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import FAQ from '../components/FAQ';
@@ -15,8 +11,8 @@ import WaveDivider from '../components/WaveDivider';
 const AboutPage = () => {
   return (
     <Page title="Om oss | 130 år med feriekoloni">
+      <Navigation />
       <HeroImage>
-        <Navigation />
         <HeroContent>
           <PageTitle>130 år med feriekoloni</PageTitle>
         </HeroContent>

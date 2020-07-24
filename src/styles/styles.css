@@ -11,3 +11,17 @@ h6,
 summary {
   font-family: 'Raleway', sans-serif;
 }
+
+.blue-primary {
+  color: #2c72ac;
+}
+.blue-dark {
+  color: #0e2e58;
+}
+.blue-secondary {
+  color: #46b3d9;
+}
+
+.blue-dark-2 {
+  color: #173a4d;
+}

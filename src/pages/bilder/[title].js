@@ -6,12 +6,9 @@ import { useRouter } from 'next/router';
 import Carousel, { Modal, ModalGateway } from 'react-images';
 
 import Page from '../../components/Page';
-import {
-  HeroImage,
-  HeroContent,
-  PageTitle,
-} from '../../components/PageComponents';
+import { HeroImage, HeroContent } from '../../components/PageComponents';
 import Navigation from '../../components/Navigation';
+import { PageTitle } from '../../components/PageTitle';
 import WaveDivider from '../../components/WaveDivider';
 import Footer from '../../components/Footer';
 import { fetchSanityDocument, getImageSizes } from '../../lib/sanity';

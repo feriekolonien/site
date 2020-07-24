@@ -1,19 +1,20 @@
 import Link from 'next/link';
+import colors from '../styles/colors';
 
 const NavLink = ({ children, href, color }) => {
   return (
     <Link href={href}>
       <a
-        className={`f5 fw5 hover-${color} no-underline ${color} dib-ns pv2 ph3`}>
+        className={`f5 fw6 hover-${color} no-underline ${color} dib-ns pv2 ph3`}>
         {children}
       </a>
     </Link>
   );
 };
 
-const Navigation = ({ color = 'white' }) => {
+const Navigation = ({ color = 'blue-dark' }) => {
   return (
-    <nav className="flex w-100 mw8 center flex-row-ns flex-column">
+    <nav className="flex w-100 center flex-row-ns flex-column bg-white">
       <div className="pa3 mr-auto-ns">
         <Link href="/">
           <a className="dib grow-large border-box">

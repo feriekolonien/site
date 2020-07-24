@@ -12,25 +12,11 @@ const Footer = ({ children, bgColor = 'white', color = 'mid-gray' }) => {
   return (
     <footer
       style={{ backgroundColor: bgColor }}
-      className={`pv4 ph3 ph5-m ph6-l ${color}`}>
+      className={`ph3 ph5-m ph6-l pt6 pb4 ${color}`}>
       <small className="f6 db tc">
         <span className="ttu">FILTVET FERIEKOLONI</span>{' '}
         {new Date().getFullYear()}
       </small>
-      <div className="tc mt3">
-        <FooterLink color={color} href="/">
-          Hjem
-        </FooterLink>
-        <FooterLink color={color} href="/om-oss">
-          Om oss
-        </FooterLink>
-        <FooterLink color={color} href="/kontakt">
-          Kontakt
-        </FooterLink>
-        <FooterLink color={color} href="/soknadsskjema">
-          Søknadsskjema
-        </FooterLink>
-      </div>
     </footer>
   );
 };

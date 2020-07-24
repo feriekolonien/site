@@ -3,12 +3,9 @@ import useSWR from 'swr';
 import Link from 'next/link';
 
 import Page from '../../components/Page';
-import {
-  HeroImage,
-  HeroContent,
-  PageTitle,
-} from '../../components/PageComponents';
+import { HeroImage, HeroContent } from '../../components/PageComponents';
 import Navigation from '../../components/Navigation';
+import { PageTitle } from '../../components/PageTitle';
 import WaveDivider from '../../components/WaveDivider';
 import Footer from '../../components/Footer';
 import { fetchSanityDocument } from '../../lib/sanity';
