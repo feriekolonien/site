@@ -21,15 +21,15 @@ const evenOddClasses = (number, classes) => {
 
 const AlbumList = () => {
   const { data, error } = useSWR(
-    /* groq */ `*[_type == "album"]
+    /* groq */ `*[_type == "album" && title != "Historie"] | order(title desc)
     {title, coverImage {asset -> {...}}}`,
     fetchSanityDocument,
   );
 
   return (
     <Page title="Bilder">
-      <HeroImage>
-        <Navigation />
+      <Navigation />
+      <HeroImage imageUrl="/static/img/IMG_5962.jpg">
         <HeroContent>
           <PageTitle>Bilder fra feriekolonien</PageTitle>
         </HeroContent>

@@ -13,7 +13,7 @@ export const HeroContent = ({ children }) => {
 export const HeroImage = ({
   children,
   imageUrl = '/static/img/IMG_6409.jpg',
-  className = 'bg-black-60  relative',
+  className = 'bg-black-40  relative',
 }) => {
   return (
     <div
