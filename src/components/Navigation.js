@@ -43,9 +43,6 @@ const Navigation = ({ color = 'blue-dark' }) => {
         <NavLink color={color} href="/kontakt">
           Kontakt
         </NavLink>
-        <NavLink color={color} href="/soknadsskjema">
-          Søk her
-        </NavLink>
       </div>
     </nav>
   );
