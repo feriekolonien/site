@@ -33,11 +33,12 @@ function HomePage() {
             }
           `}</style>
           <h1 className="mb0 lh-title f1-ns">
-            Sommerferie på Filtvet Feriekoloni
+            Sommerferie på{' '}
+            <span style={{ whiteSpace: 'nowrap' }}>Filtvet Feriekoloni</span>
           </h1>
           <div className="fw1 f4 white-80 mt3 mb4 lh-title">
             <p>
-              Trefoldighet Feriekoloni er norges eldste aktive feriekoloni –
+              Trefoldighet Feriekoloni er Norges eldste aktive feriekoloni –
               eller sommerleir om du vil!
             </p>
             <p>
