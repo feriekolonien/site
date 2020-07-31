@@ -4,7 +4,7 @@
 
 > Repository for Feriekoloniens frontend (powered by [NextJS](https://nextjs.org/))
 
-This project organizes the pages and styles available on (soon to be) [feriekolonien.no](http://feriekolonien.no/)
+This project organizes the pages and styles available on [feriekolonien.no](http://feriekolonien.no/)
 
 ### Getting started
 
