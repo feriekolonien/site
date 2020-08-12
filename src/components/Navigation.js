@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import colors from '../styles/colors';
 
 const NavLink = ({ children, href, color }) => {
   return (
@@ -39,6 +38,9 @@ const Navigation = ({ color = 'blue-dark' }) => {
         </NavLink>
         <NavLink color={color} href="/bilder">
           Bilder
+        </NavLink>
+        <NavLink color={color} href="/historien">
+          Historien
         </NavLink>
         <NavLink color={color} href="/kontakt">
           Kontakt
