@@ -42,7 +42,7 @@ function HomePage() {
               eller sommerleir om du vil!
             </p>
             <p>
-              I over 125 år har barn og unge vært på ferie hos oss. Kanskje du
+              I {new Date().getFullYear() - 1890} år har barn og unge vært på ferie hos oss. Kanskje du
               også vil komme til sommeren?{' '}
             </p>
           </div>
