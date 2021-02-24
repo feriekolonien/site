@@ -7,6 +7,8 @@ import LandingPageVideo from '../components/LandingPageVideo';
 import FAQ from '../components/FAQ';
 
 import colors from '../styles/colors';
+import CampDates from '../components/CampDates';
+import { CTA } from '../components/CTA';
 
 function HomePage() {
   return (
@@ -42,20 +44,28 @@ function HomePage() {
               eller sommerleir om du vil!
             </p>
             <p>
-              I {new Date().getFullYear() - 1890} år har barn og unge vært på ferie hos oss. Kanskje du
-              også vil komme til sommeren?{' '}
+              I {new Date().getFullYear() - 1890} år har barn og unge vært på
+              ferie hos oss. Kanskje du også vil komme til sommeren?{' '}
             </p>
           </div>
-          <LandingPageVideo />
+          <CampDates />
+          <CTA subtext="Søknadsfrist 1.mai">Søk nå</CTA>
         </div>
       </div>
       <WaveDivider color={colors.primary} />
-      <PageContent bgColor={colors.primary} color="white">
-        <div>
-          <h3 className="f2 mt0">Ofte stilte spørsmål</h3>
-          <FAQ />
+      <div
+        className="pt4 pb4 f3 white"
+        style={{ backgroundColor: colors.primary }}>
+        <div className="mt4 mt5-m mt4-l ph3 mw8 center flex flex-column-reverse flex-row-ns">
+          <div className="w-100 w-60-ns">
+            <h3 className="f2 mt0">Ofte stilte spørsmål</h3>
+            <FAQ />
+          </div>
+          <div className="w-100 w-40-ns mb3">
+            <LandingPageVideo />
+          </div>
         </div>
-      </PageContent>
+      </div>
       <Footer bgColor={colors.primary} color="white" />
     </Page>
   );

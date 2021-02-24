@@ -3,8 +3,7 @@ import Link from 'next/link';
 const NavLink = ({ children, href, color }) => {
   return (
     <Link href={href}>
-      <a
-        className={`f5 fw6 hover-${color} no-underline ${color} dib-ns pv2 ph3`}>
+      <a className={`f5 fw6 hover-${color} no-underline ${color} dib-ns pv2`}>
         {children}
       </a>
     </Link>
@@ -32,7 +31,7 @@ const Navigation = ({ color = 'blue-dark' }) => {
           </a>
         </Link>
       </div>
-      <div className="tr-ns pa3">
+      <div className="pa3 flex justify-between w-100 w-60-ns w-40-l ph4-l">
         <NavLink color={color} href="/om-oss">
           Om oss
         </NavLink>

@@ -2,6 +2,7 @@ import Page from '../components/Page';
 import Footer from '../components/Footer';
 import Navigation from '../components/Navigation';
 import ApplicationForm from '../components/ApplicationForm';
+import colors from '../styles/colors';
 
 function ApplicationPage() {
   return (
@@ -11,7 +12,7 @@ function ApplicationPage() {
         <div className="flex-auto flex flex-column">
           <ApplicationForm />
         </div>
-        <Footer />
+        <Footer bgColor={colors.primary} color="white" />
       </div>
     </Page>
   );

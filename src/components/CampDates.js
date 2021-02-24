@@ -1,9 +1,9 @@
 const CampDates = () => {
   return (
     <>
-      <h2 className="mb0 mt4 f3">Datoer for 2020</h2>
+      <h2 className="mb0 mt4 f3">Datoer for 2021</h2>
 
-      <div className="flex justify-center-l tl">
+      <div className="flex justify-center-ns tl">
         <ul className="pl0 mt3">
           <style jsx>{`
             li {
@@ -11,13 +11,16 @@ const CampDates = () => {
             }
           `}</style>
           <li className="db">
-            <span className="b">1. parti:</span> 23. juni – 3. juli
+            <span className="b">1. parti:</span> Fredag 25. juni - Lørdag 3.
+            juli
           </li>
           <li className="db">
-            <span className="b">2. parti:</span> 10. juli – 20. juli
+            <span className="b">2. parti:</span> Fredag 9. juli - Lørdag 17.
+            juli
           </li>
           <li className="db">
-            <span className="b">3. parti:</span> 27. juli – 6. august
+            <span className="b">3. parti:</span> Fredag 23. juli - Lørdag 31.
+            juli
           </li>
         </ul>
       </div>
