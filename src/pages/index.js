@@ -1,5 +1,6 @@
+import Image from 'next/image';
+
 import Page from '../components/Page';
-import { PageContent } from '../components/PageContent';
 import WaveDivider from '../components/WaveDivider';
 import Footer from '../components/Footer';
 import Navigation from '../components/Navigation';
@@ -16,9 +17,12 @@ function HomePage() {
       <Navigation />
       <div className="mt4 mt5-m mt4-l ph3 mw8 center flex flex-column-reverse flex-row-ns">
         <div className="w-100 tc mb4">
-          <img
+          <Image
             className="db-ns w5 w-auto-ns"
             src="/static/img/logo.png"
+            width="500"
+            height="680"
+            priority
             alt="Kolomåke"
           />
         </div>
