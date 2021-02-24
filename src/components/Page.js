@@ -18,29 +18,6 @@ const Page = ({ children, title = 'Trefoldighet Feriekoloni' }) => {
           property="og:description"
           content={description}
         />
-
-        <meta property="og:site_name" content="Trefoldighet Feriekoloni" />
-
-        <meta
-          property="og:image"
-          content="https://feriekolonien.no/static/img/social-card.jpg"
-        />
-        <meta property="og:url" content="https://feriekolonien.no" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          property="twitter:image"
-          content="https://feriekolonien.no/static/img/social-card.jpg"
-        />
-
-        <link
-          rel="stylesheet"
-          href="https://unpkg.com/tachyons/css/tachyons.min.css"
-        />
-        <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway:wght@400;600&display=swap"
-          rel="stylesheet"
-        />
       </Head>
       {children}
     </main>
