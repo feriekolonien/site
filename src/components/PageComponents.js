@@ -1,5 +1,3 @@
-import { localize } from 'pseudo-localization';
-
 export const PageLead = ({ children }) => {
   return <div className="fw1 f4 white-80 mt3 mb4 lh-title">{children}</div>;
 };
