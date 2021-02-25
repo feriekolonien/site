@@ -1,14 +1,4 @@
-import Link from 'next/link';
-
-const FooterLink = ({ children, color, ...rest }) => {
-  return (
-    <Link {...rest}>
-      <a className={`f6 dib ph2 link ${color} dim`}>{children}</a>
-    </Link>
-  );
-};
-
-const Footer = ({ children, bgColor = 'white', color = 'mid-gray' }) => {
+const Footer = ({ bgColor = 'white', color = 'mid-gray' }) => {
   return (
     <footer
       style={{ backgroundColor: bgColor }}
