@@ -14,7 +14,9 @@ const AboutPage = () => {
       <Navigation />
       <HeroImage src="/static/img/IMG_6409.jpg">
         <HeroContent>
-          <PageTitle>{new Date().getFullYear() - 1890} år med feriekoloni</PageTitle>
+          <PageTitle>
+            {new Date().getFullYear() - 1890} år med feriekoloni
+          </PageTitle>
         </HeroContent>
         <WaveDivider color="white" />
       </HeroImage>

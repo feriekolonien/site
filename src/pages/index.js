@@ -65,7 +65,7 @@ function HomePage() {
             <h3 className="f2 mt0">Ofte stilte spørsmål</h3>
             <FAQ />
           </div>
-          <div className="w-100 w-40-ns mb3">
+          <div className="w-100 w-40-ns mb3 ml3">
             <LandingPageVideo />
           </div>
         </div>
