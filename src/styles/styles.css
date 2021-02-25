@@ -55,3 +55,7 @@ summary {
 .blue-dark-2 {
   color: #173a4d;
 }
+
+.error-status {
+  border-right: 1px solid rgba(0, 0, 0, 0.3);
+}
