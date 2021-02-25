@@ -1,6 +1,3 @@
-export const Text = ({ children, pseudo = false, size = 'f4' }) => {
-  if (pseudo && typeof children === 'string') {
-    return <p className="fw3 lh-copy">{localize(children)}</p>;
-  }
+export const Text = ({ children, size = 'f4' }) => {
   return <p className={`fw3 lh-copy ${size}`}>{children}</p>;
 };

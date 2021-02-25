@@ -1,15 +1,14 @@
-import sanityClient from '@sanity/client';
-import imageUrlBuilder from '@sanity/image-url';
+import { createClient, createImageUrlBuilder } from 'next-sanity';
 
-export const client = sanityClient({
+const config = {
   projectId: process.env.SANITY_PROJECT_ID,
   dataset: process.env.SANITY_DATASET,
   useCdn: true, // `false` if you want to ensure fresh data
-});
+};
 
-export const fetchSanityDocument = url => client.fetch(url);
+export const sanityClient = createClient(config);
 
-const urlBuilder = imageUrlBuilder(client);
+const urlBuilder = createImageUrlBuilder(config);
 
 export function getImageSizes(img) {
   return {

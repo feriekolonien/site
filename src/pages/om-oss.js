@@ -12,9 +12,11 @@ const AboutPage = () => {
   return (
     <Page title="Om oss | 130 år med feriekoloni">
       <Navigation />
-      <HeroImage>
+      <HeroImage src="/static/img/IMG_6409.jpg">
         <HeroContent>
-          <PageTitle>{new Date().getFullYear() - 1890} år med feriekoloni</PageTitle>
+          <PageTitle>
+            {new Date().getFullYear() - 1890} år med feriekoloni
+          </PageTitle>
         </HeroContent>
         <WaveDivider color="white" />
       </HeroImage>
@@ -50,7 +52,7 @@ const AboutPage = () => {
         <h3>Dette trenger du å vite</h3>
         <Text>Vi deler opp sommeren i 3 partier.</Text>
         <Text>
-          Hvert parti er på totalt 11 dager (ink. reisedager). Dette for å
+          Hvert parti er på totalt 9 dager (ink. reisedager). Dette for å
           imøtekomme etterspørselen for kortere opphold. For dere som
           liker/trenger et lengre opphold, er det fullt mulig å søke om opphold
           på to partier dersom plass er tilgjengelig.

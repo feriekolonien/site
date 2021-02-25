@@ -1,88 +1,110 @@
-import React, { useCallback, useState } from 'react';
-import useSWR from 'swr';
+import React, { useCallback } from 'react';
+import { groq } from 'next-sanity';
+import Image from 'next/image';
 import Gallery from 'react-photo-gallery';
-import { useRouter } from 'next/router';
 
-import Carousel, { Modal, ModalGateway } from 'react-images';
-
-import Page from '../../components/Page';
-import { HeroImage, HeroContent } from '../../components/PageComponents';
-import Navigation from '../../components/Navigation';
-import { PageTitle } from '../../components/PageTitle';
-import WaveDivider from '../../components/WaveDivider';
 import Footer from '../../components/Footer';
-import { fetchSanityDocument, getImageSizes } from '../../lib/sanity';
+import Navigation from '../../components/Navigation';
+import Page from '../../components/Page';
+import { HeroContent, HeroImage } from '../../components/PageComponents';
+import { PageTitle } from '../../components/PageTitle';
 import RenderInBrowser from '../../components/RenderInBrowser';
+import WaveDivider from '../../components/WaveDivider';
+import { getImageSizes, sanityClient } from '../../lib/sanity';
 
-// eslint-disable-next-line react/prop-types
-const AlbumPage = () => {
-  const router = useRouter();
-  const { title = '' } = router.query;
-  const { data, error } = useSWR(
-    /* groq */ `
-    *[_type == "album" && title == "${title}"]
-     {title, coverImage{asset->{...}}, "images": images[]{asset->{...}}}[0]
-    `,
-    fetchSanityDocument,
-  );
-
-  const [currentImage, setCurrentImage] = useState(0);
-  const [viewerIsOpen, setViewerIsOpen] = useState(false);
-
-  const openLightbox = useCallback((event, { index }) => {
-    setCurrentImage(index);
-    setViewerIsOpen(true);
+const AlbumPage = ({ data }) => {
+  const imageRenderer = useCallback(({ photo, key }) => {
+    return (
+      <Image
+        className="gallery-image"
+        key={key}
+        src={photo.src}
+        height={photo.height}
+        width={photo.width}
+      />
+    );
   }, []);
 
-  const closeLightbox = () => {
-    setCurrentImage(0);
-    setViewerIsOpen(false);
-  };
+  const images = data.album.images.map(getImageSizes);
+  const albumTitle = data.album.title;
 
-  const images = (data && data.images.map(getImageSizes)) || [];
-  const albumTitle = (data && data.title) || '';
-
-  const coverImage =
-    data && data.coverImage
-      ? getImageSizes(data.coverImage).source.fullscreen
-      : undefined;
+  const coverImage = getImageSizes(data.album.coverImage).source.fullscreen;
 
   return (
     <Page title={`Album: ${albumTitle}`}>
-      <HeroImage imageUrl={coverImage}>
-        <Navigation />
+      <Navigation />
+      <HeroImage src={coverImage}>
         <HeroContent>
           <PageTitle>{albumTitle}</PageTitle>
         </HeroContent>
         <WaveDivider color="white" />
       </HeroImage>
-      <RenderInBrowser>
-        <div className="mw8 center">
-          {data && (
-            <Gallery
-              onClick={openLightbox}
-              photos={images.map(img => ({
-                src: img.source.thumbnail,
-                height: 1,
-                width: img.aspectRatio,
-              }))}
-            />
-          )}
-          {!data && 'Laster...'}
-          {error && <div>Det har skjedd en feil</div>}
-        </div>
-      </RenderInBrowser>
-      <ModalGateway>
-        {viewerIsOpen ? (
-          <Modal onClose={closeLightbox}>
-            <Carousel currentIndex={currentImage} views={images} />
-          </Modal>
-        ) : null}
-      </ModalGateway>
-
+      <div className="mw8 center min-vh-100">
+        <RenderInBrowser>
+          <Gallery
+            renderImage={imageRenderer}
+            photos={images.map(img => ({
+              src: img.source.thumbnail,
+              height: 1,
+              width: img.aspectRatio,
+            }))}
+          />
+        </RenderInBrowser>
+      </div>
       <Footer />
     </Page>
   );
 };
+
+const albumQuery = groq`
+    *[_type == "album" && title == $slug][0]{
+      title,
+      coverImage{asset->{...}},
+      "images": images[]{asset->{...}}
+      }
+    `;
+
+export async function getStaticProps({ params, preview = false }) {
+  try {
+    const album = await sanityClient.fetch(albumQuery, {
+      slug: params.title,
+    });
+    if (!album || !album?.images?.length) {
+      throw new Error(
+        'Unable to build album page: Sanity fetch succeeded, but no images were found. Please check Sanity',
+      );
+    }
+
+    return {
+      props: {
+        preview,
+        data: { album },
+      },
+    };
+  } catch (error) {
+    console.error(error);
+    throw error;
+  }
+}
+
+export async function getStaticPaths() {
+  try {
+    const albums = await sanityClient.fetch(
+      groq`*[_type == "album" && title != "Historie"].title`,
+    );
+    if (!albums || !albums?.length) {
+      throw new Error(
+        'Unable to generate any static paths: Sanity fetch succeeded, but no albums were found. Please check Sanity',
+      );
+    }
+    return {
+      paths: albums.map(title => ({ params: { title } })),
+      fallback: false,
+    };
+  } catch (error) {
+    console.error(error);
+    throw error;
+  }
+}
 
 export default AlbumPage;

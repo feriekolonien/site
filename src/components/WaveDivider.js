@@ -1,4 +1,4 @@
-const WaveDivider = ({ color = 'white', className = '' }) => {
+const WaveDivider = ({ color = 'white' }) => {
   return (
     <>
       <style jsx>{`
