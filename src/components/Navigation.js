@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 const NavLink = ({ children, href, color }) => {
@@ -23,7 +24,9 @@ const Navigation = ({ color = 'blue-dark' }) => {
                 }
               }
             `}</style>
-            <img
+            <Image
+              width="164"
+              height="40"
               src="/logo.png"
               className="w-50 w4-ns"
               alt="Filtvet feriekoloni"
