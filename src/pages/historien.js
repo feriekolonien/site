@@ -12,8 +12,7 @@ const Historie = () => {
   return (
     <Page title="Historie">
       <Navigation />
-      <HeroImage imageUrl="/static/img/historien.jpg">
-
+      <HeroImage src="/static/img/historien.jpg">
         <HeroContent>
           <PageTitle>Historien</PageTitle>
         </HeroContent>

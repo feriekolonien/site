@@ -29,7 +29,7 @@ const AlbumList = () => {
   return (
     <Page title="Bilder">
       <Navigation />
-      <HeroImage imageUrl="/static/img/IMG_5962.jpg">
+      <HeroImage src="/static/img/IMG_5962.jpg">
         <HeroContent>
           <PageTitle>Bilder fra feriekolonien</PageTitle>
         </HeroContent>
