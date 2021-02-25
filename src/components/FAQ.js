@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Text } from './Text';
 
-const Question = ({ children }) => {
+const Question = ({ children, title }) => {
   const [isOpen, setIsOpen] = useState(false);
   function toggleState() {
     setIsOpen(prevState => !prevState);
@@ -12,6 +12,8 @@ const Question = ({ children }) => {
     <summary
       tabIndex="0"
       role="button"
+      data-splitbee-event={`Click: ${title}`}
+      data-splitbee-event-type="FAQ Toggle"
       onClick={toggleState}
       className="f3 relative outline-0"
       style={{ cursor: 'pointer' }}>
@@ -60,7 +62,9 @@ const FAQ = () => {
   return (
     <>
       <FAQElement>
-        <Question>Blir det feriekoloni i 2021?</Question>
+        <Question title="Blir det feriekoloni i 2021">
+          Blir det feriekoloni i 2021?
+        </Question>
         <Text size="f4">
           Vårt ønske er å tilby ordinært sommeropphold, men vil presisere at vi
           innretter oss etter offentlige retningslinjer for forsvarlig drift
@@ -72,7 +76,9 @@ const FAQ = () => {
         </Text>
       </FAQElement>
       <FAQElement>
-        <Question>Feriekoloni, hva er det?</Question>
+        <Question title="Feriekoloni, hva er det">
+          Feriekoloni, hva er det?
+        </Question>
         <Text size="f4">
           Feriekolonien på Filtvet eies av Trefoldighetslegatet. Driften har i
           alle år vært ivaretatt av Trefoldighet Menighet (Trefoldighetskirken)
@@ -86,7 +92,7 @@ const FAQ = () => {
         </Text>
 
         <Text size="f4">
-          I over 125 år har barn og unge vært på sommerferie hos oss. I år kan
+          I over 130 år har barn og unge vært på sommerferie hos oss. I år kan
           du også få være med. Trefoldighet feriekoloni ligger på Filtvet på
           Hurumlandet, ca. 1 times bilkjøring fra Oslo. Hurumlandet er et
           spennende sted med forskjellig natur. Nede ved sjøen er det
@@ -97,7 +103,9 @@ const FAQ = () => {
       </FAQElement>
 
       <FAQElement>
-        <Question>Hvem er feriekolonien for?</Question>
+        <Question title="Hvem er feriekolonien for">
+          Hvem er feriekolonien for?
+        </Question>
         <Text size="f4">
           Alle gutter og jenter i alderen 5-12 år kan søke om plass på
           feriekolonien. Her vil man treffe nye venner eller kanskje noen man
@@ -108,7 +116,9 @@ const FAQ = () => {
       </FAQElement>
 
       <FAQElement>
-        <Question>Hva skal man ha med seg?</Question>
+        <Question title="Hva skal man ha med seg">
+          Hva skal man ha med seg?
+        </Question>
         <Text size="f4">
           Feriekolonien har mye fine og rene klær i alle størrelser som barna
           låner når de er her ute, så mye tøy behøver du ikke. Det man MÅ ta med
@@ -122,7 +132,9 @@ const FAQ = () => {
       </FAQElement>
 
       <FAQElement>
-        <Question>Hvem jobber på feriekolonien?</Question>
+        <Question title="Hvem jobber på feriekolonien">
+          Hvem jobber på feriekolonien?
+        </Question>
         <Text size="f4">
           Sammen med barna er vi 15-20 voksne som passer på. Mange av oss jobber
           med barn og ungdom resten av året eller så har de vært barn på

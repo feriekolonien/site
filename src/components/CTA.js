@@ -8,6 +8,7 @@ export const CTA = ({ children, subtext }) => {
         }
       `}</style>
       <a
+        data-splitbee-event="Sign up"
         className="f3 grow no-underline br-pill ph5 pv2 mb2 dib white mt3"
         href="/soknadsskjema">
         {children}

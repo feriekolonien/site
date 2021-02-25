@@ -47,8 +47,8 @@ function HomePage() {
               eller sommerleir <span className="nowrap">om du vil</span>!
             </p>
             <p>
-              I {new Date().getFullYear() - 1890} år har barn og unge vært på
-              ferie hos oss. Kanskje du også vil komme til sommeren?{' '}
+              I over 130 år har barn og unge vært på ferie hos oss. Kanskje du
+              også vil komme til sommeren?{' '}
             </p>
           </div>
           <div className="flex flex-column">
