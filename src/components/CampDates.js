@@ -1,7 +1,7 @@
 const CampDates = () => {
   return (
-    <>
-      <h2 className="mb0 mt4 f3">Datoer for 2021</h2>
+    <div className="order-2 order-0-ns mb3">
+      <h2 className="mv0 f3">Datoer for 2021</h2>
 
       <div className="flex justify-center-ns tl">
         <ul className="pl0 mt3">
@@ -24,7 +24,7 @@ const CampDates = () => {
           </li>
         </ul>
       </div>
-    </>
+    </div>
   );
 };
 

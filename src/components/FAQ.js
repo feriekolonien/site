@@ -110,9 +110,6 @@ const FAQ = () => {
       <FAQElement>
         <Question>Hva skal man ha med seg?</Question>
         <Text size="f4">
-          I løpet av 11 raske dager tar du kun med deg det du trenger.
-        </Text>
-        <Text size="f4">
           Feriekolonien har mye fine og rene klær i alle størrelser som barna
           låner når de er her ute, så mye tøy behøver du ikke. Det man MÅ ta med
           seg er: regntøy/gummistøvler, joggesko, toalettsaker (tannbørste,
@@ -126,9 +123,6 @@ const FAQ = () => {
 
       <FAQElement>
         <Question>Hvem jobber på feriekolonien?</Question>
-        <Text size="f4">
-          Hver sommer er det 50 barn på feriekolonien av gangen i 3 x 11 dager.
-        </Text>
         <Text size="f4">
           Sammen med barna er vi 15-20 voksne som passer på. Mange av oss jobber
           med barn og ungdom resten av året eller så har de vært barn på
