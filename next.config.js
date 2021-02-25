@@ -3,6 +3,9 @@ module.exports = {
     SANITY_DATASET: 'development',
     SANITY_PROJECT_ID: 'bvwemm0b',
   },
+  images: {
+    domains: ['cdn.sanity.io'],
+  },
   async rewrites() {
     return [
       {

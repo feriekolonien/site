@@ -59,3 +59,7 @@ summary {
 .error-status {
   border-right: 1px solid rgba(0, 0, 0, 0.3);
 }
+
+.gallery-image {
+  margin: 2px !important;
+}

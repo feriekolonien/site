@@ -14,15 +14,12 @@
     "eslint": "eslint . --cache"
   },
   "dependencies": {
-    "@sanity/client": "^1.148.3",
-    "@sanity/image-url": "^0.140.17",
     "next": "^10.0.7",
+    "next-sanity": "^0.1.10",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-images": "^1.1.0-beta.3",
     "react-photo-gallery": "^8.0.0",
-    "react-youtube": "^7.13.1",
-    "swr": "^0.4.2"
+    "react-youtube": "^7.13.1"
   },
   "devDependencies": {
     "@otovo/eslint-config-otovo": "^3.0.0",
