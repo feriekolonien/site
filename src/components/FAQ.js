@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Text } from './Text';
 
-const Question = ({ children, icon = '👉' }) => {
+const Question = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false);
   function toggleState() {
     setIsOpen(prevState => !prevState);
@@ -60,6 +60,18 @@ const FAQ = () => {
   return (
     <>
       <FAQElement>
+        <Question>Blir det feriekoloni i 2021?</Question>
+        <Text size="f4">
+          Vårt ønske er å tilby ordinært sommeropphold, men vil presisere at vi
+          innretter oss etter offentlige retningslinjer for forsvarlig drift
+          mtp. den pågående pandemi problematikken. Det er foreløpig vanskelig
+          for oss å se hvordan dagens situasjon utvikler seg fram mot oppstart,
+          og vil måtte ta et forbehold om driftsfasong - MEN vi håper og tror vi
+          kan få lov til å “se ut som oss selv” når sommeren kommer :) Vi vil
+          holde påmeldte oppdatert om situasjonen fortløpende.
+        </Text>
+      </FAQElement>
+      <FAQElement>
         <Question>Feriekoloni, hva er det?</Question>
         <Text size="f4">
           Feriekolonien på Filtvet eies av Trefoldighetslegatet. Driften har i
@@ -85,7 +97,7 @@ const FAQ = () => {
       </FAQElement>
 
       <FAQElement>
-        <Question icon="👨‍👦‍👦">Hvem er feriekolonien for?</Question>
+        <Question>Hvem er feriekolonien for?</Question>
         <Text size="f4">
           Alle gutter og jenter i alderen 5-12 år kan søke om plass på
           feriekolonien. Her vil man treffe nye venner eller kanskje noen man
@@ -96,7 +108,7 @@ const FAQ = () => {
       </FAQElement>
 
       <FAQElement>
-        <Question icon="👕">Hva skal man ha med seg?</Question>
+        <Question>Hva skal man ha med seg?</Question>
         <Text size="f4">
           I løpet av 11 raske dager tar du kun med deg det du trenger.
         </Text>
@@ -113,7 +125,7 @@ const FAQ = () => {
       </FAQElement>
 
       <FAQElement>
-        <Question icon="🙋‍♀️">Hvem jobber på feriekolonien?</Question>
+        <Question>Hvem jobber på feriekolonien?</Question>
         <Text size="f4">
           Hver sommer er det 50 barn på feriekolonien av gangen i 3 x 11 dager.
         </Text>
