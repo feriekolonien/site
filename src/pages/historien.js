@@ -16,7 +16,7 @@ const Historie = () => {
         <HeroContent>
           <PageTitle>Historien</PageTitle>
         </HeroContent>
-        <WaveDivider color="white" />
+        <WaveDivider color="white" absolute />
       </HeroImage>
 
       <section className="mw7 center">

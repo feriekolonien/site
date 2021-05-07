@@ -18,7 +18,7 @@ const AboutPage = () => {
             {new Date().getFullYear() - 1890} år med feriekoloni
           </PageTitle>
         </HeroContent>
-        <WaveDivider color="white" />
+        <WaveDivider color="white" absolute />
       </HeroImage>
       <PageContent article>
         <Text>

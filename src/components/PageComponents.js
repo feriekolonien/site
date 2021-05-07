@@ -14,7 +14,7 @@ export const HeroImage = ({
   className = 'bg-black-40  relative',
   alt,
 }) => {
-  const height = '360px';
+  const height = '400px';
   return (
     <div style={{ height }} className="relative flex tc">
       <div

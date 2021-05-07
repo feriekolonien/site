@@ -19,7 +19,7 @@ const AlbumList = ({ data }) => {
         <HeroContent>
           <PageTitle>Bilder fra feriekolonien</PageTitle>
         </HeroContent>
-        <WaveDivider color="white" />
+        <WaveDivider color="white" absolute />
       </HeroImage>
       <section className="mw7 center">
         <article className="bt bb b--black-10 flex flex-wrap justify-between">
