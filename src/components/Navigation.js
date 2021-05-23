@@ -4,7 +4,8 @@ import Link from 'next/link';
 const NavLink = ({ children, href, color }) => {
   return (
     <Link href={href}>
-      <a className={`f5 fw6 hover-${color} no-underline ${color} dib-ns pv2`}>
+      <a
+        className={`f5 fw6 hover-${color} no-underline ${color} dib-ns tracked-tight dim`}>
         {children}
       </a>
     </Link>
@@ -34,7 +35,7 @@ const Navigation = ({ color = 'blue-dark' }) => {
           </a>
         </Link>
       </div>
-      <div className="pa3 flex justify-between w-100 w-60-ns w-40-l ph4-l">
+      <div className="pa3 flex justify-between w-100 w-60-ns w-40-l ph4-l items-center">
         <NavLink color={color} href="/om-oss">
           Om oss
         </NavLink>
