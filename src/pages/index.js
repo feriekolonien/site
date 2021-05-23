@@ -1,20 +1,29 @@
 import Image from 'next/image';
-
+import Link from 'next/link';
+import Banner from '../components/Banner';
+import CampDates from '../components/CampDates';
+import FAQ from '../components/FAQ';
+import Footer from '../components/Footer';
+import LandingPageVideo from '../components/LandingPageVideo';
+import Navigation from '../components/Navigation';
 import Page from '../components/Page';
 import WaveDivider from '../components/WaveDivider';
-import Footer from '../components/Footer';
-import Navigation from '../components/Navigation';
-import LandingPageVideo from '../components/LandingPageVideo';
-import FAQ from '../components/FAQ';
-
 import colors from '../styles/colors';
-import CampDates from '../components/CampDates';
-import { CTA } from '../components/CTA';
 
 function HomePage() {
+  const cancelledText = (
+    <>
+      Dessverre blir feriekolonien 2021 avlyst{' '}
+      <Link href="nyheter/avlyst-2021">
+        <a>les mer her</a>
+      </Link>
+      .
+    </>
+  );
   return (
     <Page style={{ backgroundColor: colors.primary }}>
       <Navigation />
+      <Banner>{cancelledText}</Banner>
       <div className="mt3 mt5-m mt4-l ph3 mw8 center flex flex-column-reverse flex-row-ns">
         <div className="w-100 tc mb4">
           <Image
@@ -46,14 +55,11 @@ function HomePage() {
               Trefoldighet Feriekoloni er Norges eldste aktive feriekoloni –
               eller sommerleir <span className="nowrap">om du vil</span>!
             </p>
-            <p>
-              I over 130 år har barn og unge vært på ferie hos oss. Kanskje du
-              også vil komme til sommeren?{' '}
-            </p>
+            <p>I over 130 år har barn og unge vært på ferie hos oss.</p>
           </div>
           <div className="flex flex-column">
             <CampDates />
-            <CTA subtext="Søknadsfrist 1.mai">Søk nå</CTA>
+            <span className="fw1 f5 mb4 lh-title db o-70">{cancelledText}</span>
           </div>
         </div>
       </div>

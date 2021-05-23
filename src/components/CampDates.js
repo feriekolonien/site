@@ -9,6 +9,9 @@ const CampDates = () => {
             li {
               line-height: 1.8;
             }
+            li {
+              text-decoration: line-through;
+            }
           `}</style>
           <li className="db">
             <span className="b">1. parti:</span> Fredag 25. juni - Lørdag 3.
