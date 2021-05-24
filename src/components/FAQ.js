@@ -66,12 +66,12 @@ const FAQ = () => {
           Blir det feriekoloni i 2021?
         </Question>
         <Text size="f4">
-          Ingen ønsker mer enn oss at det skal drives normal feriekoloni på
-          Filtvet, men slik anbefalingene FHI er kan vi ikke arrangere
-          feriekoloni i sommer. Vi vil følge med på utviklingen og se om vi får
-          mulighet til å arrangere andre alternativer som f.eks. &ldquo;åpne
-          dager&ldquo; i løpet av sommeren. Dette vil vi informere dere om
-          dersom det blir aktuelt.
+          Nei, dessverre. Ingen ønsker mer enn oss at det skal drives normal
+          feriekoloni på Filtvet, men slik anbefalingene fra FHI er kan vi ikke
+          arrangere feriekoloni i sommer. Vi vil følge med på utviklingen og se
+          om vi får mulighet til å arrangere andre alternativer som f.eks.
+          &ldquo;åpne dager&ldquo; i løpet av sommeren. Dette vil vi informere
+          dere om dersom det blir aktuelt.
         </Text>
       </FAQElement>
       <FAQElement>
