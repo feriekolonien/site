@@ -22,7 +22,7 @@ const AlbumList = ({ data }) => {
         <WaveDivider color="white" absolute />
       </HeroImage>
       <section className="mw7 center">
-        <article className="bt bb b--black-10 flex flex-wrap justify-between">
+        <article className="bt bb b--black-10 flex flex-wrap justify-between pb4">
           {data.albums.map(album => (
             <Link key={album.title} href={`/bilder/${album.title}`}>
               {/* eslint-disable-next-line */}

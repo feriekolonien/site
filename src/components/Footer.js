@@ -1,8 +1,6 @@
-const Footer = ({ bgColor = 'white', color = 'mid-gray' }) => {
+const Footer = ({ className = '' }) => {
   return (
-    <footer
-      style={{ backgroundColor: bgColor }}
-      className={`ph3 ph5-m ph6-l pt4 pb4 ${color}`}>
+    <footer className={`ph3 ph5-m ph6-l pt4 pb4 ${className}`}>
       <small className="f6 db tc">
         <span className="ttu">FILTVET FERIEKOLONI</span>{' '}
         {new Date().getFullYear()}

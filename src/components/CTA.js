@@ -1,11 +1,9 @@
-import colors from '../styles/colors';
-
 export const CTA = ({ children, subtext }) => {
   return (
     <div className="tc">
       <style jsx>{`
         a {
-          background-color: ${colors.peach};
+          background-color: var(--peach-3);
           font-weight: bold;
         }
       `}</style>
