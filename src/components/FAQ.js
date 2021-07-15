@@ -67,7 +67,7 @@ const FAQ = () => {
         </Question>
         <Text size="f4">
           Etter litt om og men, ble det klart i slutten av juni at vi får til
-          ett parti i sommer i uke 28-29. Ingen ønsker mer enn oss at det skal
+          ett parti i sommer i uke 28-29! Ingen ønsker mer enn oss at det skal
           drives normal feriekoloni på Filtvet. Etter dialog med Asker kommune
           bestemte vi oss derfor for at ett parti er bedre enn ingen!
         </Text>
