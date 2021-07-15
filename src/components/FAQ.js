@@ -66,12 +66,10 @@ const FAQ = () => {
           Blir det feriekoloni i 2021?
         </Question>
         <Text size="f4">
-          Nei, dessverre. Ingen ønsker mer enn oss at det skal drives normal
-          feriekoloni på Filtvet, men slik anbefalingene fra FHI er kan vi ikke
-          arrangere feriekoloni i sommer. Vi vil følge med på utviklingen og se
-          om vi får mulighet til å arrangere andre alternativer som f.eks.
-          &ldquo;åpne dager&ldquo; i løpet av sommeren. Dette vil vi informere
-          dere om dersom det blir aktuelt.
+          Etter litt om og men, ble det klart i slutten av juni at vi får til
+          ett parti i sommer i uke 28-29. Ingen ønsker mer enn oss at det skal
+          drives normal feriekoloni på Filtvet. Etter dialog med Asker kommune
+          bestemte vi oss derfor for at ett parti er bedre enn ingen!
         </Text>
       </FAQElement>
       <FAQElement>

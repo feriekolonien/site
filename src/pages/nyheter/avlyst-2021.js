@@ -3,19 +3,18 @@ import Navigation from '../../components/Navigation';
 import Page from '../../components/Page';
 import { Text } from '../../components/Text';
 import WaveDivider from '../../components/WaveDivider';
-import colors from '../../styles/colors';
 
 const CancelledPost = () => {
   return (
-    <Page style={{ backgroundColor: colors.primary }}>
+    <Page>
       <Navigation />
       <div
+        className="bg-blue-0"
         style={{
           margin: 0,
-          backgroundColor: colors.darkBlue,
         }}>
         <h1 className="f1 fw6 mv0 lh-title white tc pv6 ph3">
-          Feriekolonien 2021 er avlyst
+          Feriekolonien 2021 <span className="line-through">er avlyst</span>
         </h1>
         <WaveDivider color="white" />
       </div>
