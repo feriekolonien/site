@@ -9,37 +9,35 @@ import Page from '../../components/Page';
 import { HeroContent, HeroImage } from '../../components/PageComponents';
 import { PageTitle } from '../../components/PageTitle';
 import WaveDivider from '../../components/WaveDivider';
-import { sanityClient } from '../../lib/sanity';
+import { sanityClient } from '../../lib/sanity.server';
 
-const AlbumList = ({ data }) => {
-  return (
-    <Page title="Bilder">
-      <Navigation />
-      <HeroImage src="/static/img/IMG_5962.jpg">
-        <HeroContent>
-          <PageTitle>Bilder fra feriekolonien</PageTitle>
-        </HeroContent>
-        <WaveDivider color="white" absolute />
-      </HeroImage>
-      <section className="mw7 center">
-        <article className="bt bb b--black-10 flex flex-wrap justify-between pb4">
-          {data.albums.map(album => (
-            <Link key={album.title} href={`/bilder/${album.title}`}>
-              {/* eslint-disable-next-line */}
-              <a className="no-underline black dim w-50 pa3">
-                <div className="mb4 mb0-ns w-100">
-                  <h1 className="f3 fw1 mt0 lh-title w-100">{album.title}</h1>
-                  <SanityImage image={album.coverImage} />
-                </div>
-              </a>
-            </Link>
-          ))}
-        </article>
-      </section>
-      <Footer />
-    </Page>
-  );
-};
+const AlbumList = ({ data }) => (
+  <Page title="Bilder">
+    <Navigation />
+    <HeroImage src="/static/img/IMG_5962.jpg">
+      <HeroContent>
+        <PageTitle>Bilder fra feriekolonien</PageTitle>
+      </HeroContent>
+      <WaveDivider color="white" absolute />
+    </HeroImage>
+    <section className="mw7 center">
+      <article className="bt bb b--black-10 flex flex-wrap justify-between pb4">
+        {data.albums.map((album) => (
+          <Link key={album.title} href={`/bilder/${album.title}`}>
+            {/* eslint-disable-next-line */}
+            <a className="no-underline black dim w-50 pa3">
+              <div className="mb4 mb0-ns w-100">
+                <h1 className="f3 fw1 mt0 lh-title w-100">{album.title}</h1>
+                <SanityImage image={album.coverImage} />
+              </div>
+            </a>
+          </Link>
+        ))}
+      </article>
+    </section>
+    <Footer />
+  </Page>
+);
 
 export async function getStaticProps({ preview = false }) {
   try {

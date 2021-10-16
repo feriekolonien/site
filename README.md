@@ -15,9 +15,21 @@ cd web && yarn install
 
 This will clone the repo and install dependencies.
 
+Next, configure environment variables:
+
 ```sh
-yarn dev # this starts the NextJS with hot module reloading (HMR)
+cp dev-template.env .env
 ```
+
+This copies the template variables (Sanity configuration) to a new file called `.env`.
+
+After this, you should be able to start the local development server:
+
+```sh
+yarn dev
+```
+
+This starts the NextJS with hot module reloading (HMR)
 
 ### Built With
 

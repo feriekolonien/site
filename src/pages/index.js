@@ -23,12 +23,14 @@ function HomePage() {
           />
         </div>
         <div className="ml4-l tc-ns blue-0">
-          <style jsx>{`
-            p,
-            ul > li {
-              line-height: 1.5;
-            }
-          `}</style>
+          <style jsx>
+            {`
+              p,
+              ul > li {
+                line-height: 1.5;
+              }
+            `}
+          </style>
           <h1 className="mb0 lh-title f1-ns">
             Sommerferie på <span className="nowrap">Filtvet Feriekoloni</span>
           </h1>
