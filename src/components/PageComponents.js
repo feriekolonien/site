@@ -1,12 +1,10 @@
 import Image from 'next/image';
 
-export const PageLead = ({ children }) => {
-  return <div className="fw1 f4 white-80 mt3 mb4 lh-title">{children}</div>;
-};
+export const PageLead = ({ children }) => (
+  <div className="fw1 f4 white-80 mt3 mb4 lh-title">{children}</div>
+);
 
-export const HeroContent = ({ children }) => {
-  return <div className="">{children}</div>;
-};
+export const HeroContent = ({ children }) => <div className="">{children}</div>;
 
 export const HeroImage = ({
   children,
@@ -19,7 +17,8 @@ export const HeroImage = ({
     <div style={{ height }} className="relative flex tc">
       <div
         style={{ height, filter: 'blur(1px)' }}
-        className="absolute w-100 z--1">
+        className="absolute w-100 z--1"
+      >
         <Image
           quality="90"
           layout="fill"

@@ -27,14 +27,12 @@ export const Phone = ({ children, type, ...rest }) => {
   );
 };
 
-export const Office = ({ children }) => {
-  return (
-    <article className="flex-auto w-50">
-      <address className="fs-normal">{children}</address>
-    </article>
-  );
-};
+export const Office = ({ children }) => (
+  <article className="flex-auto w-50">
+    <address className="fs-normal">{children}</address>
+  </article>
+);
 
-export const AddressLine = ({ children }) => {
-  return <span className="f5 db black-70 lh-copy">{children}</span>;
-};
+export const AddressLine = ({ children }) => (
+  <span className="f5 db black-70 lh-copy">{children}</span>
+);
