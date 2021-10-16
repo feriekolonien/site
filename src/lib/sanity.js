@@ -1,30 +1,20 @@
-import { createClient, createImageUrlBuilder } from 'next-sanity';
+import { createImageUrlBuilder } from 'next-sanity';
+import { config } from './config';
 
-const config = {
-  projectId: process.env.SANITY_PROJECT_ID,
-  dataset: process.env.SANITY_DATASET,
-  useCdn: true, // `false` if you want to ensure fresh data
-};
-
-export const sanityClient = createClient(config);
-
-const urlBuilder = createImageUrlBuilder(config);
+const urlFor = source => createImageUrlBuilder(config).image(source);
 
 export function getImageSizes(img) {
   return {
     aspectRatio: img.asset.metadata.dimensions.aspectRatio,
     source: {
-      download: urlBuilder.image(img).url(),
-      fullscreen: urlBuilder
-        .image(img)
+      download: urlFor(img).url(),
+      fullscreen: urlFor(img)
         .width(1024)
         .url(),
-      regular: urlBuilder
-        .image(img)
+      regular: urlFor(img)
         .width(900)
         .url(),
-      thumbnail: urlBuilder
-        .image(img)
+      thumbnail: urlFor(img)
         .height(400)
         .url(),
     },

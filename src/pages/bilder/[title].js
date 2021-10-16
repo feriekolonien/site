@@ -10,7 +10,8 @@ import { HeroContent, HeroImage } from '../../components/PageComponents';
 import { PageTitle } from '../../components/PageTitle';
 import RenderInBrowser from '../../components/RenderInBrowser';
 import WaveDivider from '../../components/WaveDivider';
-import { getImageSizes, sanityClient } from '../../lib/sanity';
+import { sanityClient } from '../../lib/sanity.server';
+import { getImageSizes } from '../../lib/sanity';
 
 const AlbumPage = ({ data }) => {
   const imageRenderer = useCallback(({ photo, key }) => {
@@ -25,7 +26,7 @@ const AlbumPage = ({ data }) => {
     );
   }, []);
 
-  const images = data.album.images.map(getImageSizes);
+  const responsiveImages = data.album.images.map(getImageSizes);
   const albumTitle = data.album.title;
 
   const coverImage = getImageSizes(data.album.coverImage).source.fullscreen;
@@ -43,7 +44,7 @@ const AlbumPage = ({ data }) => {
         <RenderInBrowser>
           <Gallery
             renderImage={imageRenderer}
-            photos={images.map(img => ({
+            photos={responsiveImages.map(img => ({
               src: img.source.thumbnail,
               height: 1,
               width: img.aspectRatio,

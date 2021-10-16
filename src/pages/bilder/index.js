@@ -9,7 +9,7 @@ import Page from '../../components/Page';
 import { HeroContent, HeroImage } from '../../components/PageComponents';
 import { PageTitle } from '../../components/PageTitle';
 import WaveDivider from '../../components/WaveDivider';
-import { sanityClient } from '../../lib/sanity';
+import { sanityClient } from '../../lib/sanity.server';
 
 const AlbumList = ({ data }) => {
   return (
