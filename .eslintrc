@@ -2,7 +2,10 @@
   "env": {
     "browser": true
   },
-  "parser": "babel-eslint",
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "requireConfigFile": false
+  },
   "extends": ["@otovo/eslint-config-otovo/react-recommended"],
   "plugins": ["react-hooks"],
   "rules": {
