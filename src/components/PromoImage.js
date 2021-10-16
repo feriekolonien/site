@@ -1,5 +1,3 @@
-import Image from 'next/image';
-
 const shadowColor = 'rgba(13, 42, 78, 0.24)';
 
 const PromoImage = ({ ...rest }) => (
@@ -21,7 +19,7 @@ const PromoImage = ({ ...rest }) => (
         }
       `}
     </style>
-    <Image alt="Cover image" draggable="false" {...rest} />
+    <img alt="Cover" draggable="false" {...rest} />
   </>
 );
 
