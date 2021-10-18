@@ -13,7 +13,7 @@ function HomePage() {
       <Navigation />
       <div className="mt3 mt5-m mt4-l ph3 mw8 center flex flex-column-reverse flex-row-ns">
         <div className="w-100 tc mb4">
-          <Image
+          <img
             className="db-ns w5 w-auto-ns"
             src="/static/img/logo.png"
             width="500"

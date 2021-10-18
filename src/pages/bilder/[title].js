@@ -1,6 +1,5 @@
 import React, { useCallback } from 'react';
 import { groq } from 'next-sanity';
-import Image from 'next/image';
 import Gallery from 'react-photo-gallery';
 
 import Footer from '../../components/Footer';
@@ -12,11 +11,12 @@ import RenderInBrowser from '../../components/RenderInBrowser';
 import WaveDivider from '../../components/WaveDivider';
 import { sanityClient } from '../../lib/sanity.server';
 import { getImageSizes } from '../../lib/sanity';
+import LazyImage from '../../components/LazyImage';
 
 const AlbumPage = ({ data }) => {
   const imageRenderer = useCallback(
     ({ photo, key }) => (
-      <Image
+      <LazyImage
         className="gallery-image"
         key={key}
         src={photo.src}

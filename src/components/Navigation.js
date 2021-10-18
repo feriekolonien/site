@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Link from 'next/link';
 
 const NavLink = ({ children, href, color }) => (
@@ -34,7 +33,7 @@ const Navigation = ({ color = 'blue-dark' }) => (
               }
             `}
           </style>
-          <Image
+          <img
             width="164"
             height="40"
             src="/logo.png"
