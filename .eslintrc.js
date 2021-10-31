@@ -4,6 +4,7 @@ module.exports = {
     es2021: true,
   },
   extends: [
+    'next/core-web-vitals',
     'plugin:react/recommended',
     'airbnb',
     'plugin:prettier/recommended',
@@ -19,7 +20,10 @@ module.exports = {
   plugins: ['react', 'prettier'],
   rules: {
     'prettier/prettier': 'error',
-    'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
+    'react/jsx-filename-extension': [
+      1,
+      { extensions: ['.js', '.jsx', '.tsx'] },
+    ],
     'react/react-in-jsx-scope': 'off',
     'import/prefer-default-export': 'off',
     'react/prop-types': 'warn',
