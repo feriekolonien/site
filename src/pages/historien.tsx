@@ -11,7 +11,10 @@ import { Text } from '../components/Text';
 const Historie = () => (
   <Page title="Historie">
     <Navigation />
-    <HeroImage src="/static/img/historien.jpg">
+    <HeroImage
+      src="/static/img/historien.jpg"
+      alt="Historisk bilde i svart hvitt. Barn som er samlet rundt en leke."
+    >
       <HeroContent>
         <PageTitle>Historien</PageTitle>
       </HeroContent>

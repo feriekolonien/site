@@ -35,7 +35,7 @@ const AlbumPage = ({ data }) => {
   return (
     <Page title={`Album: ${albumTitle}`}>
       <Navigation />
-      <HeroImage src={coverImage}>
+      <HeroImage src={coverImage} alt="Hero image">
         <HeroContent>
           <PageTitle>{albumTitle}</PageTitle>
         </HeroContent>

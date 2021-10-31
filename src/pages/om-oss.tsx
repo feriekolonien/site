@@ -11,7 +11,7 @@ import WaveDivider from '../components/WaveDivider';
 const AboutPage = () => (
   <Page title="Om oss | 130 år med feriekoloni">
     <Navigation />
-    <HeroImage src="/static/img/IMG_6409.jpg">
+    <HeroImage src="/static/img/IMG_6409.jpg" alt="B">
       <HeroContent>
         <PageTitle>
           {new Date().getFullYear() - 1890} år med feriekoloni
@@ -19,7 +19,7 @@ const AboutPage = () => (
       </HeroContent>
       <WaveDivider color="white" absolute />
     </HeroImage>
-    <PageContent article>
+    <PageContent>
       <Text>
         På feriekolonien er det aktiviteter for både store og små, for tøffinger
         og for de som ikke vil være så tøffe. Her leker vi dagen lang. Kjører

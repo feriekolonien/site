@@ -12,8 +12,8 @@ const LandingPageVideo = () => {
         <YouTube
           videoId="UzQcTkygO8Q"
           opts={{
-            height: 225,
-            width: 400,
+            height: '225',
+            width: '400',
             playerVars: {
               autoplay: 1,
             },

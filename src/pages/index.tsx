@@ -18,7 +18,6 @@ function HomePage() {
             src="/static/img/logo.png"
             width="500"
             height="680"
-            priority
             alt="Kolomåke"
           />
         </div>

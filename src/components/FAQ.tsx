@@ -10,7 +10,7 @@ const Question = ({ children, title }) => {
   return (
     // eslint-disable-next-line jsx-a11y/click-events-have-key-events
     <summary
-      tabIndex="0"
+      tabIndex={0}
       role="button"
       data-splitbee-event={`Click: ${title}`}
       data-splitbee-event-type="FAQ Toggle"

@@ -16,7 +16,15 @@ export const AddressLink = ({ children, ...rest }) => (
   </a>
 );
 
-export const Phone = ({ children, type, ...rest }) => {
+export const Phone = ({
+  children,
+  type,
+  ...rest
+}: {
+  children: React.ReactNode;
+  type?: 'cell';
+  title: string;
+}) => {
   if (typeof children !== 'string') {
     throw new Error(`Only strings allowed as children. Got ${typeof children}`);
   }

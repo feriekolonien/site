@@ -14,7 +14,10 @@ import { sanityClient } from '../../lib/sanity.server';
 const AlbumList = ({ data }) => (
   <Page title="Bilder">
     <Navigation />
-    <HeroImage src="/static/img/IMG_5962.jpg">
+    <HeroImage
+      src="/static/img/IMG_5962.jpg"
+      alt="Innebandy-turnering på basketbanen. Solfylt dag med utsikt over havet."
+    >
       <HeroContent>
         <PageTitle>Bilder fra feriekolonien</PageTitle>
       </HeroContent>

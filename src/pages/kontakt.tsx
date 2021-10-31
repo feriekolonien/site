@@ -45,7 +45,11 @@ const ContactPage = () => (
           <AddressLine>St. Olavs Plass, 0130 Oslo</AddressLine>
 
           <div className="f5 fw6 pv3 black-70">
-            Tlf: <Phone title="Ring Elin">48111106</Phone> (Elin)
+            Tlf:{' '}
+            <Phone type="cell" title="Ring Elin">
+              48111106
+            </Phone>{' '}
+            (Elin)
           </div>
         </Office>
       </div>
@@ -56,7 +60,6 @@ const ContactPage = () => (
         height="400"
         frameBorder="0"
         style={{ border: 0 }}
-        allowFullScreen=""
       />
     </PageContent>
     <Footer />
