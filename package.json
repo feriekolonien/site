@@ -25,6 +25,7 @@
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^11.1.2",
+    "@sanity-codegen/types": "^1.0.0-alpha.11",
     "@types/node": "16.11.6",
     "@types/react": "17.0.33",
     "eslint": "^8.0.1",
@@ -37,6 +38,7 @@
     "eslint-plugin-react": "^7.26.1",
     "eslint-plugin-react-hooks": "^4.2.0",
     "prettier": "^2.4.1",
+    "sanity-codegen": "^0.9.6",
     "typescript": "4.4.4",
     "windicss-webpack-plugin": "^1.5.5"
   }
