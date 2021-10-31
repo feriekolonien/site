@@ -20,8 +20,6 @@ const AlbumList = ({
     albums: QueryResult;
   };
 }) => {
-  console.log(data.albums[0].coverImage);
-
   return (
     <Page title="Bilder">
       <Navigation />
