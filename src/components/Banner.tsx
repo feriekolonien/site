@@ -1,4 +1,4 @@
-const Banner = ({ children }) => (
+const Banner = ({ children }: { children: React.ReactNode }) => (
   <>
     <style jsx>
       {`

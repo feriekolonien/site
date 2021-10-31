@@ -13,7 +13,15 @@ import { sanityClient } from '../../lib/sanity.server';
 import { getImageSizes } from '../../lib/sanity';
 import LazyImage from '../../components/LazyImage';
 
-const AlbumPage = ({ data }) => {
+type SanityAlbum = Sanity.Schema.Album;
+
+const AlbumPage = ({
+  data,
+}: {
+  data: {
+    album: SanityAlbum;
+  };
+}) => {
   const imageRenderer = useCallback(
     ({ photo, key }) => (
       <LazyImage
@@ -27,26 +35,34 @@ const AlbumPage = ({ data }) => {
     [],
   );
 
+  if (!data.album?.images?.length) {
+    return null;
+  }
+
   const responsiveImages = data.album.images.map(getImageSizes);
   const albumTitle = data.album.title;
 
-  const coverImage = getImageSizes(data.album.coverImage).source.fullscreen;
+  const coverImage = data.album?.coverImage
+    ? getImageSizes(data.album?.coverImage).source.fullscreen
+    : null;
 
   return (
     <Page title={`Album: ${albumTitle}`}>
       <Navigation />
-      <HeroImage src={coverImage} alt="Hero image">
-        <HeroContent>
-          <PageTitle>{albumTitle}</PageTitle>
-        </HeroContent>
-        <WaveDivider color="white" />
-      </HeroImage>
+      {coverImage && (
+        <HeroImage src={coverImage} alt="Hero image">
+          <HeroContent>
+            <PageTitle>{albumTitle}</PageTitle>
+          </HeroContent>
+          <WaveDivider color="white" />
+        </HeroImage>
+      )}
       <div className="mw8 center min-vh-100">
         <RenderInBrowser>
           <Gallery
             renderImage={imageRenderer}
             photos={responsiveImages.map((img) => ({
-              src: img.source.thumbnail,
+              src: img.source.thumbnail || '',
               height: 1,
               width: img.aspectRatio,
             }))}
@@ -66,9 +82,17 @@ const albumQuery = groq`
       }
     `;
 
-export async function getStaticProps({ params, preview = false }) {
+export async function getStaticProps({
+  params,
+  preview = false,
+}: {
+  params: {
+    title: Pick<Sanity.Schema.Album, 'title'>;
+  };
+  preview: boolean;
+}) {
   try {
-    const album = await sanityClient.fetch(albumQuery, {
+    const album = await sanityClient.fetch<SanityAlbum>(albumQuery, {
       slug: params.title,
     });
     if (!album || !album?.images?.length) {
@@ -89,9 +113,11 @@ export async function getStaticProps({ params, preview = false }) {
   }
 }
 
+type SanityAlbumTitles = Array<Pick<Sanity.Schema.Album, 'title'>>;
+
 export async function getStaticPaths() {
   try {
-    const albums = await sanityClient.fetch(
+    const albums = await sanityClient.fetch<SanityAlbumTitles>(
       groq`*[_type == "album" && title != "Historie"].title`,
     );
     if (!albums || !albums?.length) {

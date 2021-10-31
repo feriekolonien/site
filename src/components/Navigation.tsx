@@ -1,6 +1,14 @@
 import Link from 'next/link';
 
-const NavLink = ({ children, href, color }) => (
+const NavLink = ({
+  children,
+  href,
+  color,
+}: {
+  children: React.ReactNode;
+  href: string;
+  color: string;
+}) => (
   <Link href={href}>
     {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
     <a

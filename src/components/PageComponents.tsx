@@ -1,16 +1,23 @@
 import Image from 'next/image';
 
-export const PageLead = ({ children }) => (
+export const PageLead = ({ children }: { children: React.ReactNode }) => (
   <div className="fw1 f4 white-80 mt3 mb4 lh-title">{children}</div>
 );
 
-export const HeroContent = ({ children }) => <div className="">{children}</div>;
+export const HeroContent = ({ children }: { children: React.ReactNode }) => (
+  <div className="">{children}</div>
+);
 
 export const HeroImage = ({
   children,
   src,
   className = 'bg-black-40  relative',
   alt,
+}: {
+  children: React.ReactNode;
+  src: string;
+  alt: string;
+  className?: string;
 }) => {
   const height = '400px';
   return (
