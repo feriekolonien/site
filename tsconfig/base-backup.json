@@ -1,7 +1,4 @@
 {
-  "$schema": "https://json.schemastore.org/tsconfig",
-  "display": "Next.js",
-  "extends": "./tsconfig/base.json",
   "compilerOptions": {
     "allowJs": true,
     "esModuleInterop": true,
@@ -11,12 +8,13 @@
     "jsx": "preserve",
     "lib": ["dom", "dom.iterable", "esnext"],
     "module": "esnext",
+    "moduleResolution": "node",
     "noEmit": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,
     "target": "es5"
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["../next-env.d.ts", "../**/*.ts", "../**/*.tsx"],
   "exclude": ["node_modules"]
 }

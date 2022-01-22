@@ -11,7 +11,8 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "eslint": "eslint . --cache"
+    "eslint": "eslint . --cache",
+    "ts": "tsc --project ./tsconfig.json"
   },
   "dependencies": {
     "next": "^12.0.2",
