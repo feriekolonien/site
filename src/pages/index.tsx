@@ -12,7 +12,7 @@ function HomePage() {
     <Page>
       <Navigation />
       <div className="mt3 mt5-m mt4-l ph3 mw8 center flex flex-column-reverse flex-row-ns">
-        <div className="w-100 tc mb4">
+        <div className="w-100 mb4">
           <img
             className="db-ns w5 w-auto-ns"
             src="/static/img/logo.png"
@@ -21,7 +21,7 @@ function HomePage() {
             alt="Kolomåke"
           />
         </div>
-        <div className="ml4-l tc-ns blue-0">
+        <div className="ml4-l blue-0">
           <style jsx>
             {`
               p,

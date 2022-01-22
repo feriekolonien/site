@@ -1,9 +1,15 @@
-const CampDates = () => (
-  <div className="order-2 order-0-ns mb3">
-    <h2 className="mv0 f3">Datoer for 2021</h2>
+const dates = [
+  { name: '🔆 1. parti', from: 'tirsdag 21. juni', to: ' fredag 1. juli' },
+  { name: '🦀 2. parti', from: 'fredag 8. juli', to: ' mandag 18. juli' },
+  { name: '🛶 3. parti', from: 'mandag 25. juli', to: ' torsdag 4. august' },
+];
 
-    <div className="flex justify-center-ns tl">
-      <ul className="pl0 mt3">
+const CampDates = () => (
+  <div className="order-2 order-0-ns mb3 tl">
+    <h2 className="mv0 f3">Datoer for 2022</h2>
+
+    <div className="">
+      <ul className="pl0 mt3 list">
         <style jsx>
           {`
             li {
@@ -14,27 +20,13 @@ const CampDates = () => (
             }
           `}
         </style>
-        <li className="db">
-          <span className="cancelled">
-            <span className="b">1. parti:</span> Fredag 25. juni - Lørdag 3.
-            juli
-          </span>{' '}
-          *
-        </li>
-        <li className="db">
-          <span className="cancelled">
-            <span className="b">2. parti:</span> Fredag 9. juli - Lørdag 17.
-            juli
-          </span>{' '}
-          *
-        </li>
-        <li className="db">
-          <span className="b">3. parti:</span> Torsdag 15. juli - Fredag 23.
-          juli
-        </li>
-        <li className="db">
-          <small>* Kansellert pga. COVID-19</small>
-        </li>
+
+        {dates.map((el) => (
+          <li key={el.name}>
+            <span className="fw8 tracked-tight">{el.name}</span>: {el.from} -{' '}
+            {el.to}
+          </li>
+        ))}
       </ul>
     </div>
   </div>
