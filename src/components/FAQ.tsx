@@ -1,7 +1,13 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { Text } from './Text';
 
-const Question = ({ children, title }) => {
+const Question = ({
+  children,
+  title,
+}: {
+  children: React.ReactNode;
+  title: string;
+}) => {
   const [isOpen, setIsOpen] = useState(false);
   function toggleState() {
     setIsOpen((prevState) => !prevState);
@@ -10,7 +16,7 @@ const Question = ({ children, title }) => {
   return (
     // eslint-disable-next-line jsx-a11y/click-events-have-key-events
     <summary
-      tabIndex="0"
+      tabIndex={0}
       role="button"
       data-splitbee-event={`Click: ${title}`}
       data-splitbee-event-type="FAQ Toggle"
@@ -58,7 +64,7 @@ const Question = ({ children, title }) => {
   );
 };
 
-const FAQElement = ({ children }) => (
+const FAQElement = ({ children }: { children: React.ReactNode }) => (
   <details className="fw3 mb3 lh-copy">{children}</details>
 );
 

@@ -1,4 +1,12 @@
-export const CTA = ({ children, subtext }) => (
+import React from 'react';
+
+export const CTA = ({
+  children,
+  subtext,
+}: {
+  children: React.ReactNode;
+  subtext?: React.ReactNode;
+}) => (
   <div className="tc">
     <style jsx>
       {`

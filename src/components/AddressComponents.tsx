@@ -1,4 +1,4 @@
-function formatNumber(number, type) {
+function formatNumber(number: string, type?: 'cell') {
   if (type === 'cell') {
     return [number.slice(0, 3), number.slice(3, 5), number.slice(5)].join(' ');
   }
@@ -10,16 +10,28 @@ function formatNumber(number, type) {
   ].join(' ');
 }
 
-export const AddressLink = ({ children, ...rest }) => (
+export const AddressLink = ({
+  children,
+  href: string,
+  ...rest
+}: {
+  children: React.ReactNode;
+  href: string;
+}) => (
   <a className="f5 link dim black-70" {...rest}>
     {children}
   </a>
 );
 
-export const Phone = ({ children, type, ...rest }) => {
-  if (typeof children !== 'string') {
-    throw new Error(`Only strings allowed as children. Got ${typeof children}`);
-  }
+export const Phone = ({
+  children,
+  type,
+  ...rest
+}: {
+  children: string;
+  type?: 'cell';
+  title: string;
+}) => {
   return (
     <AddressLink href={`tel:${children}`} {...rest}>
       {formatNumber(children, type)}
@@ -27,12 +39,12 @@ export const Phone = ({ children, type, ...rest }) => {
   );
 };
 
-export const Office = ({ children }) => (
+export const Office = ({ children }: { children: React.ReactNode }) => (
   <article className="flex-auto w-50">
     <address className="fs-normal">{children}</address>
   </article>
 );
 
-export const AddressLine = ({ children }) => (
+export const AddressLine = ({ children }: { children: React.ReactNode }) => (
   <span className="f5 db black-70 lh-copy">{children}</span>
 );

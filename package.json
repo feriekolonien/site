@@ -11,10 +11,11 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "eslint": "eslint . --cache"
+    "eslint": "eslint . --cache",
+    "ts": "tsc --project ./tsconfig.json"
   },
   "dependencies": {
-    "next": "^11.1.2",
+    "next": "^12.0.2",
     "next-sanity": "^0.4.0",
     "preact": "^10.5.15",
     "react": "^17.0.2",
@@ -25,14 +26,21 @@
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^11.1.2",
+    "@sanity-codegen/types": "^1.0.0-alpha.11",
+    "@types/node": "16.11.6",
+    "@types/react": "17.0.33",
     "eslint": "^8.0.1",
     "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-next": "12.0.2",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.25.2",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.26.1",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "prettier": "^2.4.1"
+    "prettier": "^2.4.1",
+    "sanity-codegen": "^0.9.6",
+    "typescript": "4.4.4",
+    "windicss-webpack-plugin": "^1.5.5"
   }
 }

@@ -4,7 +4,13 @@ import Footer from './Footer';
 import Navigation from './Navigation';
 import Page from './Page';
 
-const ErrorPage = ({ title, children }) => (
+const ErrorPage = ({
+  title,
+  children,
+}: {
+  children: React.ReactNode;
+  title: string;
+}) => (
   <Page>
     <Navigation />
     <div className="flex justify-center items-center pv6 pv7-ns">

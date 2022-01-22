@@ -1,4 +1,10 @@
-const WaveDivider = ({ color = 'white', absolute }) => (
+const WaveDivider = ({
+  color = 'white',
+  absolute,
+}: {
+  color: string;
+  absolute?: boolean;
+}) => (
   <>
     <style jsx>
       {`
@@ -11,7 +17,7 @@ const WaveDivider = ({ color = 'white', absolute }) => (
     </style>
     <svg
       viewBox="0 0 1367 120"
-      className={absolute && 'absolute bottom-0'}
+      className={absolute ? 'absolute bottom-0' : ''}
       xmlns="http://www.w3.org/2000/svg"
     >
       <path

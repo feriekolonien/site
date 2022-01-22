@@ -1,6 +1,14 @@
 import Link from 'next/link';
 
-const NavLink = ({ children, href, color }) => (
+const NavLink = ({
+  children,
+  href,
+  color,
+}: {
+  children: React.ReactNode;
+  href: string;
+  color: string;
+}) => (
   <Link href={href}>
     {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
     <a
@@ -23,7 +31,7 @@ const Navigation = ({ color = 'blue-dark' }) => (
     <div className="pa3 mr-auto-ns">
       <Link href="/">
         {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-        <a className="dib grow-large border-box">
+        <a className="dib border-box">
           <style jsx>
             {`
               @media screen and (min-width: 30em) {

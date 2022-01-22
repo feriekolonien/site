@@ -4,6 +4,10 @@ const Page = ({
   children,
   className = '',
   title = 'Trefoldighet Feriekoloni',
+}: {
+  children: React.ReactNode;
+  className?: string;
+  title?: string;
 }) => {
   const description =
     'Trefoldighet Feriekoloni på Filtvet er Norges eldste aktive feriekoloni! I 130 år har barn og unge vært på ferie hos oss. Bli med neste sommer!';
