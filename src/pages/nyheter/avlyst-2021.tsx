@@ -7,21 +7,14 @@ import WaveDivider from '../../components/WaveDivider';
 const CancelledPost = () => (
   <Page>
     <Navigation />
-    <div
-      className="bg-blue-0"
-      style={{
-        margin: 0,
-      }}
-    >
-      <h1 className="f1 fw6 mv0 lh-title white tc pv6 ph3">
-        Feriekolonien 2021 <span className="line-through">er avlyst</span>
-      </h1>
-      <WaveDivider color="white" />
-    </div>
 
-    <section className="mw7 center ph3">
+    <article className="prose md:prose-lg lg:prose-xl mx-auto mt-4 sm:mt-24 mb-10">
+      <h1 className="font-bold text-4xl sm:text-5xl lg:text-5xl mb-8">
+        Feriekolonien 2021 er avlyst
+      </h1>
       <span>
-        Publisert: <time dateTime="2021-05-23">23. Mai 2021</time>
+        <strong>Publisert:</strong>{' '}
+        <time dateTime="2021-05-23">23. Mai 2021</time>
       </span>
       <Text>
         Kjære barn, foreldre og øvrige feriekolonivenner. Denne meldingen trodde
@@ -42,7 +35,7 @@ const CancelledPost = () => (
         arrangere andre alternativer som f.eks. &ldquo;åpne dager&ldquo; i løpet
         av sommeren. Dette vil vi informere dere om dersom det blir aktuelt.
       </Text>
-    </section>
+    </article>
     <Footer />
   </Page>
 );

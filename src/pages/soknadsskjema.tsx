@@ -6,12 +6,14 @@ import ApplicationForm from '../components/ApplicationForm';
 function ApplicationPage() {
   return (
     <Page title="Søknadsskjema">
-      <div className="flex flex-column vh-100">
-        <Navigation color="black" />
-        <div className="flex-auto flex flex-column">
-          <ApplicationForm />
+      <div className="h-screen flex flex-col">
+        <div className="w-full">
+          <Navigation />
         </div>
-        <Footer className="bg-blue-4 white" />
+        <div className="flex-auto flex flex-col -mx-4">
+          <ApplicationForm />
+          <Footer />
+        </div>
       </div>
     </Page>
   );

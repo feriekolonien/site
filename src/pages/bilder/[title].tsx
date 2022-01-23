@@ -1,14 +1,13 @@
 import React, { useCallback } from 'react';
 import { groq } from 'next-sanity';
+import Link from 'next/link';
+import { RiArrowLeftSLine } from 'react-icons/ri';
 import Gallery from 'react-photo-gallery';
 
 import Footer from '../../components/Footer';
 import Navigation from '../../components/Navigation';
 import Page from '../../components/Page';
-import { HeroContent, HeroImage } from '../../components/PageComponents';
-import { PageTitle } from '../../components/PageTitle';
 import RenderInBrowser from '../../components/RenderInBrowser';
-import WaveDivider from '../../components/WaveDivider';
 import { sanityClient } from '../../lib/sanity.server';
 import { getImageSizes } from '../../lib/sanity';
 import LazyImage from '../../components/LazyImage';
@@ -41,23 +40,26 @@ const AlbumPage = ({
 
   const responsiveImages = data.album.images.map(getImageSizes);
   const albumTitle = data.album.title;
-
-  const coverImage = data.album?.coverImage
-    ? getImageSizes(data.album?.coverImage).source.fullscreen
-    : null;
-
+  const goBack = (
+    <Link href="/bilder">
+      <a>
+        <p className="hover:text-slate-500">
+          <RiArrowLeftSLine className="inline-block align-middle" /> Tilbake til
+          oversikt
+        </p>
+      </a>
+    </Link>
+  );
   return (
     <Page title={`Album: ${albumTitle}`}>
       <Navigation />
-      {coverImage && (
-        <HeroImage src={coverImage} alt="Hero image">
-          <HeroContent>
-            <PageTitle>{albumTitle}</PageTitle>
-          </HeroContent>
-          <WaveDivider color="white" />
-        </HeroImage>
-      )}
-      <div className="mw8 center min-vh-100">
+      <section className="max-w-4xl mx-auto pt-4 pb-10 sm:pt-20 px-4 sm:px-6 md:px-8">
+        <div className="mb-6 sm:mb-12 grid grid-cols-3 items-center">
+          {goBack}
+          <h1 className="font-extrabold text-4xl sm:text-5xl lg:text-6xl text-center">
+            {albumTitle}
+          </h1>
+        </div>
         <RenderInBrowser>
           <Gallery
             renderImage={imageRenderer}
@@ -68,7 +70,8 @@ const AlbumPage = ({
             }))}
           />
         </RenderInBrowser>
-      </div>
+        {goBack}
+      </section>
       <Footer />
     </Page>
   );

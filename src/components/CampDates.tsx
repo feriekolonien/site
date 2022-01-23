@@ -1,42 +1,33 @@
-const CampDates = () => (
-  <div className="order-2 order-0-ns mb3">
-    <h2 className="mv0 f3">Datoer for 2021</h2>
+import Card from './Card';
 
-    <div className="flex justify-center-ns tl">
-      <ul className="pl0 mt3">
-        <style jsx>
-          {`
-            li {
-              line-height: 1.8;
-            }
-            .cancelled {
-              text-decoration: line-through;
-            }
-          `}
-        </style>
-        <li className="db">
-          <span className="cancelled">
-            <span className="b">1. parti:</span> Fredag 25. juni - Lørdag 3.
-            juli
-          </span>{' '}
-          *
-        </li>
-        <li className="db">
-          <span className="cancelled">
-            <span className="b">2. parti:</span> Fredag 9. juli - Lørdag 17.
-            juli
-          </span>{' '}
-          *
-        </li>
-        <li className="db">
-          <span className="b">3. parti:</span> Torsdag 15. juli - Fredag 23.
-          juli
-        </li>
-        <li className="db">
-          <small>* Kansellert pga. COVID-19</small>
-        </li>
+const dates = [
+  { emoji: '🦀', name: '1. parti', from: '21. juni', to: '1. juli' },
+  { emoji: '☀️', name: '2. parti', from: '8. juli', to: '18. juli' },
+  { emoji: '🐚', name: '3. parti', from: '25. juli', to: '4. august' },
+  // { name: '🔆 1. parti', from: 'tirsdag 21. juni', to: ' fredag 1. juli' },
+  // { name: '🦀 2. parti', from: 'fredag 8. juli', to: ' mandag 18. juli' },
+  // { name: ' 3. parti', from: 'mandag 25. juli', to: ' torsdag 4. august' },
+];
+
+const CampDates = () => (
+  <div className="relative group mb-11 max-w-sm">
+    <Card className="absolute inset-0 rotate-[-8deg] group-hover:-rotate-3 opacity-70 transition-all ease-in-out duration-300 mx-auto md:ml-0" />
+    <Card className="relative shadow-xl mx-auto md:ml-0">
+      <h2 className="text-white font-bold text-3xl mb-4">Datoer for 2022</h2>
+
+      <ul className="text-base md:text-xl text-white">
+        {dates.map((el) => (
+          <li key={el.name}>
+            <p className="flex">
+              <span className="text-3xl mr-4">{el.emoji}</span>
+              <span className="font-semibold tracking-tight">
+                {el.name}
+              </span>: {el.from} - {el.to}
+            </p>
+          </li>
+        ))}
       </ul>
-    </div>
+    </Card>
   </div>
 );
 

@@ -1,57 +1,52 @@
 import Page from '../components/Page';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { Text } from '../components/Text';
-import { PageTitle } from '../components/PageTitle';
-import { PageContent } from '../components/PageContent';
-import {
-  AddressLink,
-  Phone,
-  Office,
-  AddressLine,
-} from '../components/AddressComponents';
+import { AddressLink, Phone } from '../components/AddressComponents';
 
 const ContactPage = () => (
   <Page title="Kontaktinfo">
-    <Navigation color="black" />
-    <PageContent>
-      <PageTitle color="black">Kontaktinfo</PageTitle>
-      <Text>
-        Vi er stort sett på feriekoloien hele sommeren, resten av året finner du
-        oss i Oslo.
-      </Text>
+    <Navigation />
+    <div className="max-w-4xl mx-auto pt-20 pb-20 sm:pt-24 px-4 sm:px-6 md:px-8">
+      <h1 className="font-extrabold text-4xl sm:text-5xl lg:text-6xl mb-5">
+        Kontaktinfo
+      </h1>
+      <p className="text-lg mb-5">
+        Vi er stort sett på feriekolonien hele sommeren, resten av året finner
+        du oss i Oslo.
+      </p>
 
-      <div className="flex mb5">
-        <Office>
-          <b className="f5 f4-l fw6 dib mb3 mt4">Filtvet Feriekoloni</b>
-          <AddressLine>Trefoldighet Feriekoloni Stranda 16</AddressLine>
-          <AddressLine>Postboks 3, 3480 Filtvet</AddressLine>
-
-          <div className="f5 fw6 pv3 black-70">
+      <div className="grid grid-cols-1 gap-8 pt-8 mb-11 sm:grid-cols-2">
+        <div className="space-y-2">
+          <h3 className="font-bold text-2xl">Filtvet Feriekoloni</h3>
+          <p>Trefoldighet Feriekoloni Stranda 16</p>
+          <p>Postboks 3, 3480 Filtvet</p>
+          <p>
             Tlf: <Phone title="Ring feriekoloniens fasttelefon">32796542</Phone>{' '}
-            <span className="fw4">|</span>{' '}
+            <span className="">|</span>{' '}
             <Phone title="Ring feriekoloniens andre fasttelefon">
               32796270
             </Phone>
-          </div>
-          <AddressLink href="mailTo:feriekolonien@feriekolonien.no">
-            feriekolonien@feriekolonien.no
-          </AddressLink>
-        </Office>
+          </p>
+          <p>
+            <AddressLink href="mailTo:feriekolonien@feriekolonien.no">
+              feriekolonien@feriekolonien.no
+            </AddressLink>
+          </p>
+        </div>
 
-        <Office>
-          <b className="f5 f4-l fw6 dib mb3 mt4">Oslo</b>
-          <AddressLine>Trefoldighet Feriekoloni Postboks 6929</AddressLine>
-          <AddressLine>St. Olavs Plass, 0130 Oslo</AddressLine>
+        <div className="space-y-2">
+          <h3 className="font-bold text-2xl">Oslo</h3>
+          <p>Trefoldighet Feriekoloni Postboks 6929</p>
+          <p>St. Olavs Plass, 0130 Oslo</p>
 
-          <div className="f5 fw6 pv3 black-70">
+          <p>
             Tlf:{' '}
             <Phone type="cell" title="Ring Elin">
               48111106
             </Phone>{' '}
             (Elin)
-          </div>
-        </Office>
+          </p>
+        </div>
       </div>
       <iframe
         title="Påmeldingsskjema"
@@ -59,9 +54,10 @@ const ContactPage = () => (
         width="100%"
         height="400"
         frameBorder="0"
+        className="rounded-xl"
         style={{ border: 0 }}
       />
-    </PageContent>
+    </div>
     <Footer />
   </Page>
 );

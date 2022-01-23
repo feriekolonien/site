@@ -3,13 +3,11 @@ import Link from 'next/link';
 import { groq } from 'next-sanity';
 
 import Footer from '../../components/Footer';
-import SanityImage from '../../components/SanityImage';
 import Navigation from '../../components/Navigation';
 import Page from '../../components/Page';
-import { HeroContent, HeroImage } from '../../components/PageComponents';
-import { PageTitle } from '../../components/PageTitle';
-import WaveDivider from '../../components/WaveDivider';
 import { sanityClient } from '../../lib/sanity.server';
+import { getImageSizes } from '../../lib/sanity';
+import { RiInstagramLine } from 'react-icons/ri';
 
 type QueryResult = Array<Pick<Sanity.Schema.Album, 'title' | 'coverImage'>>;
 
@@ -23,29 +21,49 @@ const AlbumList = ({
   return (
     <Page title="Bilder">
       <Navigation />
-      <HeroImage
-        src="/static/img/IMG_5962.jpg"
-        alt="Innebandy-turnering på basketbanen. Solfylt dag med utsikt over havet."
-      >
-        <HeroContent>
-          <PageTitle>Bilder fra feriekolonien</PageTitle>
-        </HeroContent>
-        <WaveDivider color="white" absolute />
-      </HeroImage>
-      <section className="mw7 center">
-        <article className="bt bb b--black-10 flex flex-wrap justify-between pb4">
+      <section className="max-w-4xl mx-auto mt-4 sm:mt-24 mb-10 px-4 sm:px-6 md:px-8">
+        <h1 className="font-bold text-4xl sm:text-5xl lg:text-5xl mb-8">
+          Bilder fra tidligere år
+        </h1>
+        <p className="mb-6 sm:mb-12 text-lg">
+          På slutten av hver sommer legger vi ut bilder fra alle partiene vi har
+          hatt her. Gjennom sommerferien legger vi som regel ut bilder på{' '}
+          <a
+            target="_blank"
+            className="text-blue-900 underline font-semibold"
+            href="https://www.instagram.com/feriekolonien/?utm_source=feriekolonien.no&utm_campaign=bilder"
+          >
+            Instagram <RiInstagramLine className="inline-block" />
+          </a>
+          .
+        </p>
+        <ul
+          role="list"
+          className="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-2 xl:gap-x-8"
+        >
           {data.albums.map((album) => (
-            <Link key={album.title} href={`/bilder/${album.title}`}>
-              {/* eslint-disable-next-line */}
-              <a className="no-underline black dim w-50 pa3">
-                <div className="mb4 mb0-ns w-100">
-                  <h1 className="f3 fw1 mt0 lh-title w-100">{album.title}</h1>
-                  {album.coverImage && <SanityImage image={album.coverImage} />}
-                </div>
-              </a>
-            </Link>
+            <li key={album.title} className="relative">
+              <Link key={album.title} href={`/bilder/${album.title}`}>
+                <a className="">
+                  {album.coverImage && (
+                    <div className="group block w-full aspect-w-10 aspect-h-7 rounded-lg bg-gray-100 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-offset-gray-100 focus-within:ring-indigo-500 overflow-hidden">
+                      <img
+                        width="400px"
+                        height="280px"
+                        src={getImageSizes(album.coverImage).source.regular}
+                        alt={`Albumlenke for ${album.title}`}
+                        className="object-cover pointer-events-none group-hover:opacity-75"
+                      />
+                    </div>
+                  )}
+                  <p className="mt-2 block text-xl font-semibold text-gray-900 truncate pointer-events-none">
+                    {album.title}
+                  </p>
+                </a>
+              </Link>
+            </li>
           ))}
-        </article>
+        </ul>
       </section>
       <Footer />
     </Page>

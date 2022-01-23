@@ -1,4 +1,6 @@
-import Image from 'next/image';
+import Link from 'next/link';
+import Bleed from '../components/Bleed';
+import { ButtonLink } from '../components/Button';
 import CampDates from '../components/CampDates';
 import FAQ from '../components/FAQ';
 import Footer from '../components/Footer';
@@ -11,53 +13,68 @@ function HomePage() {
   return (
     <Page>
       <Navigation />
-      <div className="mt3 mt5-m mt4-l ph3 mw8 center flex flex-column-reverse flex-row-ns">
-        <div className="w-100 tc mb4">
+      <div className="grid grid-cols-1 md:grid-cols-2 max-w-6xl mx-auto gap-4 pt-8 mb-14">
+        <div className="p-5 order-2 md:order-1">
           <img
-            className="db-ns w5 w-auto-ns"
+            className="mx-auto max-w-[200px] md:max-w-xs"
             src="/static/img/logo.png"
-            width="500"
-            height="680"
             alt="Kolomåke"
           />
         </div>
-        <div className="ml4-l tc-ns blue-0">
-          <style jsx>
-            {`
-              p,
-              ul > li {
-                line-height: 1.5;
-              }
-            `}
-          </style>
-          <h1 className="mb0 lh-title f1-ns">
+        <div className="p-5 md:pl-0 order-1 md:order-2">
+          <h1 className="text-4xl font-semibold uppercase mb-6">
             Sommerferie på <span className="nowrap">Filtvet Feriekoloni</span>
           </h1>
-          <div className="fw1 f4 white-80 mt3 mb4 lh-title blue-0">
-            <p>
+          <div className="text-lg mb-14 ">
+            <p className="mb-4">
               Trefoldighet Feriekoloni er Norges eldste aktive feriekoloni –
-              eller sommerleir <span className="nowrap">om du vil</span>!
+              eller sommerleir om du vil!
             </p>
-            <p>I over 130 år har barn og unge vært på ferie hos oss.</p>
+            <p>
+              I over 130 år har barn og unge vært på ferie hos oss. Kanskje du
+              også vil komme til sommeren?
+            </p>
           </div>
-          <div className="flex flex-column">
-            <CampDates />
+          <CampDates />
+          <div className="max-w-sm text-center md:text-right">
+            <p className="inline-block mr-4 mb-3">Søknadsfrist 1. april!</p>
+            <ButtonLink href="/soknadsskjema" className="text-xl">
+              Søk nå
+            </ButtonLink>
           </div>
         </div>
       </div>
-      <WaveDivider color="var(--blue-3)" />
-      <div className="pt4 pb4 f3 white bg-blue-3">
-        <div className="mt4 mt5-m mt4-l ph3 mw8 center flex flex-column-reverse flex-row-ns">
-          <div className="w-100 w-60-ns">
-            <h3 className="f2 mt0">Ofte stilte spørsmål</h3>
+      <Bleed className="relative pt-20 md:pt-40 bg-gradient-to-t from-[#2C72AC] to-[#46B3D9]">
+        <WaveDivider />
+        <div
+          className={[
+            'max-w-6xl mx-auto p-3 md:p-0',
+            // Grid stuff
+            'grid grid-rows-2 md:grid-rows-none md:grid-cols-5 gap-8',
+          ].join(' ')}
+        >
+          <div className="md:col-span-3 md:ml-10">
+            <h2 className="text-white font-bold text-2xl md:text-3xl mb-4">
+              Ofte stilte spørsmål
+            </h2>
             <FAQ />
           </div>
-          <div className="w-100 w-40-ns mb3-ns ml3-ns">
-            <LandingPageVideo />
+          <div className="md:col-span-2 md:mr-10">
+            <div className="max-w-sm">
+              <LandingPageVideo />
+              <p className="mt-3 text-center text-white text-base lg:text-lg">
+                <Link href="/bilder">
+                  <a>
+                    Se flere sommerminner fra{' '}
+                    <span className="whitespace-nowrap">Filtvet →</span>
+                  </a>
+                </Link>
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-      <Footer className="bg-blue-3 white" />
+        <Footer className="mt-20 md:mt-44" showSand={true} />
+      </Bleed>
     </Page>
   );
 }
