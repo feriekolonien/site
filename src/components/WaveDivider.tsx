@@ -1,20 +1,11 @@
-{
-  /* <style jsx>
-      {`
-        svg {
-          margin-bottom: -6px;
-          margin-left: -10px;
-          margin-top: auto;
-        }
-      `}
-    </style> */
-}
+type WaveDividerProps = {};
 
-const WaveDivider = ({ absolute }: { color?: string; absolute?: boolean }) => (
+const WaveDivider = ({}: WaveDividerProps) => (
   <svg
     viewBox="0 0 1367 120"
-    className="text-gray-800 rotate-180 -mx-4"
+    className="text-white rotate-180 absolute inset-0 -top-1 h-10 md:h-20 w-full"
     xmlns="http://www.w3.org/2000/svg"
+    preserveAspectRatio="none"
   >
     <path
       fill="currentColor"
