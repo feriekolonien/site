@@ -42,10 +42,10 @@ class MyDocument extends Document {
             content="https://feriekolonien.no/static/img/social-card.jpg"
           />
 
-          <link
+          {/* <link
             rel="stylesheet"
             href="https://unpkg.com/tachyons/css/tachyons.min.css"
-          />
+          /> */}
           <script async data-api="/_hive" src="/bee.js" />
         </Head>
         <body>
