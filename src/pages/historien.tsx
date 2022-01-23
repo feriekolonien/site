@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 const Historie = () => (
   <Page title="Historie">
     <Navigation />
-    <article className="prose max-w-prose mx-auto max-w-8xl px-4 sm:px-6 md:px-8">
+    <article className="prose max-w-prose mx-auto max-w-8xl p-4 sm:px-6 md:px-8 mb-12">
       <img
         src="/static/img/historien.jpg"
         alt="Historisk bilde i svart hvitt. Barn som er samlet rundt en leke."
