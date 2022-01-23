@@ -81,21 +81,19 @@ const FAQ = () => (
     <FAQElement question="Hva skal man ha med seg?">
       <Answer>
         Feriekolonien har mye fine og rene klær i alle størrelser som barna
-        låner når de er her ute, så mye tøy behøver du ikke. Det man MÅ ta med
-        seg er:
+        låner når de er her ute, så mye tøy behøver du ikke. Det man <em>må</em>{' '}
+        ta med seg er:
       </Answer>
-      <Answer>
-        <ul className="list-disc ml-6">
-          <li>Regntøy/gummistøvler</li>
-          <li>Joggesko</li>
-          <li>
-            Toalettsaker (tannbørste, tannkrem, såpe, shampo, kam/børste,
-            solkrem med solfaktor)
-          </li>
-          <li>Kosedyr hvis man vil</li>
-          <li>Litt lommepenger til kiosken som er åpen to ganger i uka</li>
-        </ul>
-      </Answer>
+      <ul className="list-disc ml-6 text-base md:text-lg">
+        <li>Regntøy/gummistøvler</li>
+        <li>Joggesko</li>
+        <li>
+          Toalettsaker (tannbørste, tannkrem, såpe, shampo, kam/børste, solkrem
+          med solfaktor)
+        </li>
+        <li>Kosedyr hvis man vil</li>
+        <li>Litt lommepenger til kiosken som er åpen to ganger i uka</li>
+      </ul>
       <Answer>
         Ønsker du likevel å ta med noe eget tøy, er det viktig at de er godt
         merket med navn, og at man passer på tingene sine. Mobiltelefon ønsker
