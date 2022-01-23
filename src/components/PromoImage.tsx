@@ -10,10 +10,7 @@ const PromoImage = ({ className, src }: PromoImageProps) => (
     src={src}
     alt="Cover"
     draggable="false"
-    className={[
-      'shadow-2xl active:shadow-sm hover:shadow-sm transition-shadow ring-8 rounded-lg ring-white',
-      className,
-    ].join(' ')}
+    className={['shadow-2xl ring-8 rounded-lg ring-white', className].join(' ')}
   />
 );
 
