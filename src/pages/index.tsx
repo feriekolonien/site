@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Button from '../components/Button';
 import CampDates from '../components/CampDates';
 import FAQ from '../components/FAQ';
 import Footer from '../components/Footer';
@@ -9,43 +10,37 @@ import WaveDivider from '../components/WaveDivider';
 
 function HomePage() {
   return (
-    <Page>
+    <Page className="px-3 overflow-hidden">
       <Navigation />
-      <div className="mt3 mt5-m mt4-l ph3 mw8 center flex flex-column-reverse flex-row-ns">
-        <div className="w-100 mb4">
+      <div className="grid grid-cols-2 max-w-6xl mx-auto gap-8 pt-8">
+        <div className="p-5">
           <img
-            className="db-ns w5 w-auto-ns"
+            className="max-w-xs mx-auto"
             src="/static/img/logo.png"
-            width="500"
-            height="680"
             alt="Kolomåke"
           />
         </div>
-        <div className="ml4-l blue-0">
-          <style jsx>
-            {`
-              p,
-              ul > li {
-                line-height: 1.5;
-              }
-            `}
-          </style>
-          <h1 className="mb0 lh-title f1-ns">
+        <div className="p-5 mb-14">
+          <h1 className="text-4xl font-semibold uppercase mb-6">
             Sommerferie på <span className="nowrap">Filtvet Feriekoloni</span>
           </h1>
-          <div className="fw1 f4 white-80 mt3 mb4 lh-title blue-0">
-            <p>
+          <div className="text-lg mb-14 ">
+            <p className="mb-4">
               Trefoldighet Feriekoloni er Norges eldste aktive feriekoloni –
-              eller sommerleir <span className="nowrap">om du vil</span>!
+              eller sommerleir om du vil!
             </p>
-            <p>I over 130 år har barn og unge vært på ferie hos oss.</p>
+            <p>
+              I over 125 år har barn og unge vært på ferie hos oss. Kanskje du
+              også vil komme til sommeren?
+            </p>
           </div>
-          <div className="flex flex-column">
-            <CampDates />
+          <CampDates />
+          <div>
+            <Button>Søk nå</Button>
           </div>
         </div>
       </div>
-      <WaveDivider color="var(--blue-3)" />
+      <WaveDivider />
       <div className="pt4 pb4 f3 white bg-blue-3">
         <div className="mt4 mt5-m mt4-l ph3 mw8 center flex flex-column-reverse flex-row-ns">
           <div className="w-100 w-60-ns">

@@ -27,31 +27,19 @@ const NavLink = ({
 );
 
 const Navigation = ({ color = 'blue-dark' }) => (
-  <nav className="flex w-100 center flex-row-ns flex-column bg-white">
-    <div className="pa3 mr-auto-ns">
+  <nav className="flex flex-col sm:flex-row mx-center bg-white max-w-6xl py-5 items-center mx-auto">
+    <div className="mr-auto">
       <Link href="/">
-        {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-        <a className="dib border-box">
-          <style jsx>
-            {`
-              @media screen and (min-width: 30em) {
-                img {
-                  width: 10rem;
-                }
-              }
-            `}
-          </style>
+        <a className="">
           <img
-            width="164"
-            height="40"
             src="/logo.png"
-            className="w-50 w4-ns"
+            className="w-40 inline-block"
             alt="Filtvet feriekoloni"
           />
         </a>
       </Link>
     </div>
-    <div className="pa3 flex justify-between w-100 w-60-ns w-40-l ph4-l items-center">
+    <div className="space-x-6">
       <NavLink color={color} href="/om-oss">
         Om oss
       </NavLink>
