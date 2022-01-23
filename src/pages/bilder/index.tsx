@@ -39,7 +39,7 @@ const AlbumList = ({
                       className="object-cover pointer-events-none group-hover:opacity-75"
                     />
                   </div>
-                  <p className="mt-2 block text-xl font-bold text-gray-900 truncate pointer-events-none">
+                  <p className="mt-2 block text-xl font-semibold text-gray-900 truncate pointer-events-none">
                     {album.title}
                   </p>
                 </a>

@@ -9,7 +9,7 @@ const YEARS = new Date().getFullYear() - 1890;
 const AboutPage = () => (
   <Page title={`Om oss | ${YEARS} år med feriekoloni`}>
     <Navigation />
-    <article className="prose max-w-prose mx-auto max-w-8xl p-4 sm:px-6 md:px-8 mb-12">
+    <article className="prose md:prose-lg lg:prose-xl mx-auto max-w-8xl p-4 sm:px-6 md:px-8 mb-12">
       <img
         src="/static/img/about-us.jpg"
         alt="Historiefortelling på stranda"

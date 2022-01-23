@@ -17,10 +17,13 @@ const CampDates = () => (
 
       <ul className="text-base md:text-xl text-white">
         {dates.map((el) => (
-          <li key={el.name} className="flex">
-            <span className="text-2xl md:text-3xl mr-4">{el.emoji}</span>
-            <span className="font-bold tracking-tight">{el.name}</span>:{' '}
-            {el.from} - {el.to}
+          <li key={el.name}>
+            <p className="flex">
+              <span className="text-3xl mr-4">{el.emoji}</span>
+              <span className="font-semibold tracking-tight">
+                {el.name}
+              </span>: {el.from} - {el.to}
+            </p>
           </li>
         ))}
       </ul>
