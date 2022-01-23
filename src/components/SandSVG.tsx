@@ -41,8 +41,8 @@ const SandSVG = ({}: SandSVGProps) => (
         y2="100%"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="30%" stop-color="#FFD930" />
-        <stop offset="100%" stop-color="#FCA92B" />
+        <stop offset="30%" stopColor="#FFD930" />
+        <stop offset="100%" stopColor="#FCA92B" />
       </linearGradient>
     </defs>
   </svg>
