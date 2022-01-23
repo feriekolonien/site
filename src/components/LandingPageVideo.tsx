@@ -4,9 +4,9 @@ import YouTube from 'react-youtube';
 import PromoImage from './PromoImage';
 
 const LandingPageVideo = () => {
-  const [openModal, setOpenModal] = useState(false);
+  const [showVideo, setShowVideo] = useState(false);
 
-  if (openModal) {
+  if (showVideo) {
     return (
       <div className="flex justify-center">
         <YouTube
@@ -25,11 +25,9 @@ const LandingPageVideo = () => {
 
   return (
     <div>
-      <PromoImage
-        className="mb4"
-        src="/static/poster.jpg"
-        onClick={() => setOpenModal(true)}
-      />
+      <button className="" onClick={() => setShowVideo(true)}>
+        <PromoImage className="mb4" src="/static/poster.jpg" />
+      </button>
     </div>
   );
 };
