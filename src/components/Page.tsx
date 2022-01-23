@@ -1,19 +1,15 @@
 import Head from 'next/head';
 
-const Page = ({
-  children,
-  className = '',
-  title = 'Trefoldighet Feriekoloni',
-}: {
+type PageProps = {
   children: React.ReactNode;
-  className?: string;
   title?: string;
-}) => {
+};
+const Page = ({ children, title = 'Trefoldighet Feriekoloni' }: PageProps) => {
   const description =
     'Trefoldighet Feriekoloni på Filtvet er Norges eldste aktive feriekoloni! I 130 år har barn og unge vært på ferie hos oss. Bli med neste sommer!';
 
   return (
-    <main className={className}>
+    <main className="px-3 overflow-hidden">
       <Head>
         <title>{title}</title>
         <meta charSet="utf-8" />

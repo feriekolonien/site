@@ -10,7 +10,7 @@ function ApplicationPage() {
         <div className="w-full">
           <Navigation />
         </div>
-        <div className="flex-auto flex flex-col">
+        <div className="flex-auto flex flex-col -mx-4">
           <ApplicationForm />
           <Footer />
         </div>

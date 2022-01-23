@@ -11,7 +11,7 @@ import WaveDivider from '../components/WaveDivider';
 
 function HomePage() {
   return (
-    <Page className="px-3 overflow-hidden">
+    <Page>
       <Navigation />
       <div className="grid grid-cols-1 md:grid-cols-2 max-w-6xl mx-auto gap-4 pt-8 mb-14">
         <div className="p-5 order-2 md:order-1">

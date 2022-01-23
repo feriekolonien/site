@@ -5,7 +5,7 @@ import { AddressLink, Phone } from '../components/AddressComponents';
 
 const ContactPage = () => (
   <Page title="Kontaktinfo">
-    <Navigation color="black" />
+    <Navigation />
     <div className="max-w-4xl mx-auto pt-20 pb-20 sm:pt-24 px-4 sm:px-6 md:px-8">
       <h1 className="font-extrabold text-4xl sm:text-5xl lg:text-6xl mb-5">
         Kontaktinfo
