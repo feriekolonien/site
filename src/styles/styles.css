@@ -69,3 +69,24 @@ summary {
 .gallery-image {
   margin: 2px !important;
 }
+
+/* Reset <summary> styles */
+
+summary {
+  list-style-image: none;
+  list-style: none;
+}
+
+summary::-webkit-details-marker {
+  background: none;
+  color: transparent;
+}
+summary::marker {
+  display: none;
+}
+summary {
+  list-style-type: none;
+}
+summary::-webkit-details-marker {
+  display: none;
+}

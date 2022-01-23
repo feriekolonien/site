@@ -1,103 +1,64 @@
 import React, { useState } from 'react';
-import { Text } from './Text';
 
-const Question = ({
-  children,
-  title,
-}: {
-  children: React.ReactNode;
-  title: string;
-}) => {
+type FAQElementProps = { children: React.ReactNode; question: string };
+
+const FAQElement = ({ children, question }: FAQElementProps) => {
   const [isOpen, setIsOpen] = useState(false);
   function toggleState() {
     setIsOpen((prevState) => !prevState);
   }
-
   return (
-    // eslint-disable-next-line jsx-a11y/click-events-have-key-events
-    <summary
-      tabIndex={0}
-      role="button"
-      data-splitbee-event={`Click: ${title}`}
-      data-splitbee-event-type="FAQ Toggle"
-      onClick={toggleState}
-      className="f3 relative outline-0"
-      style={{ cursor: 'pointer' }}
-    >
-      <style jsx>
-        {`
-          .dropdown {
-            transition: all 90ms ease-in;
-          }
-          summary {
-            list-style-image: none;
-            list-style: none;
-          }
-
-          summary::-webkit-details-marker {
-            background: none;
-            color: transparent;
-          }
-          summary::marker {
-            display: none;
-          }
-          summary {
-            list-style-type: none;
-          }
-          summary::-webkit-details-marker {
-            display: none;
-          }
-          summary:focus {
-            outline: 1px dotted rgba(255, 255, 255, 0.4);
-          }
-        `}
-      </style>
-      {children}
-      <span
-        aria-label="pointer"
-        role="img"
-        className={`dropdown dib ml2 ${isOpen && 'rotate-90'}`}
+    <details className="text-white">
+      <summary
+        tabIndex={0}
+        role="button"
+        data-splitbee-event={`Click: ${question}`}
+        data-splitbee-event-type="FAQ Toggle"
+        onClick={toggleState}
+        className="outline-none focus:ring-1 ring-white/60 text-2xl cursor-pointer mb-3"
       >
-        ▸
-      </span>
-    </summary>
+        <span
+          aria-label="pointer"
+          role="img"
+          className={[isOpen && 'inline-block rotate-90', 'mr-2'].join(' ')}
+        >
+          👉
+        </span>
+        {question}
+      </summary>
+      {children}
+    </details>
   );
 };
 
-const FAQElement = ({ children }: { children: React.ReactNode }) => (
-  <details className="fw3 mb3 lh-copy">{children}</details>
+const Answer = ({ children }: { children: React.ReactNode }) => (
+  <p className="last-of-type:mb-4 text-lg">{children}</p>
 );
 
 const FAQ = () => (
-  <>
-    <FAQElement>
-      <Question title="Blir det feriekoloni i 2021">
-        Blir det feriekoloni i 2021?
-      </Question>
-      <Text size="f4">
+  <div className="space-y-2">
+    <FAQElement question="Blir det feriekoloni i 2021">
+      <Answer>
         Etter litt om og men, ble det klart i slutten av juni at vi får til ett
         parti i sommer i uke 28-29! Ingen ønsker mer enn oss at det skal drives
         normal feriekoloni på Filtvet. Etter dialog med Asker kommune bestemte
         vi oss derfor for at ett parti er bedre enn ingen!
-      </Text>
+      </Answer>
     </FAQElement>
-    <FAQElement>
-      <Question title="Feriekoloni, hva er det">
-        Feriekoloni, hva er det?
-      </Question>
-      <Text size="f4">
+    <FAQElement question="Feriekoloni, hva er det">
+      <Answer>
         Feriekolonien på Filtvet eies av Trefoldighetslegatet. Driften har i
         alle år vært ivaretatt av Trefoldighet Menighet (Trefoldighetskirken)
         som ligger i Oslo sentrum og som nå er en del av Sentrum og St.
         Hanshaugen sokn.
-      </Text>
+      </Answer>
 
-      <Text size="f4">
+      <Answer>
         Trefoldighet feriekoloni har som mål å gi barn en morsom og innholdsrik
         ferie.
-      </Text>
+      </Answer>
 
-      <Text size="f4">
+      <Answer>
         I over 130 år har barn og unge vært på sommerferie hos oss. I år kan du
         også få være med. Trefoldighet feriekoloni ligger på Filtvet på
         Hurumlandet, ca. 1 times bilkjøring fra Oslo. Hurumlandet er et
@@ -105,27 +66,21 @@ const FAQ = () => (
         «sørlandsidyll» med strender og svaberg, og ikke langt unna er det fine
         skogsterreng med store vann. Det gir muligheter for mange fine
         aktiviteter.
-      </Text>
+      </Answer>
     </FAQElement>
 
-    <FAQElement>
-      <Question title="Hvem er feriekolonien for">
-        Hvem er feriekolonien for?
-      </Question>
-      <Text size="f4">
+    <FAQElement question="Hvem er feriekolonien for">
+      <Answer>
         Alle gutter og jenter i alderen 5-12 år kan søke om plass på
         feriekolonien. Her vil man treffe nye venner eller kanskje noen man
         kjenner fra før. Noen reiser på feriekoloni sammen med en venn eller
         søsken, mens andre reiser alene. Uansett, feriekolonien tar godt vare på
         alle sammen.
-      </Text>
+      </Answer>
     </FAQElement>
 
-    <FAQElement>
-      <Question title="Hva skal man ha med seg">
-        Hva skal man ha med seg?
-      </Question>
-      <Text size="f4">
+    <FAQElement question="Hva skal man ha med seg">
+      <Answer>
         Feriekolonien har mye fine og rene klær i alle størrelser som barna
         låner når de er her ute, så mye tøy behøver du ikke. Det man MÅ ta med
         seg er: regntøy/gummistøvler, joggesko, toalettsaker (tannbørste,
@@ -134,14 +89,11 @@ const FAQ = () => (
         Ønsker du likevel å ta med noe eget tøy, er det viktig at de er godt
         merket med navn, og at man passer på tingene sine. Mobiltelefon ønsker
         vi ikke at barna har med.
-      </Text>
+      </Answer>
     </FAQElement>
 
-    <FAQElement>
-      <Question title="Hvem jobber på feriekolonien">
-        Hvem jobber på feriekolonien?
-      </Question>
-      <Text size="f4">
+    <FAQElement question="Hvem jobber på feriekolonien">
+      <Answer>
         Sammen med barna er vi 15-20 voksne som passer på. Mange av oss jobber
         med barn og ungdom resten av året eller så har de vært barn på
         feriekolonien selv. Som så mange av barna, er også betjeningen på
@@ -149,9 +101,9 @@ const FAQ = () => (
         trygt miljø for både barn og voksne. Det viktigste med å være en av de
         voksne på feriekolonien er å være en god venn, en lekekamerat, samtidig
         som man passer godt på – alle som èn.
-      </Text>
+      </Answer>
     </FAQElement>
-  </>
+  </div>
 );
 
 export default FAQ;
