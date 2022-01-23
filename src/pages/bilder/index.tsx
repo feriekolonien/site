@@ -21,7 +21,7 @@ const AlbumList = ({
   return (
     <Page title="Bilder">
       <Navigation />
-      <section className="max-w-4xl mx-auto pt-4 pb-10 sm:pt-24 px-4 sm:px-6 md:px-8">
+      <section className="max-w-4xl mx-auto mt-4 sm:mt-24 mb-10 px-4 sm:px-6 md:px-8">
         <h1 className="font-bold text-4xl sm:text-5xl lg:text-5xl mb-8">
           Bilder fra tidligere år
         </h1>
