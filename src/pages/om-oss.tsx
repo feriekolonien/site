@@ -46,13 +46,12 @@ const AboutPage = () => (
       <h3>Dette trenger du å vite</h3>
       <p>Vi deler opp sommeren i 3 partier.</p>
       <p>
-        Hvert parti er på totalt 9 dager (ink. reisedager). Dette for å
-        imøtekomme etterspørselen for kortere opphold. For dere som
+        Hvert parti er på totalt 11 dager (ink. reisedager). For dere som
         liker/trenger et lengre opphold, er det fullt mulig å søke om opphold på
         to partier dersom plass er tilgjengelig.
       </p>
       <p>Tilbudet vårt er for barn i aldersgruppen 5-12 år.</p>
-      <p>Søknadsfrist for sommeren er satt til 15. april.</p>
+      <p>Søknadsfrist for sommeren er satt til 1. april.</p>
       <p>
         Vi vil ta imot søknader etter denne datoen dersom det er plass, men de
         som har søkt innen tidsfristen vil bli prioritert.

@@ -38,7 +38,7 @@ function HomePage() {
           </div>
           <CampDates />
           <div className="max-w-sm text-center md:text-right">
-            <p className="inline-block mr-4 mb-3">Søknadsfrist 15. april!</p>
+            <p className="inline-block mr-4 mb-3">Søknadsfrist 1. april!</p>
             <Button>Søk nå</Button>
           </div>
         </div>

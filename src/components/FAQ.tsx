@@ -37,15 +37,14 @@ const Answer = ({ children }: { children: React.ReactNode }) => (
 
 const FAQ = () => (
   <div className="space-y-2">
-    <FAQElement question="Blir det feriekoloni i 2021">
+    <FAQElement question="Blir det feriekoloni i 2022?">
       <Answer>
-        Etter litt om og men, ble det klart i slutten av juni at vi får til ett
-        parti i sommer i uke 28-29! Ingen ønsker mer enn oss at det skal drives
-        normal feriekoloni på Filtvet. Etter dialog med Asker kommune bestemte
-        vi oss derfor for at ett parti er bedre enn ingen!
+        Vi tar utgangspunkt i å arrangere normal feriekolonidrift for sommeren
+        2022. Det vil si til full kapasitet og tre partier. Eventuelle regler og
+        retningslinjer vil vi informere om i god tid før oppholdet.
       </Answer>
     </FAQElement>
-    <FAQElement question="Feriekoloni, hva er det">
+    <FAQElement question="Feriekoloni, hva er det?">
       <Answer>
         Feriekolonien på Filtvet eies av Trefoldighetslegatet. Driften har i
         alle år vært ivaretatt av Trefoldighet Menighet (Trefoldighetskirken)
@@ -69,7 +68,7 @@ const FAQ = () => (
       </Answer>
     </FAQElement>
 
-    <FAQElement question="Hvem er feriekolonien for">
+    <FAQElement question="Hvem er feriekolonien for?">
       <Answer>
         Alle gutter og jenter i alderen 5-12 år kan søke om plass på
         feriekolonien. Her vil man treffe nye venner eller kanskje noen man
@@ -79,20 +78,32 @@ const FAQ = () => (
       </Answer>
     </FAQElement>
 
-    <FAQElement question="Hva skal man ha med seg">
+    <FAQElement question="Hva skal man ha med seg?">
       <Answer>
         Feriekolonien har mye fine og rene klær i alle størrelser som barna
         låner når de er her ute, så mye tøy behøver du ikke. Det man MÅ ta med
-        seg er: regntøy/gummistøvler, joggesko, toalettsaker (tannbørste,
-        tannkrem, såpe, shampo, kam/børste, solkrem med solfaktor) kosedyr hvis
-        man vil, og litt lommepenger til kiosken som er åpen to ganger i uka.
+        seg er:
+      </Answer>
+      <Answer>
+        <ul className="list-disc ml-6">
+          <li>Regntøy/gummistøvler</li>
+          <li>Joggesko</li>
+          <li>
+            Toalettsaker (tannbørste, tannkrem, såpe, shampo, kam/børste,
+            solkrem med solfaktor)
+          </li>
+          <li>Kosedyr hvis man vil</li>
+          <li>Litt lommepenger til kiosken som er åpen to ganger i uka</li>
+        </ul>
+      </Answer>
+      <Answer>
         Ønsker du likevel å ta med noe eget tøy, er det viktig at de er godt
         merket med navn, og at man passer på tingene sine. Mobiltelefon ønsker
         vi ikke at barna har med.
       </Answer>
     </FAQElement>
 
-    <FAQElement question="Hvem jobber på feriekolonien">
+    <FAQElement question="Hvem jobber på feriekolonien?">
       <Answer>
         Sammen med barna er vi 15-20 voksne som passer på. Mange av oss jobber
         med barn og ungdom resten av året eller så har de vært barn på
