@@ -11,7 +11,7 @@ const AboutPage = () => (
     <Navigation />
     <article className="prose max-w-prose mx-auto max-w-8xl p-4 sm:px-6 md:px-8 mb-12">
       <img
-        src="/static/img/IMG_6409.jpg"
+        src="/static/img/about-us.jpg"
         alt="Historiefortelling på stranda"
         className="rounded-xl"
       />
