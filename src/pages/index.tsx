@@ -61,7 +61,7 @@ function HomePage() {
             </p>
           </div>
         </div>
-        <Footer className="mt-20" />
+        <Footer className="mt-20" showSand={true} />
       </Bleed>
     </Page>
   );
