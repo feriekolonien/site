@@ -10,41 +10,31 @@ function formatNumber(number: string, type?: 'cell') {
   ].join(' ');
 }
 
-export const AddressLink = ({
-  children,
-  href: string,
-  ...rest
-}: {
+type AddressLinkProps = {
   children: React.ReactNode;
   href: string;
-}) => (
-  <a className="f5 link dim black-70" {...rest}>
+};
+
+export const AddressLink = ({ children, href, ...rest }: AddressLinkProps) => (
+  <a
+    className="hover:text-slate-500 hover:cursor-pointer"
+    href={href}
+    {...rest}
+  >
     {children}
   </a>
 );
 
-export const Phone = ({
-  children,
-  type,
-  ...rest
-}: {
+type PhoneProps = {
   children: string;
   type?: 'cell';
   title: string;
-}) => {
+};
+
+export const Phone = ({ children, type, ...rest }: PhoneProps) => {
   return (
     <AddressLink href={`tel:${children}`} {...rest}>
       {formatNumber(children, type)}
     </AddressLink>
   );
 };
-
-export const Office = ({ children }: { children: React.ReactNode }) => (
-  <article className="flex-auto w-50">
-    <address className="fs-normal">{children}</address>
-  </article>
-);
-
-export const AddressLine = ({ children }: { children: React.ReactNode }) => (
-  <span className="f5 db black-70 lh-copy">{children}</span>
-);
