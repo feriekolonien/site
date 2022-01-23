@@ -1,6 +1,7 @@
 import React, { useCallback } from 'react';
 import { groq } from 'next-sanity';
 import Link from 'next/link';
+import { RiArrowLeftSLine } from 'react-icons/ri';
 import Gallery from 'react-photo-gallery';
 
 import Footer from '../../components/Footer';
@@ -42,8 +43,9 @@ const AlbumPage = ({
   const goBack = (
     <Link href="/bilder">
       <a>
-        <p className="mb-6 mt-6 sm:mb-12 sm:mt-6 hover:text-slate-500">
-          Tilbake til oversikt
+        <p className="hover:text-slate-500">
+          <RiArrowLeftSLine className="inline-block align-middle" /> Tilbake til
+          oversikt
         </p>
       </a>
     </Link>
@@ -51,11 +53,13 @@ const AlbumPage = ({
   return (
     <Page title={`Album: ${albumTitle}`}>
       <Navigation />
-      <section className="max-w-4xl mx-auto pt-4 pb-10 sm:pt-24 px-4 sm:px-6 md:px-8">
-        <h1 className="font-extrabold text-4xl sm:text-5xl lg:text-6xl">
-          {albumTitle}
-        </h1>
-        {goBack}
+      <section className="max-w-4xl mx-auto pt-4 pb-10 sm:pt-20 px-4 sm:px-6 md:px-8">
+        <div className="mb-6 sm:mb-12 grid grid-cols-3 items-center">
+          {goBack}
+          <h1 className="font-extrabold text-4xl sm:text-5xl lg:text-6xl text-center">
+            {albumTitle}
+          </h1>
+        </div>
         <RenderInBrowser>
           <Gallery
             renderImage={imageRenderer}

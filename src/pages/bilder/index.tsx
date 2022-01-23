@@ -7,6 +7,7 @@ import Navigation from '../../components/Navigation';
 import Page from '../../components/Page';
 import { sanityClient } from '../../lib/sanity.server';
 import { getImageSizes } from '../../lib/sanity';
+import { RiInstagramLine } from 'react-icons/ri';
 
 type QueryResult = Array<Pick<Sanity.Schema.Album, 'title' | 'coverImage'>>;
 
@@ -21,9 +22,20 @@ const AlbumList = ({
     <Page title="Bilder">
       <Navigation />
       <section className="max-w-4xl mx-auto pt-4 pb-10 sm:pt-24 px-4 sm:px-6 md:px-8">
-        <h1 className="font-extrabold text-4xl sm:text-5xl lg:text-6xl mb-6 sm:mb-12">
-          Bilder fra feriekolonien
+        <h1 className="font-bold text-4xl sm:text-5xl lg:text-5xl mb-8">
+          Bilder fra tidligere år
         </h1>
+        <p className="mb-6 sm:mb-12 text-lg">
+          På slutten av hver sommer legger vi ut bilder fra alle partiene vi har
+          hatt her. Gjennom sommerferien legger vi som regel ut bilder på{' '}
+          <a
+            className="text-blue-900 underline font-semibold"
+            href="https://www.instagram.com/feriekolonien/?utm_source=feriekolonien.no&utm_campaign=bilder"
+          >
+            Instagram <RiInstagramLine className="inline-block" />
+          </a>
+          .
+        </p>
         <ul
           role="list"
           className="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-2 xl:gap-x-8"
