@@ -9,7 +9,9 @@ const Footer = ({ className = '', showSand = false }) => (
       />
     )}
     {showSand && <SandSVG />}
-    <div className="text-center pb-3 text-yellow-700">
+    <div
+      className={['text-center py-3', showSand && 'text-yellow-700'].join(' ')}
+    >
       <small className="relative z-10">
         <span className="">FILTVET FERIEKOLONI</span> {new Date().getFullYear()}
       </small>
