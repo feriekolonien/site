@@ -1,4 +1,6 @@
+import Link from 'next/link';
 import Image from 'next/image';
+import Bleed from '../components/Bleed';
 import Button from '../components/Button';
 import CampDates from '../components/CampDates';
 import FAQ from '../components/FAQ';
@@ -30,29 +32,37 @@ function HomePage() {
               eller sommerleir om du vil!
             </p>
             <p>
-              I over 125 år har barn og unge vært på ferie hos oss. Kanskje du
+              I over 130 år har barn og unge vært på ferie hos oss. Kanskje du
               også vil komme til sommeren?
             </p>
           </div>
           <CampDates />
-          <div>
+          <div className="max-w-sm text-right">
+            <p className="inline-block mr-4">Søknadsfrist 15. april!</p>
             <Button>Søk nå</Button>
           </div>
         </div>
       </div>
-      <WaveDivider />
-      <div className="pt4 pb4 f3 white bg-blue-3">
-        <div className="mt4 mt5-m mt4-l ph3 mw8 center flex flex-column-reverse flex-row-ns">
-          <div className="w-100 w-60-ns">
-            <h3 className="f2 mt0">Ofte stilte spørsmål</h3>
+      <Bleed className="relative pt-40 bg-gradient-to-t from-[#2C72AC] to-[#46B3D9]">
+        <WaveDivider />
+        <div className="grid grid-cols-5 max-w-6xl mx-auto gap-8 pb-32">
+          <div className="col-span-3 ml-10">
+            <h2 className="text-white font-bold text-3xl mb-4">
+              Ofte stilte spørsmål
+            </h2>
             <FAQ />
           </div>
-          <div className="w-100 w-40-ns mb3-ns ml3-ns">
+          <div className="col-span-2">
             <LandingPageVideo />
+            <p className="mt-3 text-center text-white text-lg">
+              <Link href="/bilder">
+                <a>Se flere sommerminner fra Filtvet →</a>
+              </Link>
+            </p>
           </div>
         </div>
-      </div>
-      <Footer className="bg-blue-3 white" />
+        <Footer className="" />
+      </Bleed>
     </Page>
   );
 }
