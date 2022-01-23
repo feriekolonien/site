@@ -1,9 +1,13 @@
+import SandSVG from './SandSVG';
+
 const Footer = ({ className = '' }) => (
-  <footer className={`ph3 ph5-m ph6-l pt4 pb4 ${className}`}>
-    <small className="f6 db tc">
-      <span className="ttu">FILTVET FERIEKOLONI</span>{' '}
-      {new Date().getFullYear()}
-    </small>
+  <footer className={className}>
+    <SandSVG />
+    <div className="text-center pb-3 text-yellow-700">
+      <small className="relative z-10">
+        <span className="">FILTVET FERIEKOLONI</span> {new Date().getFullYear()}
+      </small>
+    </div>
   </footer>
 );
 

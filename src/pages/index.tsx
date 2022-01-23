@@ -61,7 +61,7 @@ function HomePage() {
             </p>
           </div>
         </div>
-        <Footer className="" />
+        <Footer className="mt-20" />
       </Bleed>
     </Page>
   );
