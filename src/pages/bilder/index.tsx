@@ -29,6 +29,7 @@ const AlbumList = ({
           På slutten av hver sommer legger vi ut bilder fra alle partiene vi har
           hatt her. Gjennom sommerferien legger vi som regel ut bilder på{' '}
           <a
+            target="_blank"
             className="text-blue-900 underline font-semibold"
             href="https://www.instagram.com/feriekolonien/?utm_source=feriekolonien.no&utm_campaign=bilder"
           >
