@@ -33,11 +33,11 @@ const Navigation = ({}: NavigationProps) => (
           />
         </a>
       </Link>
-      <ButtonLink href="/soknadsskjema" className="sm:hidden">
+      <ButtonLink href="/soknadsskjema" className="sm:hidden mr-3">
         Søk nå
       </ButtonLink>
     </div>
-    <div className="ml-3 space-x-6 mt-4 sm:mt-0 text-slate-900">
+    <div className="mx-3 space-x-6 mt-4 sm:mt-0 text-slate-900">
       <NavLink href="/om-oss">Om oss</NavLink>
       <NavLink href="/bilder">Bilder</NavLink>
       <NavLink href="/historien">Historien</NavLink>
