@@ -26,7 +26,7 @@ const Card = ({ children, className = '' }: CardProps) => {
 
 const CampDates = () => (
   <div className="relative group mb-11">
-    <Card className="absolute inset-0 rotate-[-8deg] group-hover:-rotate-6 opacity-70 transition-all" />
+    <Card className="absolute inset-0 rotate-[-8deg] group-hover:-rotate-3 opacity-70 transition-all ease-in-out duration-300" />
     <Card className="relative shadow-xl">
       <h2 className="text-white font-bold text-3xl mb-4">Datoer for 2022</h2>
 
