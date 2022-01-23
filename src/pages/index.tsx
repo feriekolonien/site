@@ -1,7 +1,6 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import Bleed from '../components/Bleed';
-import Button from '../components/Button';
+import { ButtonLink } from '../components/Button';
 import CampDates from '../components/CampDates';
 import FAQ from '../components/FAQ';
 import Footer from '../components/Footer';
@@ -39,7 +38,9 @@ function HomePage() {
           <CampDates />
           <div className="max-w-sm text-center md:text-right">
             <p className="inline-block mr-4 mb-3">Søknadsfrist 1. april!</p>
-            <Button className="text-xl">Søk nå</Button>
+            <ButtonLink href="/soknadsskjema" className="text-xl">
+              Søk nå
+            </ButtonLink>
           </div>
         </div>
       </div>

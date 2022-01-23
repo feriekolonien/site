@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Button from './Button';
+import { ButtonLink } from './Button';
 
 const NavLink = ({
   children,
@@ -33,14 +33,18 @@ const Navigation = ({}: NavigationProps) => (
           />
         </a>
       </Link>
-      <Button className="sm:hidden">Søk nå</Button>
+      <ButtonLink href="/soknadsskjema" className="sm:hidden">
+        Søk nå
+      </ButtonLink>
     </div>
     <div className="ml-3 space-x-6 mt-4 sm:mt-0 text-slate-900">
       <NavLink href="/om-oss">Om oss</NavLink>
       <NavLink href="/bilder">Bilder</NavLink>
       <NavLink href="/historien">Historien</NavLink>
       <NavLink href="/kontakt">Kontakt</NavLink>
-      <Button className="hidden sm:inline-block">Søk nå</Button>
+      <ButtonLink href="/soknadsskjema" className="hidden sm:inline-block">
+        Søk nå
+      </ButtonLink>
     </div>
   </nav>
 );
