@@ -3,13 +3,10 @@ import Link from 'next/link';
 import { groq } from 'next-sanity';
 
 import Footer from '../../components/Footer';
-import SanityImage from '../../components/SanityImage';
 import Navigation from '../../components/Navigation';
 import Page from '../../components/Page';
-import { HeroContent, HeroImage } from '../../components/PageComponents';
-import { PageTitle } from '../../components/PageTitle';
-import WaveDivider from '../../components/WaveDivider';
 import { sanityClient } from '../../lib/sanity.server';
+import { getImageSizes } from '../../lib/sanity';
 
 type QueryResult = Array<Pick<Sanity.Schema.Album, 'title' | 'coverImage'>>;
 
@@ -23,29 +20,33 @@ const AlbumList = ({
   return (
     <Page title="Bilder">
       <Navigation />
-      <HeroImage
-        src="/static/img/IMG_5962.jpg"
-        alt="Innebandy-turnering på basketbanen. Solfylt dag med utsikt over havet."
-      >
-        <HeroContent>
-          <PageTitle>Bilder fra feriekolonien</PageTitle>
-        </HeroContent>
-        <WaveDivider color="white" absolute />
-      </HeroImage>
-      <section className="max-w-7xl mx-center">
-        <article className="bt bb b--black-10 flex flex-wrap justify-between pb4">
+      <section className="max-w-4xl mx-auto pt-4 pb-10 sm:pt-24 px-4 sm:px-6 md:px-8">
+        <h1 className="font-extrabold text-4xl sm:text-5xl lg:text-6xl mb-6 sm:mb-12">
+          Bilder fra feriekolonien
+        </h1>
+        <ul
+          role="list"
+          className="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-2 xl:gap-x-8"
+        >
           {data.albums.map((album) => (
-            <Link key={album.title} href={`/bilder/${album.title}`}>
-              {/* eslint-disable-next-line */}
-              <a className="no-underline black dim w-50 pa3">
-                <div className="mb4 mb0-ns w-100">
-                  <h1 className="f3 fw1 mt0 lh-title w-100">{album.title}</h1>
-                  {album.coverImage && <SanityImage image={album.coverImage} />}
-                </div>
-              </a>
-            </Link>
+            <li key={album.title} className="relative">
+              <Link key={album.title} href={`/bilder/${album.title}`}>
+                <a className="">
+                  <div className="group block w-full aspect-w-10 aspect-h-7 rounded-lg bg-gray-100 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-offset-gray-100 focus-within:ring-indigo-500 overflow-hidden">
+                    <img
+                      src={getImageSizes(album.coverImage).source.regular}
+                      alt=""
+                      className="object-cover pointer-events-none group-hover:opacity-75"
+                    />
+                  </div>
+                  <p className="mt-2 block text-xl font-bold text-gray-900 truncate pointer-events-none">
+                    {album.title}
+                  </p>
+                </a>
+              </Link>
+            </li>
           ))}
-        </article>
+        </ul>
       </section>
       <Footer />
     </Page>

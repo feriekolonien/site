@@ -1,14 +1,12 @@
 import React, { useCallback } from 'react';
 import { groq } from 'next-sanity';
+import Link from 'next/link';
 import Gallery from 'react-photo-gallery';
 
 import Footer from '../../components/Footer';
 import Navigation from '../../components/Navigation';
 import Page from '../../components/Page';
-import { HeroContent, HeroImage } from '../../components/PageComponents';
-import { PageTitle } from '../../components/PageTitle';
 import RenderInBrowser from '../../components/RenderInBrowser';
-import WaveDivider from '../../components/WaveDivider';
 import { sanityClient } from '../../lib/sanity.server';
 import { getImageSizes } from '../../lib/sanity';
 import LazyImage from '../../components/LazyImage';
@@ -41,23 +39,23 @@ const AlbumPage = ({
 
   const responsiveImages = data.album.images.map(getImageSizes);
   const albumTitle = data.album.title;
-
-  const coverImage = data.album?.coverImage
-    ? getImageSizes(data.album?.coverImage).source.fullscreen
-    : null;
-
+  const goBack = (
+    <Link href="/bilder">
+      <a>
+        <p className="mb-6 mt-6 sm:mb-12 sm:mt-6 hover:text-slate-500">
+          Tilbake til oversikt
+        </p>
+      </a>
+    </Link>
+  );
   return (
     <Page title={`Album: ${albumTitle}`}>
       <Navigation />
-      {coverImage && (
-        <HeroImage src={coverImage} alt="Hero image">
-          <HeroContent>
-            <PageTitle>{albumTitle}</PageTitle>
-          </HeroContent>
-          <WaveDivider color="white" />
-        </HeroImage>
-      )}
-      <div className="mw8 center min-vh-100">
+      <section className="max-w-4xl mx-auto pt-4 pb-10 sm:pt-24 px-4 sm:px-6 md:px-8">
+        <h1 className="font-extrabold text-4xl sm:text-5xl lg:text-6xl">
+          {albumTitle}
+        </h1>
+        {goBack}
         <RenderInBrowser>
           <Gallery
             renderImage={imageRenderer}
@@ -68,7 +66,8 @@ const AlbumPage = ({
             }))}
           />
         </RenderInBrowser>
-      </div>
+        {goBack}
+      </section>
       <Footer />
     </Page>
   );
