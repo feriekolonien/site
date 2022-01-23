@@ -3,7 +3,7 @@ type WaveDividerProps = {};
 const WaveDivider = ({}: WaveDividerProps) => (
   <svg
     viewBox="0 0 1367 120"
-    className="text-white rotate-180 absolute inset-0 -top-1 h-10 md:h-20 w-full"
+    className="text-white rotate-180 absolute inset-0 -top-1 h-8 md:h-20 w-full"
     xmlns="http://www.w3.org/2000/svg"
     preserveAspectRatio="none"
   >
