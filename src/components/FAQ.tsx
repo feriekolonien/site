@@ -15,7 +15,7 @@ const FAQElement = ({ children, question }: FAQElementProps) => {
         data-splitbee-event={`Click: ${question}`}
         data-splitbee-event-type="FAQ Toggle"
         onClick={toggleState}
-        className="outline-none focus:ring-1 ring-white/60 text-2xl cursor-pointer mb-3"
+        className="outline-none focus:ring-1 ring-white/60 text-xl md:text-2xl cursor-pointer mb-3"
       >
         <span
           aria-label="pointer"
@@ -26,13 +26,13 @@ const FAQElement = ({ children, question }: FAQElementProps) => {
         </span>
         {question}
       </summary>
-      {children}
+      <div className="space-y-4">{children}</div>
     </details>
   );
 };
 
 const Answer = ({ children }: { children: React.ReactNode }) => (
-  <p className="last-of-type:mb-4 text-lg">{children}</p>
+  <p className="last-of-type:mb-4 text-base md:text-lg">{children}</p>
 );
 
 const FAQ = () => (
