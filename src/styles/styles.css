@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @import 'colors.css'; */
 @import 'fonts.css';
 
 body {
