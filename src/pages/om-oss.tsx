@@ -13,6 +13,8 @@ const AboutPage = () => (
       <img
         src="/static/img/about-us.jpg"
         alt="Historiefortelling på stranda"
+        width="730px"
+        height="487px"
         className="rounded-xl"
       />
       <h1>{YEARS} år med feriekoloni</h1>

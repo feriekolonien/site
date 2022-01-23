@@ -21,6 +21,8 @@ const ErrorPage = ({
         <img
           src="/static/img/about-us.jpg"
           alt="Historiefortelling på stranda"
+          width="1365px"
+          height="546px"
           className="rounded-xl grayscale object-cover brightness-50"
         />
 

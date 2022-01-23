@@ -48,6 +48,8 @@ const AlbumList = ({
                   {album.coverImage && (
                     <div className="group block w-full aspect-w-10 aspect-h-7 rounded-lg bg-gray-100 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-offset-gray-100 focus-within:ring-indigo-500 overflow-hidden">
                       <img
+                        width="400px"
+                        height="280px"
                         src={getImageSizes(album.coverImage).source.regular}
                         alt={`Albumlenke for ${album.title}`}
                         className="object-cover pointer-events-none group-hover:opacity-75"

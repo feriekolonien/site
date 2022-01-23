@@ -11,6 +11,8 @@ const Historie = () => (
       <img
         src="/static/img/historien.jpg"
         alt="Historisk bilde i svart hvitt. Barn som er samlet rundt en leke."
+        width="730px"
+        height="283px"
         className="rounded-xl"
       />
       <h1>Historien</h1>
