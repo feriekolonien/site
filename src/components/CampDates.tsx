@@ -11,21 +11,19 @@ const dates = [
 
 const CampDates = () => (
   <div className="relative group mb-11 max-w-sm">
-    <Card className="absolute inset-0 rotate-[-8deg] group-hover:-rotate-3 opacity-70 transition-all ease-in-out duration-300" />
-    <Card className="relative shadow-xl">
+    <Card className="absolute inset-0 rotate-[-8deg] group-hover:-rotate-3 opacity-70 transition-all ease-in-out duration-300 mx-auto md:ml-0" />
+    <Card className="relative shadow-xl mx-auto md:ml-0">
       <h2 className="text-white font-bold text-3xl mb-4">Datoer for 2022</h2>
 
-      <div className="text-xl text-white">
-        <ul className="">
-          {dates.map((el) => (
-            <li key={el.name} className="flex">
-              <span className="text-3xl mr-4">{el.emoji}</span>
-              <span className="font-bold tracking-tight">{el.name}</span>:{' '}
-              {el.from} - {el.to}
-            </li>
-          ))}
-        </ul>
-      </div>
+      <ul className="text-base md:text-xl text-white">
+        {dates.map((el) => (
+          <li key={el.name} className="flex">
+            <span className="text-2xl md:text-3xl mr-4">{el.emoji}</span>
+            <span className="font-bold tracking-tight">{el.name}</span>:{' '}
+            {el.from} - {el.to}
+          </li>
+        ))}
+      </ul>
     </Card>
   </div>
 );
