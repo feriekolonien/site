@@ -1,3 +1,5 @@
+import Card from './Card';
+
 const dates = [
   { emoji: '🦀', name: '1. parti', from: '21. juni', to: '1. juli' },
   { emoji: '☀️', name: '2. parti', from: '8. juli', to: '18. juli' },
@@ -6,26 +8,9 @@ const dates = [
   // { name: '🦀 2. parti', from: 'fredag 8. juli', to: ' mandag 18. juli' },
   // { name: ' 3. parti', from: 'mandag 25. juli', to: ' torsdag 4. august' },
 ];
-type CardProps = {
-  children?: React.ReactNode;
-  className?: string;
-};
-
-const Card = ({ children, className = '' }: CardProps) => {
-  return (
-    <div
-      className={[
-        'py-7 px-6 rounded-xl bg-gradient-to-tr from-[#2C72AC] to-[#46B3D9] max-w-sm',
-        className,
-      ].join(' ')}
-    >
-      {children}
-    </div>
-  );
-};
 
 const CampDates = () => (
-  <div className="relative group mb-11">
+  <div className="relative group mb-11 max-w-sm">
     <Card className="absolute inset-0 rotate-[-8deg] group-hover:-rotate-3 opacity-70 transition-all ease-in-out duration-300" />
     <Card className="relative shadow-xl">
       <h2 className="text-white font-bold text-3xl mb-4">Datoer for 2022</h2>

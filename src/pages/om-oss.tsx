@@ -2,13 +2,14 @@ import Page from '../components/Page';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import FAQ from '../components/FAQ';
+import Card from '../components/Card';
 
 const YEARS = new Date().getFullYear() - 1890;
 
 const AboutPage = () => (
   <Page title={`Om oss | ${YEARS} år med feriekoloni`}>
     <Navigation />
-    <article className="prose max-w-prose mx-auto max-w-8xl px-4 sm:px-6 md:px-8">
+    <article className="prose max-w-prose mx-auto max-w-8xl p-4 sm:px-6 md:px-8 mb-12">
       <img
         src="/static/img/IMG_6409.jpg"
         alt="Historiefortelling på stranda"
@@ -86,9 +87,12 @@ const AboutPage = () => (
         Vi ser fram til å se dere på feriekolonien, og til aktive og hyggelige
         sommerdager på Filtvet!
       </p>
-      <hr className="divide-y" />
-      <h3>Ofte stilte spørsmål</h3>
-      <FAQ />
+      <Card className="not-prose shadow-xl">
+        <h3 className="text-2xl font-bold text-white mb-6">
+          Ofte stilte spørsmål
+        </h3>
+        <FAQ />
+      </Card>
     </article>
     <Footer />
   </Page>
