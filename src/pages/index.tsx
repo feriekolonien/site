@@ -49,7 +49,7 @@ function HomePage() {
           className={[
             'max-w-6xl mx-auto p-3 md:p-0',
             // Grid stuff
-            'grid grid-rows-2 md:grid-rows-none sm:grid-cols-2 md:grid-cols-5 gap-8',
+            'grid grid-rows-2 md:grid-rows-none md:grid-cols-5 gap-8',
           ].join(' ')}
         >
           <div className="md:col-span-3 md:ml-10">
