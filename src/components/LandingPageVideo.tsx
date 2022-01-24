@@ -25,7 +25,10 @@ const LandingPageVideo = () => {
 
   return (
     <div className="group">
-      <button className="relative" onClick={() => setShowVideo(true)}>
+      <button
+        className="relative ring-8 rounded-lg ring-white"
+        onClick={() => setShowVideo(true)}
+      >
         <PromoImage className="mb4" src="/static/poster.jpg" />
         <div
           className={[
