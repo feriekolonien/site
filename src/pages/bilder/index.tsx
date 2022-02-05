@@ -1,13 +1,12 @@
-import React from 'react';
-import Link from 'next/link';
 import { groq } from 'next-sanity';
-
+import Link from 'next/link';
+import React from 'react';
+import { RiInstagramLine } from 'react-icons/ri';
 import Footer from '../../components/Footer';
 import Navigation from '../../components/Navigation';
 import Page from '../../components/Page';
-import { sanityClient } from '../../lib/sanity.server';
 import { getImageSizes } from '../../lib/sanity';
-import { RiInstagramLine } from 'react-icons/ri';
+import { sanityClient } from '../../lib/sanity.server';
 
 type QueryResult = Array<Pick<Sanity.Schema.Album, 'title' | 'coverImage'>>;
 
@@ -22,7 +21,7 @@ const AlbumList = ({
     <Page title="Bilder">
       <Navigation />
       <section className="mx-auto mt-4 mb-10 max-w-4xl px-4 sm:mt-24 sm:px-6 md:px-8">
-        <h1 className="mb-8 text-4xl font-bold sm:text-5xl lg:text-5xl">
+        <h1 className="mb-8 text-4xl font-bold sm:text-5xl lg:text-5xl ">
           Bilder fra tidligere år
         </h1>
         <p className="mb-6 text-lg sm:mb-12">

@@ -5,8 +5,9 @@ import { useInView } from 'react-intersection-observer';
 type LazyImageProps = {
   src: string;
   alt: string;
+  crossOrigin?: never;
 } & React.HTMLProps<HTMLImageElement>;
-const LazyImage = ({ src, alt, crossOrigin, ...rest }: LazyImageProps) => {
+const LazyImage = ({ src, alt, ...rest }: LazyImageProps) => {
   const { ref, inView } = useInView({
     triggerOnce: true,
     rootMargin: '200px 0px',

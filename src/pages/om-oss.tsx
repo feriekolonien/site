@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Page from '../components/Page';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -10,12 +11,13 @@ const AboutPage = () => (
   <Page title={`Om oss | ${YEARS} år med feriekoloni`}>
     <Navigation />
     <article className="max-w-8xl prose mx-auto mb-12 p-4 sm:px-6 md:prose-lg md:px-8 lg:prose-xl">
-      <img
+      <Image
         src="/static/img/about-us.jpg"
         alt="Historiefortelling på stranda"
         width="730px"
         height="487px"
         className="rounded-xl"
+        unoptimized
       />
       <h1>{YEARS} år med feriekoloni</h1>
       <p>

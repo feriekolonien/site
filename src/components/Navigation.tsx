@@ -19,9 +19,7 @@ const NavLink = ({
   </Link>
 );
 
-type NavigationProps = {};
-
-const Navigation = ({}: NavigationProps) => (
+const Navigation = () => (
   <nav className="mx-center mx-auto flex max-w-6xl flex-col bg-white py-5 sm:flex-row md:items-center">
     <div className="mr-auto flex w-full sm:w-auto">
       <Link href="/">

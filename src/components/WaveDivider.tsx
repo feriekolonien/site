@@ -1,6 +1,4 @@
-type WaveDividerProps = {};
-
-const WaveDivider = ({}: WaveDividerProps) => (
+const WaveDivider = () => (
   <svg
     viewBox="0 0 1367 120"
     className="absolute inset-0 -top-1 h-8 w-full rotate-180 text-white md:h-20"

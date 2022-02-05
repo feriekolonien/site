@@ -2,7 +2,6 @@ import Footer from '../../components/Footer';
 import Navigation from '../../components/Navigation';
 import Page from '../../components/Page';
 import { Text } from '../../components/Text';
-import WaveDivider from '../../components/WaveDivider';
 
 const CancelledPost = () => (
   <Page>

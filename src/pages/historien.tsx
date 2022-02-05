@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Image from 'next/image';
 import Page from '../components/Page';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -8,12 +8,13 @@ const Historie = () => (
   <Page title="Historie">
     <Navigation />
     <article className="max-w-8xl prose mx-auto mb-12 p-4 sm:px-6 md:prose-lg md:px-8 lg:prose-xl">
-      <img
+      <Image
         src="/static/img/historien.jpg"
         alt="Historisk bilde i svart hvitt. Barn som er samlet rundt en leke."
         width="730px"
         height="283px"
         className="rounded-xl"
+        unoptimized
       />
       <h1>Historien</h1>
       <p>

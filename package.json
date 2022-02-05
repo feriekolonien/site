@@ -12,41 +12,35 @@
     "build": "next build",
     "start": "next start",
     "eslint": "eslint . --cache",
-    "ts": "tsc --project ./tsconfig.json"
+    "ts": "tsc",
+    "prettier": "prettier --check .",
+    "test": "yarn prettier && yarn eslint && yarn ts"
   },
   "dependencies": {
     "autoprefixer": "^10.4.2",
-    "next": "^12.0.2",
+    "next": "^12.0.10",
     "next-sanity": "^0.4.0",
     "postcss": "^8.4.5",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-icons": "^4.3.1",
-    "react-intersection-observer": "^8.32.1",
     "react-photo-gallery": "^8.0.0",
     "react-youtube": "^7.13.1"
   },
   "devDependencies": {
-    "@next/eslint-plugin-next": "^11.1.2",
+    "@next/eslint-plugin-next": "^12.0.10",
     "@sanity-codegen/types": "^1.0.0-alpha.11",
     "@tailwindcss/aspect-ratio": "^0.4.0",
     "@tailwindcss/typography": "^0.5.0",
-    "@types/node": "16.11.6",
-    "@types/react": "17.0.33",
-    "eslint": "^8.0.1",
-    "eslint-config-airbnb": "^18.2.1",
-    "eslint-config-next": "12.0.2",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-import": "^2.25.2",
-    "eslint-plugin-jsx-a11y": "^6.4.1",
-    "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-react": "^7.26.1",
-    "eslint-plugin-react-hooks": "^4.2.0",
+    "@types/node": "^17.0.15",
+    "@types/react": "^17.0.39",
+    "@typescript-eslint/eslint-plugin": "^5.10.2",
+    "eslint": "8.8.0",
+    "eslint-config-next": "12.0.10",
     "prettier": "^2.5.1",
     "prettier-plugin-tailwindcss": "^0.1.5",
     "sanity-codegen": "^0.9.6",
     "tailwindcss": "^3.0.15",
-    "typescript": "4.4.4",
-    "windicss-webpack-plugin": "^1.5.5"
+    "typescript": "^4.5.5"
   }
 }

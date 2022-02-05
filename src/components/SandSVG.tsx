@@ -1,6 +1,4 @@
-type SandSVGProps = {};
-
-const SandSVG = ({}: SandSVGProps) => (
+const SandSVG = () => (
   <svg
     width="1680"
     height="132"

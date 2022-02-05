@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import Bleed from '../components/Bleed';
 import { ButtonLink } from '../components/Button';
@@ -15,10 +16,11 @@ function HomePage() {
       <Navigation />
       <div className="mx-auto mb-14 grid max-w-6xl grid-cols-1 gap-4 pt-8 md:grid-cols-2">
         <div className="order-2 p-5 md:order-1">
-          <img
-            className="mx-auto max-w-[200px] md:max-w-xs"
+          <Image
+            className="mx-auto max-w-[200px] md:max-w-xs "
             src="/static/img/logo.png"
             alt="Kolomåke"
+            unoptimized
           />
         </div>
         <div className="order-1 p-5 md:order-2 md:pl-0">
