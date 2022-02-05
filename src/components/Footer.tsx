@@ -12,17 +12,24 @@ const socialLinks = [
   },
 ];
 
-const Footer = ({ className = '', showSand = false }) => {
+type FooterProps = {
+  className?: string;
+  showSand?: boolean;
+};
+
+const Footer = ({ className = '', showSand = false }: FooterProps) => {
   const color = showSand ? 'text-yellow-700' : 'text-slate-800';
   return (
     <footer className={className}>
       {showSand && (
         <>
           <img
+            alt="Illustrasjon av en krabbe på bunnen av havet"
             src="/static/img/crab.png"
             className="absolute right-0 bottom-6 z-20 scale-75 md:right-20 md:bottom-20 md:scale-100"
           />
           <img
+            alt="Ved siden av krabben står det en skattekiste"
             src="/static/img/chest.png"
             className={[
               'absolute left-5 bottom-5 z-20 scale-x-[-1] md:bottom-10 lg:left-auto lg:right-60',
