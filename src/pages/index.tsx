@@ -19,8 +19,11 @@ function HomePage() {
           <Image
             className="mx-auto max-w-[200px] md:max-w-xs "
             src="/static/img/logo.png"
+            width={320}
+            height={435}
             alt="Kolomåke"
             unoptimized
+            priority
           />
         </div>
         <div className="order-1 p-5 md:order-2 md:pl-0">
@@ -48,14 +51,14 @@ function HomePage() {
       </div>
       <Bleed className="relative bg-gradient-to-t from-[#2C72AC] to-[#46B3D9] pt-20 md:pt-40">
         <WaveDivider />
-        <div className="mx-auto grid max-w-6xl grid-rows-2 gap-8 p-3 md:grid-cols-5 md:grid-rows-none md:p-0">
+        <div className="mx-auto grid max-w-6xl gap-8 p-3 md:grid-cols-5 md:grid-rows-none md:p-0">
           <div className="md:col-span-3 md:ml-10">
             <h2 className="mb-4 text-2xl font-bold text-white md:text-3xl">
               Ofte stilte spørsmål
             </h2>
             <FAQ />
           </div>
-          <div className="md:col-span-2 md:mr-10">
+          <div className="h-fit md:col-span-2 md:mr-10">
             <div className="max-w-sm">
               <LandingPageVideo />
               <p className="mt-3 text-center text-base text-white lg:text-lg">

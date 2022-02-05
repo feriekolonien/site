@@ -26,13 +26,13 @@ const LandingPageVideo = () => {
   return (
     <div className="group">
       <button
-        className="relative rounded-lg ring-8 ring-white"
+        className="relative mb-4 flex items-center justify-center rounded-lg shadow-2xl ring-8 ring-white"
         onClick={() => setShowVideo(true)}
       >
-        <PromoImage className="mb4" src="/static/poster.jpg" />
+        <PromoImage src="/static/poster.jpg" />
         <div
           className={[
-            'absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transform',
+            'absolute',
             'h-16 w-16 rounded-full	',
             'transition-all duration-150',
             'rounded-full bg-gradient-to-tr from-[#FC9C0C] to-[#FFD930] text-[#332A00]',

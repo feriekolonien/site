@@ -1,16 +1,15 @@
-import React, { useCallback } from 'react';
 import { groq } from 'next-sanity';
+import Image from 'next/image';
 import Link from 'next/link';
+import React, { useCallback } from 'react';
 import { RiArrowLeftSLine } from 'react-icons/ri';
 import Gallery from 'react-photo-gallery';
-
 import Footer from '../../components/Footer';
 import Navigation from '../../components/Navigation';
 import Page from '../../components/Page';
 import RenderInBrowser from '../../components/RenderInBrowser';
-import { sanityClient } from '../../lib/sanity.server';
 import { getImageSizes } from '../../lib/sanity';
-import LazyImage from '../../components/LazyImage';
+import { sanityClient } from '../../lib/sanity.server';
 
 type SanityAlbum = Sanity.Schema.Album;
 
@@ -23,7 +22,7 @@ const AlbumPage = ({
 }) => {
   const imageRenderer = useCallback(
     ({ photo, key }) => (
-      <LazyImage
+      <Image
         alt="Stemningsbilde fra Feriekolonien på Filtvet"
         className="gallery-image"
         key={key}

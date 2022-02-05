@@ -1,14 +1,19 @@
+import Image from 'next/image';
+
 type PromoImageProps = {
   className?: string;
   src: string;
 };
 
-const PromoImage = ({ className, src }: PromoImageProps) => (
-  <img
+const PromoImage = ({ src }: PromoImageProps) => (
+  <Image
     src={src}
     alt="Cover"
     draggable="false"
-    className={['rounded-lg shadow-2xl', className].join(' ')}
+    width={800}
+    height={450}
+    className="rounded-lg"
+    unoptimized
   />
 );
 

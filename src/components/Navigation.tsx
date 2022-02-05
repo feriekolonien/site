@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import { ButtonLink } from './Button';
 
@@ -24,10 +25,14 @@ const Navigation = () => (
     <div className="mr-auto flex w-full sm:w-auto">
       <Link href="/">
         <a className="mr-auto">
-          <img
+          <Image
             src="/logo.png"
-            className="inline-block w-40"
+            className="inline-block"
+            width={160}
+            height={40}
             alt="Filtvet feriekoloni"
+            priority
+            unoptimized
           />
         </a>
       </Link>

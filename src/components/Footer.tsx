@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { RiFacebookFill, RiInstagramLine } from 'react-icons/ri';
 import SandSVG from './SandSVG';
 
@@ -23,19 +24,24 @@ const Footer = ({ className = '', showSand = false }: FooterProps) => {
     <footer className={className}>
       {showSand && (
         <>
-          <img
-            alt="Illustrasjon av en krabbe på bunnen av havet"
-            src="/static/img/crab.png"
-            className="absolute right-0 bottom-6 z-20 scale-75 md:right-20 md:bottom-20 md:scale-100"
-          />
-          <img
-            alt="Ved siden av krabben står det en skattekiste"
-            src="/static/img/chest.png"
-            className={[
-              'absolute left-5 bottom-5 z-20 scale-x-[-1] md:bottom-10 lg:left-auto lg:right-60',
-              'w-28 md:w-auto',
-            ].join(' ')}
-          />
+          <span className="absolute right-0 bottom-6 z-20 scale-75 md:right-20 md:bottom-20 md:scale-100">
+            <Image
+              alt="Illustrasjon av en krabbe på bunnen av havet"
+              src="/static/img/crab.png"
+              width={111}
+              height={56}
+              unoptimized
+            />
+          </span>
+          <span className="absolute left-5 bottom-5 z-20 w-28 scale-x-[-1] md:bottom-10 md:w-auto lg:left-auto lg:right-60">
+            <Image
+              alt="Ved siden av krabben står det en skattekiste"
+              width={157}
+              height={148}
+              src="/static/img/chest.png"
+              unoptimized
+            />
+          </span>
         </>
       )}
       {showSand && <SandSVG />}
