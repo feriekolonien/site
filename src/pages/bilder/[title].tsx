@@ -24,6 +24,7 @@ const AlbumPage = ({
   const imageRenderer = useCallback(
     ({ photo, key }) => (
       <LazyImage
+        alt="Stemningsbilde fra Feriekolonien på Filtvet"
         className="gallery-image"
         key={key}
         src={photo.src}
