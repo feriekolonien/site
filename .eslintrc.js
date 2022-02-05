@@ -4,11 +4,10 @@ module.exports = {
     es2021: true,
   },
   extends: [
+    'next',
     'next/core-web-vitals',
     'plugin:react/recommended',
-    'airbnb',
     'plugin:prettier/recommended',
-    'plugin:@next/next/recommended',
   ],
   parserOptions: {
     ecmaFeatures: {
@@ -17,16 +16,8 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: 'module',
   },
-  plugins: ['react', 'prettier'],
   rules: {
-    'prettier/prettier': 'error',
-    'react/jsx-filename-extension': [
-      1,
-      { extensions: ['.js', '.jsx', '.tsx'] },
-    ],
     'react/react-in-jsx-scope': 'off',
-    'import/prefer-default-export': 'off',
-    'react/prop-types': 'warn',
-    'react/jsx-props-no-spreading': 'warn',
+    // 'import/prefer-default-export': 'off',
   },
 };
