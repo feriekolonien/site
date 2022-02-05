@@ -1,9 +1,9 @@
 import { groq } from 'next-sanity';
-import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import { RiInstagramLine } from 'react-icons/ri';
 import Footer from '../../components/Footer';
+import LazyImage from '../../components/LazyImage';
 import Navigation from '../../components/Navigation';
 import Page from '../../components/Page';
 import { getImageSizes } from '../../lib/sanity';
@@ -48,14 +48,15 @@ const AlbumList = ({
                 <a className="">
                   {album.coverImage && (
                     <div className="group aspect-w-10 aspect-h-7 block w-full overflow-hidden rounded-lg bg-gray-100 focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 focus-within:ring-offset-gray-100">
-                      <Image
-                        width="400px"
-                        height="280px"
-                        src={getImageSizes(album.coverImage).source.regular}
-                        alt={`Albumlenke for ${album.title}`}
-                        className="pointer-events-none object-cover group-hover:opacity-75"
-                        unoptimized
-                      />
+                      <span className="test">
+                        <LazyImage
+                          width={400}
+                          height={280}
+                          src={getImageSizes(album.coverImage).source.regular}
+                          alt={`Albumlenke for ${album.title}`}
+                          className="pointer-events-none object-cover group-hover:opacity-75"
+                        />
+                      </span>
                     </div>
                   )}
                   <p className="pointer-events-none mt-2 block truncate text-xl font-semibold text-gray-900">

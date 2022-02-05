@@ -1,10 +1,10 @@
 import { groq } from 'next-sanity';
-import Image from 'next/image';
 import Link from 'next/link';
 import React, { useCallback } from 'react';
 import { RiArrowLeftSLine } from 'react-icons/ri';
 import Gallery from 'react-photo-gallery';
 import Footer from '../../components/Footer';
+import LazyImage from '../../components/LazyImage';
 import Navigation from '../../components/Navigation';
 import Page from '../../components/Page';
 import RenderInBrowser from '../../components/RenderInBrowser';
@@ -20,19 +20,18 @@ const AlbumPage = ({
     album: SanityAlbum;
   };
 }) => {
-  const imageRenderer = useCallback(
-    ({ photo, key }) => (
-      <Image
+  const imageRenderer = useCallback(({ photo, key }) => {
+    return (
+      <LazyImage
         alt="Stemningsbilde fra Feriekolonien på Filtvet"
-        className="gallery-image"
+        // className="gallery-image"
         key={key}
         src={photo.src}
         height={photo.height}
         width={photo.width}
       />
-    ),
-    [],
-  );
+    );
+  }, []);
 
   if (!data.album?.images?.length) {
     return null;
