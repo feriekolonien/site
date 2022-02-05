@@ -18,6 +18,6 @@ module.exports = {
   },
   rules: {
     'react/react-in-jsx-scope': 'off',
-    // 'import/prefer-default-export': 'off',
+    'jsx-a11y/alt-text': 'error',
   },
 };
