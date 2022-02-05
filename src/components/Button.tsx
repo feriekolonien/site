@@ -13,8 +13,8 @@ const Button = ({ children, className }: ButtonProps) => {
         className,
         'font-bold',
         'transition-all duration-150',
-        'px-8 py-2 rounded-full text-[#332A00] bg-gradient-to-tr from-[#FC9C0C] to-[#FFD930]',
-        'hover:bg-yellow-300 hover:bg-blend-multiply active:bg-blend-multiply active:bg-yellow-400',
+        'rounded-full bg-gradient-to-tr from-[#FC9C0C] to-[#FFD930] px-8 py-2 text-[#332A00] ',
+        'hover:bg-yellow-300 hover:bg-blend-multiply active:bg-yellow-400 active:bg-blend-multiply',
       ].join(' ')}
     >
       {children}
@@ -36,8 +36,8 @@ export const ButtonLink = ({ children, className, href }: ButtonLinkProps) => {
           className,
           'font-bold',
           'transition-all duration-150',
-          'px-8 py-2 rounded-full text-[#332A00] bg-gradient-to-tr from-[#FC9C0C] to-[#FFD930]',
-          'hover:bg-yellow-300 hover:bg-blend-multiply active:bg-blend-multiply active:bg-yellow-400',
+          'rounded-full bg-gradient-to-tr from-[#FC9C0C] to-[#FFD930] px-8 py-2 text-[#332A00]',
+          'hover:bg-yellow-300 hover:bg-blend-multiply active:bg-yellow-400 active:bg-blend-multiply',
         ].join(' ')}
       >
         {children}

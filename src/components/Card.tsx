@@ -7,7 +7,7 @@ const Card = ({ children, className = '' }: CardProps) => {
   return (
     <div
       className={[
-        'py-7 px-6 rounded-xl bg-gradient-to-tr from-[#2C72AC] to-[#46B3D9] ',
+        'rounded-xl bg-gradient-to-tr from-[#2C72AC] to-[#46B3D9] py-7 px-6 ',
         className,
       ].join(' ')}
     >

@@ -20,28 +20,28 @@ const Footer = ({ className = '', showSand = false }) => {
         <>
           <img
             src="/static/img/crab.png"
-            className="absolute right-0 bottom-6 md:right-20 md:bottom-20 z-20 scale-75 md:scale-100"
+            className="absolute right-0 bottom-6 z-20 scale-75 md:right-20 md:bottom-20 md:scale-100"
           />
           <img
             src="/static/img/chest.png"
             className={[
-              'absolute left-5 bottom-5 lg:left-auto lg:right-60 md:bottom-10 z-20 scale-x-[-1]',
+              'absolute left-5 bottom-5 z-20 scale-x-[-1] md:bottom-10 lg:left-auto lg:right-60',
               'w-28 md:w-auto',
             ].join(' ')}
           />
         </>
       )}
       {showSand && <SandSVG />}
-      <div className={['text-center py-3', color].join(' ')}>
+      <div className={['py-3 text-center', color].join(' ')}>
         <ul
           className={[
-            'text-2xl relative z-10 flex justify-center space-x-3 mb-1',
+            'relative z-10 mb-1 flex justify-center space-x-3 text-2xl',
             color,
           ].join(' ')}
         >
           {socialLinks.map((el) => (
             <li key={el.href}>
-              <a href={el.href} target="_blank">
+              <a href={el.href} target="_blank" rel="noreferrer">
                 <el.icon />
               </a>
             </li>

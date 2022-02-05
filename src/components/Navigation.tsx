@@ -10,7 +10,7 @@ const NavLink = ({
 }) => (
   <Link href={href}>
     <a
-      className={['hover:text-slate-500 hover:cursor-pointer font-bold'].join(
+      className={['font-bold hover:cursor-pointer hover:text-slate-500'].join(
         ' ',
       )}
     >
@@ -22,22 +22,22 @@ const NavLink = ({
 type NavigationProps = {};
 
 const Navigation = ({}: NavigationProps) => (
-  <nav className="flex flex-col sm:flex-row mx-center bg-white max-w-6xl py-5 md:items-center mx-auto">
-    <div className="w-full sm:w-auto flex mr-auto">
+  <nav className="mx-center mx-auto flex max-w-6xl flex-col bg-white py-5 sm:flex-row md:items-center">
+    <div className="mr-auto flex w-full sm:w-auto">
       <Link href="/">
         <a className="mr-auto">
           <img
             src="/logo.png"
-            className="w-40 inline-block"
+            className="inline-block w-40"
             alt="Filtvet feriekoloni"
           />
         </a>
       </Link>
-      <ButtonLink href="/soknadsskjema" className="sm:hidden mr-3">
+      <ButtonLink href="/soknadsskjema" className="mr-3 sm:hidden">
         Søk nå
       </ButtonLink>
     </div>
-    <div className="mx-3 space-x-6 mt-4 sm:mt-0 text-slate-900">
+    <div className="mx-3 mt-4 space-x-6 text-slate-900 sm:mt-0">
       <NavLink href="/om-oss">Om oss</NavLink>
       <NavLink href="/bilder">Bilder</NavLink>
       <NavLink href="/historien">Historien</NavLink>

@@ -21,17 +21,18 @@ const AlbumList = ({
   return (
     <Page title="Bilder">
       <Navigation />
-      <section className="max-w-4xl mx-auto mt-4 sm:mt-24 mb-10 px-4 sm:px-6 md:px-8">
-        <h1 className="font-bold text-4xl sm:text-5xl lg:text-5xl mb-8">
+      <section className="mx-auto mt-4 mb-10 max-w-4xl px-4 sm:mt-24 sm:px-6 md:px-8">
+        <h1 className="mb-8 text-4xl font-bold sm:text-5xl lg:text-5xl">
           Bilder fra tidligere år
         </h1>
-        <p className="mb-6 sm:mb-12 text-lg">
+        <p className="mb-6 text-lg sm:mb-12">
           På slutten av hver sommer legger vi ut bilder fra alle partiene vi har
           hatt her. Gjennom sommerferien legger vi som regel ut bilder på{' '}
           <a
             target="_blank"
-            className="text-blue-900 underline font-semibold"
+            className="font-semibold text-blue-900 underline"
             href="https://www.instagram.com/feriekolonien/?utm_source=feriekolonien.no&utm_campaign=bilder"
+            rel="noreferrer"
           >
             Instagram <RiInstagramLine className="inline-block" />
           </a>
@@ -46,17 +47,17 @@ const AlbumList = ({
               <Link key={album.title} href={`/bilder/${album.title}`}>
                 <a className="">
                   {album.coverImage && (
-                    <div className="group block w-full aspect-w-10 aspect-h-7 rounded-lg bg-gray-100 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-offset-gray-100 focus-within:ring-indigo-500 overflow-hidden">
+                    <div className="group aspect-w-10 aspect-h-7 block w-full overflow-hidden rounded-lg bg-gray-100 focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 focus-within:ring-offset-gray-100">
                       <img
                         width="400px"
                         height="280px"
                         src={getImageSizes(album.coverImage).source.regular}
                         alt={`Albumlenke for ${album.title}`}
-                        className="object-cover pointer-events-none group-hover:opacity-75"
+                        className="pointer-events-none object-cover group-hover:opacity-75"
                       />
                     </div>
                   )}
-                  <p className="mt-2 block text-xl font-semibold text-gray-900 truncate pointer-events-none">
+                  <p className="pointer-events-none mt-2 block truncate text-xl font-semibold text-gray-900">
                     {album.title}
                   </p>
                 </a>

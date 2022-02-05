@@ -5,7 +5,7 @@ const SandSVG = ({}: SandSVGProps) => (
     width="1680"
     height="132"
     viewBox="0 0 1680 132"
-    className="absolute z-10 bottom-0 left-0 right-0 h-24 md:h-36 w-full text-yellow-600/50"
+    className="absolute bottom-0 left-0 right-0 z-10 h-24 w-full text-yellow-600/50 md:h-36"
     fill="none"
     preserveAspectRatio="none"
     xmlns="http://www.w3.org/2000/svg"

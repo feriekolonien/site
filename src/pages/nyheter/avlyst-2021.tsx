@@ -8,8 +8,8 @@ const CancelledPost = () => (
   <Page>
     <Navigation />
 
-    <article className="prose md:prose-lg lg:prose-xl mx-auto mt-4 sm:mt-24 mb-10">
-      <h1 className="font-bold text-4xl sm:text-5xl lg:text-5xl mb-8">
+    <article className="prose mx-auto mt-4 mb-10 sm:mt-24 md:prose-lg lg:prose-xl">
+      <h1 className="mb-8 text-4xl font-bold sm:text-5xl lg:text-5xl">
         Feriekolonien 2021 er avlyst
       </h1>
       <span>

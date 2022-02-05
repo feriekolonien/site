@@ -17,27 +17,27 @@ const ErrorPage = ({
   <Page>
     <Navigation />
     <article className="">
-      <div className="aspect-w-10 aspect-h-4 block relative">
+      <div className="aspect-w-10 aspect-h-4 relative block">
         <img
           src="/static/img/about-us.jpg"
           alt="Historiefortelling på stranda"
           width="1365px"
           height="546px"
-          className="rounded-xl grayscale object-cover brightness-50"
+          className="rounded-xl object-cover brightness-50 grayscale"
         />
 
-        <div className="absolute inset-0 flex justify-center items-center flex-col">
-          <h1 className="text-white text-3xl md:text-5xl font-bold mb-3">
+        <div className="absolute inset-0 flex flex-col items-center justify-center">
+          <h1 className="mb-3 text-3xl font-bold text-white md:text-5xl">
             {title}
           </h1>
-          <p className="text-white text-xl md:text-3xl text-center">
+          <p className="text-center text-xl text-white md:text-3xl">
             {children}
           </p>
         </div>
       </div>
-      <div className="max-w-3xl mx-auto mt-8">
+      <div className="mx-auto mt-8 max-w-3xl">
         <Card className="shadow-xl">
-          <h3 className="text-2xl font-bold text-white mb-6">
+          <h3 className="mb-6 text-2xl font-bold text-white">
             Ofte stilte spørsmål
           </h3>
           <FAQ />

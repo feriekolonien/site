@@ -21,10 +21,10 @@ export const HeroImage = ({
 }) => {
   const height = '400px';
   return (
-    <div style={{ height }} className="relative flex tc">
+    <div style={{ height }} className="tc relative flex">
       <div
         style={{ height, filter: 'blur(1px)' }}
-        className="absolute w-100 z--1"
+        className="w-100 z--1 absolute"
       >
         <Image
           quality="90"
@@ -35,7 +35,7 @@ export const HeroImage = ({
           priority
         />
       </div>
-      <div className={`${className} flex flex-column w-100`}>{children}</div>
+      <div className={`${className} flex-column w-100 flex`}>{children}</div>
     </div>
   );
 };

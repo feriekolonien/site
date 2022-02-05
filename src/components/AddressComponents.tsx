@@ -17,7 +17,7 @@ type AddressLinkProps = {
 
 export const AddressLink = ({ children, href, ...rest }: AddressLinkProps) => (
   <a
-    className="hover:text-slate-500 hover:cursor-pointer"
+    className="hover:cursor-pointer hover:text-slate-500"
     href={href}
     {...rest}
   >

@@ -6,18 +6,18 @@ import { AddressLink, Phone } from '../components/AddressComponents';
 const ContactPage = () => (
   <Page title="Kontaktinfo">
     <Navigation />
-    <div className="max-w-4xl mx-auto pt-20 pb-20 sm:pt-24 px-4 sm:px-6 md:px-8">
-      <h1 className="font-extrabold text-4xl sm:text-5xl lg:text-6xl mb-5">
+    <div className="mx-auto max-w-4xl px-4 pt-20 pb-20 sm:px-6 sm:pt-24 md:px-8">
+      <h1 className="mb-5 text-4xl font-extrabold sm:text-5xl lg:text-6xl">
         Kontaktinfo
       </h1>
-      <p className="text-lg mb-5">
+      <p className="mb-5 text-lg">
         Vi er stort sett på feriekolonien hele sommeren, resten av året finner
         du oss i Oslo.
       </p>
 
-      <div className="grid grid-cols-1 gap-8 pt-8 mb-11 sm:grid-cols-2">
+      <div className="mb-11 grid grid-cols-1 gap-8 pt-8 sm:grid-cols-2">
         <div className="space-y-2">
-          <h3 className="font-bold text-2xl">Filtvet Feriekoloni</h3>
+          <h3 className="text-2xl font-bold">Filtvet Feriekoloni</h3>
           <p>Trefoldighet Feriekoloni Stranda 16</p>
           <p>Postboks 3, 3480 Filtvet</p>
           <p>
@@ -35,7 +35,7 @@ const ContactPage = () => (
         </div>
 
         <div className="space-y-2">
-          <h3 className="font-bold text-2xl">Oslo</h3>
+          <h3 className="text-2xl font-bold">Oslo</h3>
           <p>Trefoldighet Feriekoloni Postboks 6929</p>
           <p>St. Olavs Plass, 0130 Oslo</p>
 

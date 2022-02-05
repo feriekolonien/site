@@ -18,7 +18,7 @@ export const CTA = ({
     </style>
     <a
       data-splitbee-event="Sign up"
-      className="f3 grow no-underline br-pill ph5 pv2 mb2 dib white mt3"
+      className="f3 br-pill ph5 pv2 mb2 dib white mt3 grow no-underline"
       href="/soknadsskjema"
     >
       {children}

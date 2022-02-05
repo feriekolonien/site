@@ -15,7 +15,7 @@ const FAQElement = ({ children, question }: FAQElementProps) => {
         data-splitbee-event={`Click: ${question}`}
         data-splitbee-event-type="FAQ Toggle"
         onClick={toggleState}
-        className="outline-none focus:ring-1 ring-white/60 text-xl md:text-2xl cursor-pointer mb-3"
+        className="mb-3 cursor-pointer text-xl outline-none ring-white/60 focus:ring-1 md:text-2xl"
       >
         <span
           aria-label="pointer"
@@ -32,7 +32,7 @@ const FAQElement = ({ children, question }: FAQElementProps) => {
 };
 
 const Answer = ({ children }: { children: React.ReactNode }) => (
-  <p className="last-of-type:mb-4 text-base md:text-lg">{children}</p>
+  <p className="text-base last-of-type:mb-4 md:text-lg">{children}</p>
 );
 
 const FAQ = () => (
@@ -84,7 +84,7 @@ const FAQ = () => (
         låner når de er her ute, så mye tøy behøver du ikke. Det man <em>må</em>{' '}
         ta med seg er:
       </Answer>
-      <ul className="list-disc ml-6 text-base md:text-lg">
+      <ul className="ml-6 list-disc text-base md:text-lg">
         <li>Regntøy/gummistøvler</li>
         <li>Joggesko</li>
         <li>

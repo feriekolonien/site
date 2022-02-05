@@ -26,17 +26,17 @@ const LandingPageVideo = () => {
   return (
     <div className="group">
       <button
-        className="relative ring-8 rounded-lg ring-white"
+        className="relative rounded-lg ring-8 ring-white"
         onClick={() => setShowVideo(true)}
       >
         <PromoImage className="mb4" src="/static/poster.jpg" />
         <div
           className={[
-            'absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2',
-            'w-16 h-16 rounded-full	',
+            'absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transform',
+            'h-16 w-16 rounded-full	',
             'transition-all duration-150',
-            'rounded-full text-[#332A00] bg-gradient-to-tr from-[#FC9C0C] to-[#FFD930]',
-            'group-hover:bg-yellow-300 group-hover:bg-blend-multiply active:bg-blend-multiply active:bg-yellow-400',
+            'rounded-full bg-gradient-to-tr from-[#FC9C0C] to-[#FFD930] text-[#332A00]',
+            'active:bg-yellow-400 active:bg-blend-multiply group-hover:bg-yellow-300 group-hover:bg-blend-multiply',
           ].join(' ')}
         >
           <svg

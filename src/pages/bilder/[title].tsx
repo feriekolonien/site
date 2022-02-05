@@ -53,10 +53,10 @@ const AlbumPage = ({
   return (
     <Page title={`Album: ${albumTitle}`}>
       <Navigation />
-      <section className="max-w-4xl mx-auto pt-4 pb-10 sm:pt-20 px-4 sm:px-6 md:px-8">
-        <div className="mb-6 sm:mb-12 grid grid-cols-3 items-center">
+      <section className="mx-auto max-w-4xl px-4 pt-4 pb-10 sm:px-6 sm:pt-20 md:px-8">
+        <div className="mb-6 grid grid-cols-3 items-center sm:mb-12">
           {goBack}
-          <h1 className="font-extrabold text-4xl sm:text-5xl lg:text-6xl text-center">
+          <h1 className="text-center text-4xl font-extrabold sm:text-5xl lg:text-6xl">
             {albumTitle}
           </h1>
         </div>
