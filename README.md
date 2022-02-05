@@ -1,4 +1,4 @@
-![Logo of the project](/public/logo.png)
+![Feriekolonien logo](/public/logo.png)
 
 # Feriekolonien Web &middot; [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/feriekolonien/web/blob/master/LICENSE)
 
@@ -33,23 +33,27 @@ This starts the NextJS with hot module reloading (HMR)
 
 ### Built With
 
-NextJS, check out their [docs for more info](https://nextjs.org/docs/getting-started).
+- **Next.js with Typescript**, check out their [docs for more info](https://nextjs.org/docs/getting-started).
+
+- Styling is done with [TailwindCSS](https://tailwindcss.com/).
+- Style guide and linting: ESLint and Prettier. It's recommended that you set up
+  your editor with and ESLint and Prettier extension. This will automatically highlight issues and automatically format your code. Even Tailwind classnames will be sorted as we're using the `prettier-plugin-tailwindcss` package.
+
+To run the TypeScript compiler, run ESlint and check formatting, run:
+
+```sh
+yarn test # this will run "yarn prettier && yarn eslint && yarn ts"
+```
+
+We should probably set this up with a pre-push hook, but that's TODO.
 
 ### Building and deploying
 
-This site will probably be hosted using _Zeit's Now_ platform. To do this you first need deploy access. Ask @rix1 for help. Then, install the [now cli](https://zeit.co/download#now-cli):
+This site is built and hosted on Vercel. We use their Github integration to automatically build and deploy on every commit. Just push a branch and Vercel will give comment a preview URL on your Github PR where you can see your changes.
 
-```sh
-npm i -g now
-```
+When pushing to master changes are automatically deployed to production.
 
-After that, everything you need to run the following command in the project root folder:
-
-```sh
-now
-```
-
-This will recognize the NextJS project, build it and upload the sources to Zeit's platform. The command will print a live URL where you can visit the site before it exits. After this you probably have to alias it to feriekolonien.no for it to be updated, but this is subject to change with the introduction to CI/CD.
+To get access to the Vercel account, ask [@rix1](https://github.com/rix1).
 
 ### CI/CD
 
