@@ -1,0 +1,41 @@
+.idea/
+*.swp
+.env
+.DS_Store
+dist/
+node_modules/
+npm-debug.log
+intl.json
+intl/
+.vscode
+yarn-error.log
+.gitconfig
+.next/
+
+# Logs
+logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Optional npm cache directory
+.npm
+
+# Dependency directories
+/node_modules
+/jspm_packages
+/bower_components
+
+# Yarn Integrity file
+.yarn-integrity
+
+# Optional eslint cache
+.eslintcache
+
+# dotenv environment variables file(s)
+.env
+.env.*
+
+#Build generated
+dist/
+build/

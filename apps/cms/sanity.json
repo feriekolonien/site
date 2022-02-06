@@ -1,0 +1,38 @@
+{
+  "root": true,
+  "project": {
+    "name": "feriekolonien-cms"
+  },
+  "api": {
+    "projectId": "bvwemm0b",
+    "dataset": "development"
+  },
+  "plugins": [
+    "@sanity/base",
+    "@sanity/components",
+    "@sanity/default-layout",
+    "@sanity/default-login",
+    "@sanity/desk-tool",
+    "@sanity/dashboard",
+    "dashboard-widget-document-list",
+    "dashboard-widget-document-chart"
+  ],
+  "env": {
+    "development": {
+      "api": {
+        "dataset": "development"
+      },
+      "plugins": ["@sanity/vision"]
+    }
+  },
+  "parts": [
+    {
+      "name": "part:@sanity/base/schema",
+      "path": "./schemas/schema.js"
+    },
+    {
+      "implements": "part:@sanity/dashboard/config",
+      "path": "./dashboardConfig.js"
+    }
+  ]
+}

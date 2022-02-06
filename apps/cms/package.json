@@ -1,0 +1,53 @@
+{
+  "name": "feriekoloniencms",
+  "private": false,
+  "version": "1.0.0",
+  "description": "Repository for Feriekoloniens CMS (powered by Sanity.io)",
+  "main": "package.json",
+  "author": "Rikard Eide <rikardeide@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "echo 'WARNING: Starting in production' &&  export NODE_ENV=production; sanity start && echo '\u001b[0;31m'",
+    "dev": "sanity start",
+    "test": "sanity check",
+    "eslint": "eslint --cache ."
+  },
+  "keywords": [
+    "sanity",
+    "cms"
+  ],
+  "dependencies": {
+    "@sanity/base": "^1.148.5",
+    "@sanity/components": "^1.148.5",
+    "@sanity/core": "^1.148.5",
+    "@sanity/dashboard": "^1.148.5",
+    "@sanity/default-layout": "^1.148.5",
+    "@sanity/default-login": "^1.148.1",
+    "@sanity/desk-tool": "^1.148.6",
+    "@sanity/vision": "^1.148.1",
+    "prop-types": "^15.6",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-icons": "^3.8.0",
+    "sanity-plugin-dashboard-widget-document-chart": "^0.0.6",
+    "sanity-plugin-dashboard-widget-document-list": "^0.0.9"
+  },
+  "devDependencies": {
+    "@otovo/eslint-config-otovo": "^3.0.0",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.6.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.5.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-react": "^7.16.0",
+    "fast-glob": "^3.1.1",
+    "nanoid": "^2.1.9",
+    "prettier": "^1.19.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:feriekolonien/cms.git"
+  }
+}
