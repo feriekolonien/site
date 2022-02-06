@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'fonts.css';
+
+body {
+  font-family: 'Raleway', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+summary {
+  font-family: 'Raleway', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+}
+
+p {
+  font-family: 'Montserrat', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+}
+
+.blue-primary {
+  color: #2c72ac;
+}
+.blue-dark {
+  color: #0e2e58;
+}
+.blue-secondary {
+  color: #46b3d9;
+}
+
+.blue-dark-2 {
+  color: #173a4d;
+}
+
+.error-status {
+  border-right: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.gallery-image {
+  margin: 2px !important;
+}
+
+/* Reset <summary> styles */
+
+summary {
+  list-style-image: none;
+  list-style: none;
+}
+
+summary::-webkit-details-marker {
+  background: none;
+  color: transparent;
+}
+summary::marker {
+  display: none;
+}
+summary {
+  list-style-type: none;
+}
+summary::-webkit-details-marker {
+  display: none;
+}
