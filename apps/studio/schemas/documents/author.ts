@@ -1,7 +1,10 @@
+import { RiUserSmileLine } from 'react-icons/ri';
+
 export default {
   name: 'author',
   title: 'Author',
   type: 'document',
+  icon: RiUserSmileLine,
   fields: [
     {
       name: 'name',

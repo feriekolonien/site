@@ -1,9 +1,9 @@
-import { MdPhotoLibrary } from 'react-icons/md';
+import { RiCamera3Line } from 'react-icons/ri';
 
 const album = {
   name: 'album',
   type: 'document',
-  icon: MdPhotoLibrary,
+  icon: RiCamera3Line,
   fields: [
     {
       name: 'title',

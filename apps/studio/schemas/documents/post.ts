@@ -1,7 +1,10 @@
+import { RiArticleLine } from 'react-icons/ri';
+
 export default {
   name: 'post',
   title: 'Post',
   type: 'document',
+  icon: RiArticleLine,
   fields: [
     {
       name: 'title',
