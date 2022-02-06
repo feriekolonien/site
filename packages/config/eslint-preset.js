@@ -1,11 +1,22 @@
 module.exports = {
-  extends: ["next", "prettier"],
-  settings: {
-    next: {
-      rootDir: ["apps/*/", "packages/*/"],
-    },
-  },
+  plugins: ["@typescript-eslint"],
+  extends: [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "next/core-web-vitals",
+  ],
   rules: {
-    "@next/next/no-html-link-for-pages": "off",
+    "no-console": ["error", { allow: ["warn", "error"] }],
   },
 };
+// module.exports = {
+//   extends: ["next", "prettier"],
+//   settings: {
+//     next: {
+//       rootDir: ["apps/*/", "packages/*/"],
+//     },
+//   },
+//   rules: {
+//     "@next/next/no-html-link-for-pages": "off",
+//   },
+// };
