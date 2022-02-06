@@ -1,4 +1,4 @@
-export default {
+const dashboardConfig = {
   widgets: [
     {
       name: 'project-info',
@@ -16,3 +16,5 @@ export default {
     },
   ],
 };
+
+export default dashboardConfig;

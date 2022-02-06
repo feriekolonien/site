@@ -6,6 +6,7 @@ import fg from 'fast-glob';
 import sanityClient from '@sanity/client'; // eslint-disable-line
 import nanoid from 'nanoid'; // eslint-disable-line
 
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const readline = require('readline').createInterface({
   input: process.stdin,
   output: process.stdout,
@@ -27,8 +28,8 @@ function createChunks(arr, size) {
   );
 }
 
-const fetchAlbums = () =>
-  client.fetch(`*[_type == 'album' && !(_id in path('drafts.**'))]`);
+// const fetchAlbums = () =>
+//   client.fetch(`*[_type == 'album' && !(_id in path('drafts.**'))]`);
 
 function addImageToAlbum(albumId, image) {
   return client
@@ -102,7 +103,7 @@ async function runScript() {
           }
         }
       } else {
-        console.log('Ok, will not do anything. Exiting.');
+        console.info('Ok, will not do anything. Exiting.');
       }
       readline.close();
       process.exit(0);

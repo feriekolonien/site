@@ -9,9 +9,9 @@
   "scripts": {
     "start": "echo 'WARNING: Starting in production' &&  export NODE_ENV=production; sanity start && echo '\u001b[0;31m'",
     "dev": "sanity start",
-    "test": "sanity check",
     "eslint": "eslint --cache .",
-    "prettier": "prettier --check . --ignore-path ../../.prettierignore"
+    "prettier": "prettier --check . --ignore-path ../../.prettierignore",
+    "test": "yarn prettier && yarn eslint && sanity check"
   },
   "keywords": [
     "sanity",
