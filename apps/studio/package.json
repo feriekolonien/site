@@ -1,13 +1,14 @@
 {
-  "name": "feriekoloniencms",
-  "private": false,
+  "name": "feriekolonien-sanity-studio",
+  "private": true,
   "version": "1.0.0",
   "description": "Repository for Feriekoloniens CMS (powered by Sanity.io)",
   "main": "package.json",
   "author": "Rikard Eide <rikardeide@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "echo 'WARNING: Starting in production' &&  export NODE_ENV=production; sanity start && echo '\u001b[0;31m'",
+    "start": "sanity start",
+    "build": "sanity build",
     "dev": "sanity start",
     "eslint": "eslint --cache .",
     "prettier": "prettier --check . --ignore-path ../../.prettierignore",
@@ -15,33 +16,25 @@
     "test": "yarn prettier && yarn eslint && yarn ts"
   },
   "keywords": [
-    "sanity",
-    "cms"
+    "sanity"
   ],
   "dependencies": {
-    "@sanity/base": "^1.148.5",
-    "@sanity/components": "^1.148.5",
-    "@sanity/core": "^1.148.5",
-    "@sanity/dashboard": "^1.148.5",
-    "@sanity/default-layout": "^1.148.5",
-    "@sanity/default-login": "^1.148.1",
-    "@sanity/desk-tool": "^1.148.6",
-    "@sanity/vision": "^1.148.1",
-    "prop-types": "^15.6",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-icons": "^3.8.0",
-    "sanity-plugin-dashboard-widget-document-chart": "^0.0.6",
-    "sanity-plugin-dashboard-widget-document-list": "^0.0.9"
+    "@sanity/base": "^2.26.0",
+    "@sanity/core": "^2.26.0",
+    "@sanity/default-layout": "^2.26.0",
+    "@sanity/default-login": "^2.26.0",
+    "@sanity/desk-tool": "^2.26.0",
+    "@sanity/eslint-config-studio": "^2.0.0",
+    "@sanity/vision": "^2.26.0",
+    "eslint": "^8.6.0",
+    "prop-types": "^15.7",
+    "react": "^17.0",
+    "react-dom": "^17.0",
+    "react-icons": "^4.3.1",
+    "styled-components": "^5.2.0"
   },
   "devDependencies": {
-    "fast-glob": "^3.1.1",
-    "nanoid": "^2.1.9",
     "config": "*",
     "tsconfig": "*"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:feriekolonien/cms.git"
   }
 }

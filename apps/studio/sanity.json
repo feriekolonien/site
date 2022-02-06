@@ -5,23 +5,16 @@
   },
   "api": {
     "projectId": "bvwemm0b",
-    "dataset": "development"
+    "dataset": "production"
   },
   "plugins": [
     "@sanity/base",
-    "@sanity/components",
     "@sanity/default-layout",
     "@sanity/default-login",
-    "@sanity/desk-tool",
-    "@sanity/dashboard",
-    "dashboard-widget-document-list",
-    "dashboard-widget-document-chart"
+    "@sanity/desk-tool"
   ],
   "env": {
     "development": {
-      "api": {
-        "dataset": "development"
-      },
       "plugins": ["@sanity/vision"]
     }
   },
@@ -29,10 +22,6 @@
     {
       "name": "part:@sanity/base/schema",
       "path": "./schemas/schema"
-    },
-    {
-      "implements": "part:@sanity/dashboard/config",
-      "path": "./dashboardConfig"
     }
   ]
 }

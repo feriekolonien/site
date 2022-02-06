@@ -8,7 +8,7 @@ const album = {
     {
       name: 'title',
       type: 'string',
-      validation: (Rule) => Rule.required(),
+      validation: (Rule: any) => Rule.required(),
     },
     {
       name: 'coverImage',
@@ -21,7 +21,7 @@ const album = {
       title: 'title',
       coverImage: 'coverImage',
     },
-    prepare(selection) {
+    prepare(selection: any) {
       const { title, coverImage } = selection;
 
       return {
