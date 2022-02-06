@@ -9,6 +9,8 @@ module.exports = {
     "no-console": ["error", { allow: ["warn", "error"] }],
   },
 };
+
+// Previous configuration that came with Turborepo
 // module.exports = {
 //   extends: ["next", "prettier"],
 //   settings: {
