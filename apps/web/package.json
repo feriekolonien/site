@@ -1,5 +1,5 @@
 {
-  "name": "feriekolonien-web",
+  "name": "web",
   "version": "0.0.1",
   "description": "Frontend repo for feriekolonien.no",
   "main": "index.js",
