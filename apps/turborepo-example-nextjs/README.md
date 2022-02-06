@@ -1,4 +1,9 @@
-## Getting Started
+## What is this?
+
+Hey! This is just a template that was automatically set up with Turborepo. I'll
+keep it around for now in order to look at / debug configuration issues.
+
+## Installing
 
 First, run the development server:
 
