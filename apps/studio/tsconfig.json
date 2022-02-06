@@ -1,5 +1,5 @@
 {
-  "extends": "tsconfig/base.json",
+  "extends": "tsconfig/nextjs.json",
   "include": [
     "./node_modules/@sanity/base/types/**/*.ts",
     "**/*.ts",
