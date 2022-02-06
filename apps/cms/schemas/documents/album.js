@@ -1,6 +1,6 @@
 import { MdPhotoLibrary } from 'react-icons/md';
 
-export default {
+const album = {
   name: 'album',
   type: 'document',
   icon: MdPhotoLibrary,
@@ -8,7 +8,7 @@ export default {
     {
       name: 'title',
       type: 'string',
-      validation: Rule => Rule.required(),
+      validation: (Rule) => Rule.required(),
     },
     {
       name: 'coverImage',
@@ -31,3 +31,5 @@ export default {
     },
   },
 };
+
+export default album;

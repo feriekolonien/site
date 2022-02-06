@@ -46,9 +46,9 @@ function addImageToAlbum(albumId, image) {
     ])
     .commit()
     .then(() => {
-      console.log('✅ Image added to', albumId);
+      console.info('✅ Image added to', albumId);
     })
-    .catch(err => {
+    .catch((err) => {
       console.error('[addImageToAlbum] Transaction failed: ', err.message);
     });
 }
@@ -65,24 +65,24 @@ function getAbsolutePath() {
 }
 
 async function runScript() {
-  console.log(
+  console.info(
     `Running Upload Photos script for\nProjectId:\t${client.clientConfig.projectId}\nDataset:\t${client.clientConfig.dataset}\n\n`,
   );
   const startPath = getAbsolutePath();
-  console.log(join(startPath, '**/*.jpg'));
+  console.info(join(startPath, '**/*.jpg'));
   const entries = await fg([join(startPath, '**/*.jpg')], {
     caseSensitiveMatch: false,
   });
   const paginated = createChunks(entries, 3);
   readline.question(
     `Will upload ${entries.length} files in ${paginated.length} batches. Continue? (y/N) `,
-    async answer => {
+    async (answer) => {
       if (answer && answer.toLowerCase() === 'y') {
         for (let index = 0; index < paginated.length; index++) {
-          console.log(
+          console.info(
             `starting batch #${index} (${paginated[index].length} files)`,
           );
-          const waitForFileUpload = paginated[index].map(file =>
+          const waitForFileUpload = paginated[index].map((file) =>
             uploadImageAsset(file),
           ); // returns promise
 
@@ -91,14 +91,14 @@ async function runScript() {
 
           const [, id] = process.argv.slice(2);
           if (id) {
-            console.log(`Adding images to album ${id}`);
-            const addToAlbums = uploadedImages.map(image =>
+            console.info(`Adding images to album ${id}`);
+            const addToAlbums = uploadedImages.map((image) =>
               addImageToAlbum(id, image),
             );
             // eslint-disable-next-line no-await-in-loop
             await Promise.all(addToAlbums);
           } else {
-            console.log('Will not add images to album.');
+            console.info('Will not add images to album.');
           }
         }
       } else {
@@ -109,8 +109,8 @@ async function runScript() {
     },
   );
 
-  // console.log('/scripts/2013/2013_001.jpg');
-  // console.log(client);
+  // console.info('/scripts/2013/2013_001.jpg');
+  // console.info(client);
   // const image = await uploadImageAsset('2013/2013_002.jpg');
   // addImageToAlbum('54539d26-57b7-43ef-b48f-662fed10b086', image);
 
