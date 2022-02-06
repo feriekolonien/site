@@ -1,6 +1,7 @@
-# Turborepo starter
+![Feriekolonien logo](/apps/web/public/logo.png)
 
-This is an official Yarn v1 starter turborepo.
+This is the (new!) main repo for [Feriekolonien.no](https://feriekolonien.no)
+and it's content.
 
 ## What's inside?
 
@@ -8,13 +9,13 @@ This turborepo uses [Yarn](https://classic.yarnpkg.com/lang/en/) as a package ma
 
 ### Apps and Packages
 
-- `docs`: a [Next.js](https://nextjs.org) app
-- `web`: another [Next.js](https://nextjs.org) app
-- `ui`: a stub React component library shared by both `web` and `docs` applications
+- `apps/web`: A [Next.js](https://nextjs.org) app that's deployed to [feriekolonien.no](https://feriekolonien.no) with Vercel.
+- `apps/studio`: A [Sanity studio](https://sanity.io) that's deployed to [studio.feriekolonien.no](https://studio.feriekolonien.no) with Vercel.
+- `ui`: a stub React component library not currently used in any of the apps.
 - `config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
 - `tsconfig`: `tsconfig.json`s used throughout the monorepo
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+Each package/app is 100% [TypeScript](https://www.typescriptlang.org/) 🔐
 
 ### Utilities
 
@@ -33,7 +34,8 @@ This repository is used in the `npx create-turbo` command, and selected when cho
 To build all apps and packages, run the following command:
 
 ```
-cd my-turborepo
+gh repo clone feriekolonien/site
+cd site
 yarn run build
 ```
 
@@ -42,18 +44,43 @@ yarn run build
 To develop all apps and packages, run the following command:
 
 ```
-cd my-turborepo
+cd site
 yarn run dev
 ```
 
+To develop on a single app, just `cd app/` into that application and run
+commands as expected (`yarn dev`, `yarn add some-new-pkg` etc).
+
+**Code style**
+
+Your environment should be automatically set up if you're using VScode with the
+Prettier and ESlint plugins installed.
+
+These tools can also be ran with `yarn test` in each app. This will run:
+
+- `prettier --check`: To find code formatting issues.
+- `eslint`: To find unused variables and other ESLint issues.
+- `tsc --no-emit` To test TypeScript errors and module import issues.
+
+**Commit style**
+
+It's recommended to prefix commits with the app you are currently working on.
+E.g.
+
+`git commit -m "studio: upgrade Sanity dependencies"`
+
+This will make it easier to read the commit history.
+
 ### Remote Caching
+
+⚠️ **Remote caching is currently NOT set up for Feriekolonien**
 
 Turborepo can use a technique known as [Remote Caching (Beta)](https://turborepo.org/docs/features/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
 
 By default, Turborepo will cache locally. To enable Remote Caching (Beta) you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
 
 ```
-cd my-turborepo
+cd site
 npx turbo login
 ```
 
@@ -65,7 +92,7 @@ Next, you can link your Turborepo to your Remote Cache by running the following 
 npx turbo link
 ```
 
-## Useful Links
+## Useful Turborepo Links
 
 Learn more about the power of Turborepo:
 
