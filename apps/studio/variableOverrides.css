@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+:root {
+  --brand-primary: #012d4f;
+  --brand-secondary: #46b3d9;
+  --font-family-base: 'Montserrat';
+
+  --main-navigation-color: var(--brand-primary);
+  --main-navigation-color--inverted: color(
+    var(--main-navigation-color) contrast(80%)
+  );
+  --main-navigation-color--inverted-muted: color(
+    var(--main-navigation-color)
+      blend(var(--main-navigation-color--inverted) 70%)
+  );
+}

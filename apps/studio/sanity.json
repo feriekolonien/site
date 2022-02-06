@@ -22,6 +22,14 @@
     {
       "name": "part:@sanity/base/schema",
       "path": "./schemas/schema"
+    },
+    {
+      "implements": "part:@sanity/base/brand-logo",
+      "path": "components/Logo"
+    },
+    {
+      "implements": "part:@sanity/base/theme/variables/override-style",
+      "path": "variableOverrides.css"
     }
   ]
 }
