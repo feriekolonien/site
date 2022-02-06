@@ -5,7 +5,7 @@
  *  {
  *    name: 'someName',
  *    title: 'Some title',
- *    type: 'blockContent'
+ *    type: 'complexPortableText'
  *  }
  */
 export default {
