@@ -18,13 +18,13 @@ Here's a what you need to get started:
 npm install -g @sanity/cli
 
 git clone git@github.com:feriekolonien/cms.git
-cd cms && yarn install
+cd cms && pnpm install
 ```
 
 This will install the sanity command line interface globally, clone the repo and install dependencies.
 
 ```sh
-yarn dev # this starts the studio and connects it to the development dataset
+pnpm dev # this starts the studio and connects it to the development dataset
 ```
 
 ### Developing
@@ -46,15 +46,15 @@ After a while it will be available on [studio.feriekolonien.no/](https://studio.
 
 In `package.json` we have defined two backup scripts:
 
-- `yarn run backup:prod`
-- `yarn run backup:dev`
+- `pnpm run backup:prod`
+- `pnpm run backup:dev`
 
 To update the `development` dataset with data from the `production` dataset (or
 vice-versa), first run one of the commands above. After backup is completed, run
 the following command to import the dataset:
 
 ```shell
-yarn sanity dataset import backups/<REPLACE_WITH_TODAYS_DATE>prod.tar.gz development --replace
+pnpm sanity dataset import backups/<REPLACE_WITH_TODAYS_DATE>prod.tar.gz development --replace
 ```
 
 ### Licensing

@@ -5,7 +5,7 @@ and it's content.
 
 ## What's inside?
 
-This turborepo uses [Yarn](https://classic.yarnpkg.com/lang/en/) as a package manager. It includes the following packages/apps:
+This turborepo uses [PNPM](https://pnpm.io/installation) as a package manager. It includes the following packages/apps:
 
 ### Apps and Packages
 
@@ -27,7 +27,7 @@ This turborepo has some additional tools already setup for you:
 
 ## Setup
 
-This repository is used in the `npx create-turbo` command, and selected when choosing which package manager you wish to use with your monorepo (Yarn).
+This repository is used in the `npx create-turbo` command, and selected when choosing which package manager you wish to use with your monorepo (PNPM).
 
 ### Build
 
@@ -36,7 +36,7 @@ To build all apps and packages, run the following command:
 ```
 gh repo clone feriekolonien/site
 cd site
-yarn run build
+pnpm run build
 ```
 
 ### Develop
@@ -45,18 +45,18 @@ To develop all apps and packages, run the following command:
 
 ```
 cd site
-yarn run dev
+pnpm run dev
 ```
 
 To develop on a single app, just `cd app/` into that application and run
-commands as expected (`yarn dev`, `yarn add some-new-pkg` etc).
+commands as expected (`pnpm dev`, `pnpm add some-new-pkg` etc).
 
 **Code style**
 
 Your environment should be automatically set up if you're using VScode with the
 Prettier and ESlint plugins installed.
 
-These tools can also be ran with `yarn test` in each app. This will run:
+These tools can also be ran with `pnpm test` in each app. This will run:
 
 - `prettier --check`: To find code formatting issues.
 - `eslint`: To find unused variables and other ESLint issues.

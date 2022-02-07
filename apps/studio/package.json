@@ -13,7 +13,7 @@
     "eslint": "eslint --cache .",
     "prettier": "prettier --check . --ignore-path ../../.prettierignore",
     "ts": "tsc",
-    "test": "yarn prettier && yarn eslint && yarn ts",
+    "test": "pnpm prettier && pnpm eslint && pnpm ts",
     "backup:prod": "sanity dataset export production backups/$(date \"+%Y-%m-%d\")-prod.tar.gz",
     "backup:dev": "sanity dataset export development backups/$(date \"+%Y-%m-%d\")-dev.tar.gz"
   },
@@ -23,10 +23,12 @@
   "dependencies": {
     "@sanity/base": "^2.26.0",
     "@sanity/core": "^2.26.0",
+    "@sanity/data-aspects": "^2.18.0",
     "@sanity/default-layout": "^2.26.0",
     "@sanity/default-login": "^2.26.0",
     "@sanity/desk-tool": "^2.26.0",
     "@sanity/eslint-config-studio": "^2.0.0",
+    "@sanity/form-builder": "^2.26.0",
     "@sanity/vision": "^2.26.0",
     "eslint": "^8.6.0",
     "prop-types": "^15.7",
@@ -38,7 +40,7 @@
   },
   "devDependencies": {
     "@sanity/cli": "^2.26.0",
-    "config": "*",
+    "config": "workspace:*",
     "tsconfig": "*"
   }
 }

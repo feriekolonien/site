@@ -1,8 +1,21 @@
 {
+  "npmClient": "pnpm",
   "pipeline": {
     "build": {
       "dependsOn": ["^build"],
       "outputs": ["dist/**", ".next/**"]
+    },
+    "web#build": {
+      "dependsOn": [
+        "^build",
+        "$NEXT_PUBLIC_SANITY_DATASET",
+        "$NEXT_PUBLIC_SANITY_PROJECT_ID"
+      ],
+      "outputs": [".next/**"]
+    },
+    "studio#build": {
+      "dependsOn": ["^build"],
+      "outputs": ["public/**"]
     },
     "lint": {
       "outputs": []

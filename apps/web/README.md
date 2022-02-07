@@ -10,7 +10,7 @@ This project organizes the pages and styles available on [feriekolonien.no](http
 
 ```sh
 git clone git@github.com:feriekolonien/web.git
-cd web && yarn install
+cd web && pnpm install
 ```
 
 This will clone the repo and install dependencies.
@@ -26,7 +26,7 @@ This copies the template variables (Sanity configuration) to a new file called `
 After this, you should be able to start the local development server:
 
 ```sh
-yarn dev
+pnpm dev
 ```
 
 This starts the NextJS with hot module reloading (HMR)
@@ -42,7 +42,7 @@ This starts the NextJS with hot module reloading (HMR)
 To run the TypeScript compiler, run ESlint and check formatting, run:
 
 ```sh
-yarn test # this will run "yarn prettier && yarn eslint && yarn ts"
+pnpm test # this will run "pnpm prettier && pnpm eslint && pnpm ts"
 ```
 
 We should probably set this up with a pre-push hook, but that's TODO.
