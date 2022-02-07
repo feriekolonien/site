@@ -46,6 +46,21 @@ sanity deploy
 
 This builds and uploads the built files to Sanity's own servers. After a while it will be available on [feriekolonien.sanity.studio/](https://feriekolonien.sanity.studio/).
 
+### Backup & update dev with production data
+
+In `package.json` we have defined two backup scripts:
+
+- `yarn run backup:prod`
+- `yarn run backup:dev`
+
+To update the `development` dataset with data from the `production` dataset (or
+vice-versa), first run one of the commands above. After backup is completed, run
+the following command to import the dataset:
+
+```shell
+yarn sanity dataset import backups/<REPLACE_WITH_TODAYS_DATE>prod.tar.gz development --replace
+```
+
 ### Licensing
 
 [MIT Licence](https://github.com/feriekolonien/cms/blob/master/LICENSE)

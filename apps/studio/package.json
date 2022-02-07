@@ -13,7 +13,9 @@
     "eslint": "eslint --cache .",
     "prettier": "prettier --check . --ignore-path ../../.prettierignore",
     "ts": "tsc",
-    "test": "yarn prettier && yarn eslint && yarn ts"
+    "test": "yarn prettier && yarn eslint && yarn ts",
+    "backup:prod": "sanity dataset export production backups/$(date \"+%Y-%m-%d\")-prod.tar.gz",
+    "backup:dev": "sanity dataset export development backups/$(date \"+%Y-%m-%d\")-dev.tar.gz"
   },
   "keywords": [
     "sanity"
