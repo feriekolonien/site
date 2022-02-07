@@ -1,4 +1,4 @@
-## What is this?
+## This app is not in use!
 
 Hey! This is just a template that was automatically set up with Turborepo. I'll
 keep it around for now in order to look at / debug configuration issues.
