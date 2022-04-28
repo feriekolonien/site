@@ -42,7 +42,9 @@ function HomePage() {
           </div>
           <CampDates />
           <div className="max-w-sm text-center md:text-right">
-            <p className="mr-4 mb-3 inline-block">Søknadsfrist 1. april!</p>
+            <p className="font-bold italic mr-4 mb-5 inline-block">
+              Fortsatt noen ledige plasser 2. og 3. parti
+            </p>
             <ButtonLink href="/soknadsskjema" className="text-xl">
               Søk nå
             </ButtonLink>
