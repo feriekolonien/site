@@ -27,8 +27,9 @@ function HomePage() {
           />
         </div>
         <div className="order-1 p-5 md:order-2 md:pl-0">
-          <h1 className="mb-6 text-4xl font-semibold uppercase">
-            Sommerferie på <span className="nowrap">Filtvet Feriekoloni</span>
+          <h1 className="mb-6 text-4xl font-semibold">
+            Sommerferie på{' '}
+            <span className="whitespace-nowrap">Filtvet Feriekoloni</span>
           </h1>
           <div className="mb-14 text-lg ">
             <p className="mb-4">
