@@ -44,7 +44,8 @@ function HomePage() {
           <CampDates />
           <div className="max-w-sm text-center md:text-right">
             <p className="font-bold italic mr-4 mb-5 inline-block">
-              Fortsatt noen ledige plasser 2. og 3. parti!
+              Vi har fulle partier, men søk gjerne og stå på venteliste. Det kan
+              bli ledige plasser.
             </p>
             <ButtonLink href="/soknadsskjema" className="text-xl">
               Søk nå
