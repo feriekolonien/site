@@ -64,8 +64,8 @@ const AboutPage = () => (
       <p>
         Det er hyggelig og viktig å få post hjemmefra når man er på feriekoloni.
         Send veldig gjerne kort, pakke, et blad eller to, men ikke så mye
-        godteri, for dette kjøper barna selv i kiosken, i tillegg til at vi har
-        dessert til middagen hver dag.
+        godteri. Dette kjøper barna selv i "Diggbu" – vår helt egen godterikiosk
+        som har åpent under spesielle arrangementer.
       </p>
 
       <p>
