@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import siteConfig from '../../siteConfig';
 import { ButtonLink } from './Button';
 
 const NavLink = ({
@@ -36,18 +37,25 @@ const Navigation = () => (
           />
         </a>
       </Link>
-      <ButtonLink href="/soknadsskjema" className="mr-3 sm:hidden">
-        Søk nå
-      </ButtonLink>
+      {siteConfig.openForApplication && (
+        <ButtonLink href={siteConfig.applicationURL} className="mr-3 sm:hidden">
+          Søk nå
+        </ButtonLink>
+      )}
     </div>
     <div className="mx-3 mt-4 space-x-6 text-slate-900 sm:mt-0">
       <NavLink href="/om-oss">Om oss</NavLink>
       <NavLink href="/bilder">Bilder</NavLink>
       <NavLink href="/historien">Historien</NavLink>
       <NavLink href="/kontakt">Kontakt</NavLink>
-      <ButtonLink href="/soknadsskjema" className="hidden sm:inline-block">
-        Søk nå
-      </ButtonLink>
+      {siteConfig.openForApplication && (
+        <ButtonLink
+          href={siteConfig.applicationURL}
+          className="hidden sm:inline-block"
+        >
+          Søk nå
+        </ButtonLink>
+      )}
     </div>
   </nav>
 );

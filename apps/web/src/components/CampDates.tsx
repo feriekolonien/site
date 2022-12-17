@@ -1,13 +1,5 @@
+import siteConfig from '../../siteConfig';
 import Card from './Card';
-
-const dates = [
-  { emoji: '🦀', name: '1. parti', from: '21. juni', to: '1. juli' },
-  { emoji: '☀️', name: '2. parti', from: '8. juli', to: '18. juli' },
-  { emoji: '🐚', name: '3. parti', from: '25. juli', to: '4. august' },
-  // { name: '🔆 1. parti', from: 'tirsdag 21. juni', to: ' fredag 1. juli' },
-  // { name: '🦀 2. parti', from: 'fredag 8. juli', to: ' mandag 18. juli' },
-  // { name: ' 3. parti', from: 'mandag 25. juli', to: ' torsdag 4. august' },
-];
 
 const CampDates = () => (
   <div className="group relative mb-11 max-w-sm">
@@ -16,13 +8,13 @@ const CampDates = () => (
       <h2 className="mb-4 text-3xl font-bold text-white">Datoer for 2022</h2>
 
       <ul className="text-base text-white md:text-xl">
-        {dates.map((el) => (
+        {siteConfig.dates.map((el) => (
           <li key={el.name}>
             <p className="flex">
               <span className="mr-4 text-3xl">{el.emoji}</span>
               <span className="font-semibold tracking-tight">
                 {el.name}
-              </span>: {el.from} - {el.to}
+              </span>: {el.dateRange}
             </p>
           </li>
         ))}

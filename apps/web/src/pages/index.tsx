@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import siteConfig from '../../siteConfig';
 import Bleed from '../components/Bleed';
 import { ButtonLink } from '../components/Button';
 import CampDates from '../components/CampDates';
@@ -43,13 +44,17 @@ function HomePage() {
           </div>
           <CampDates />
           <div className="max-w-sm text-center md:text-right">
-            <p className="font-bold italic mr-4 mb-5 inline-block">
-              Vi har fulle partier, men søk gjerne og stå på venteliste. Det kan
-              bli ledige plasser.
-            </p>
-            <ButtonLink href="/soknadsskjema" className="text-xl">
-              Søk nå
-            </ButtonLink>
+            {siteConfig.waitingListEnabled && (
+              <p className="font-bold italic mr-4 mb-5 inline-block">
+                Vi har fulle partier, men søk gjerne og stå på venteliste. Det
+                kan bli ledige plasser.
+              </p>
+            )}
+            {siteConfig.openForApplication && (
+              <ButtonLink href={siteConfig.applicationURL} className="text-xl">
+                Søk nå
+              </ButtonLink>
+            )}
           </div>
         </div>
       </div>
