@@ -1,15 +1,18 @@
 import { groq } from 'next-sanity';
+import dynamic from 'next/dynamic';
 import Link from 'next/link';
-import React, { useCallback } from 'react';
+import { useCallback } from 'react';
 import { RiArrowLeftSLine } from 'react-icons/ri';
-import Gallery from 'react-photo-gallery';
 import Footer from '../../components/Footer';
 import LazyImage from '../../components/LazyImage';
 import Navigation from '../../components/Navigation';
 import Page from '../../components/Page';
-import RenderInBrowser from '../../components/RenderInBrowser';
 import { getImageSizes } from '../../lib/sanity';
 import { sanityClient } from '../../lib/sanity.server';
+
+const DynamicGallery = dynamic(() => import('react-photo-gallery'), {
+  ssr: false,
+});
 
 type SanityAlbum = Sanity.Schema.Album;
 
@@ -59,16 +62,16 @@ const AlbumPage = ({
             {albumTitle}
           </h1>
         </div>
-        <RenderInBrowser>
-          <Gallery
-            renderImage={imageRenderer}
-            photos={responsiveImages.map((img) => ({
-              src: img.source.thumbnail || '',
-              height: 1,
-              width: img.aspectRatio,
-            }))}
-          />
-        </RenderInBrowser>
+
+        <DynamicGallery
+          renderImage={imageRenderer}
+          photos={responsiveImages.map((img) => ({
+            src: img.source.thumbnail || '',
+            height: 1,
+            width: img.aspectRatio,
+          }))}
+        />
+
         {goBack}
       </section>
       <Footer />
