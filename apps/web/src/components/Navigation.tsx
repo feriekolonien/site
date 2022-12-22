@@ -12,7 +12,7 @@ const NavLink = ({
 }) => (
   <Link href={href}>
     <a
-      className={['font-bold hover:cursor-pointer hover:text-slate-500'].join(
+      className={['font-bold hover:cursor-pointer hover:text-primary-2'].join(
         ' ',
       )}
     >
@@ -22,7 +22,7 @@ const NavLink = ({
 );
 
 const Navigation = () => (
-  <nav className="mx-center mx-auto flex max-w-6xl flex-col bg-white py-5 sm:flex-row md:items-center">
+  <nav className="mx-center mx-auto flex max-w-6xl flex-col py-5 sm:flex-row md:items-center">
     <div className="mr-auto flex w-full sm:w-auto">
       <Link href="/">
         <a className="mr-auto">

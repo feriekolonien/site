@@ -4,6 +4,12 @@
 
 @import 'fonts.css';
 
+:root {
+  --primary-text: #0f172a; /* slate-900 */
+  --primary-hover: #64748b; /* slate-500 */
+  --primary-bg: #ffff;
+}
+
 body {
   font-family: 'Raleway', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 }
