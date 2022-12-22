@@ -37,11 +37,10 @@ const Answer = ({ children }: { children: React.ReactNode }) => (
 
 const FAQ = () => (
   <div className="space-y-2">
-    <FAQElement question="Blir det feriekoloni i 2022?">
+    <FAQElement question="Blir det feriekoloni i 2023?">
       <Answer>
         Vi tar utgangspunkt i å arrangere normal feriekolonidrift for sommeren
-        2022. Det vil si til full kapasitet og tre partier. Eventuelle regler og
-        retningslinjer vil vi informere om i god tid før oppholdet.
+        2023. Det vil si til full kapasitet og tre partier.
       </Answer>
     </FAQElement>
     <FAQElement question="Feriekoloni, hva er det?">
