@@ -37,7 +37,7 @@ const Navigation = () => (
           />
         </a>
       </Link>
-      {siteConfig.openForApplication && (
+      {siteConfig.openForApplication() && (
         <ButtonLink href={siteConfig.applicationURL} className="mr-3 sm:hidden">
           Søk nå
         </ButtonLink>
@@ -48,7 +48,7 @@ const Navigation = () => (
       <NavLink href="/bilder">Bilder</NavLink>
       <NavLink href="/historien">Historien</NavLink>
       <NavLink href="/kontakt">Kontakt</NavLink>
-      {siteConfig.openForApplication && (
+      {siteConfig.openForApplication() && (
         <ButtonLink
           href={siteConfig.applicationURL}
           className="hidden sm:inline-block"

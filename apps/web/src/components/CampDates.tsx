@@ -7,9 +7,9 @@ const CampDates = () => (
     <Card className="relative mx-auto shadow-xl md:ml-0">
       <h2 className="mb-4 text-3xl font-bold ">Datoer for 2023</h2>
 
-      {siteConfig.dates.length ? (
+      {siteConfig.getDates().length ? (
         <ul className="text-base  md:text-xl">
-          {siteConfig.dates.map((el) => (
+          {siteConfig.getDates().map((el) => (
             <li key={el.name}>
               <p className="flex">
                 <span className="mr-4 text-3xl">{el.emoji}</span>

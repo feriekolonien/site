@@ -58,7 +58,7 @@ function HomePage() {
                   kan bli ledige plasser.
                 </p>
               )}
-              {siteConfig.openForApplication && (
+              {siteConfig.openForApplication() && (
                 <ButtonLink
                   href={siteConfig.applicationURL}
                   className="text-xl"
