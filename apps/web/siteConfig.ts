@@ -9,9 +9,21 @@ const siteConfig = {
   getDates: () =>
     isReleaseDate()
       ? [
-          { emoji: '🦀', name: '1. parti', dateRange: '21. juni – 1. juli' },
-          { emoji: '☀️', name: '2. parti', dateRange: '8. juli – 8. juli' },
-          { emoji: '🐚', name: '3. parti', dateRange: '25. juli – 4. august' },
+          {
+            emoji: '🦀',
+            name: '1. parti',
+            dateRange: 'Tirsdag 27. juni - Fredag 7. juli',
+          },
+          {
+            emoji: '☀️',
+            name: '2. parti',
+            dateRange: '14. juli - Mandag 24. juli',
+          },
+          {
+            emoji: '🐚',
+            name: '3. parti',
+            dateRange: '31. juli - Torsdag 10. august',
+          },
         ]
       : [],
 };
