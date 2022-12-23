@@ -14,10 +14,10 @@ const ErrorPage = ({
   children: React.ReactNode;
   title: string;
 }) => (
-  <Page>
+  <Page title="Ikke funnet">
     <Navigation />
-    <article className="">
-      <div className="aspect-w-10 aspect-h-4 relative block">
+    <article className="mx-auto mt-4 mb-10 max-w-4xl px-4 sm:px-6 md:px-8">
+      <div className="relative block">
         <Image
           src="/static/img/about-us.jpg"
           alt="Historiefortelling på stranda"
