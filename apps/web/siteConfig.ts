@@ -6,26 +6,23 @@ const siteConfig = {
   openForApplication: () => isReleaseDate(),
   waitingListEnabled: false,
   applicationURL: '/soknadsskjema',
-  getDates: () =>
-    isReleaseDate()
-      ? [
-          {
-            emoji: '🦀',
-            name: '1. parti',
-            dateRange: 'Tirsdag 27. juni - Fredag 7. juli',
-          },
-          {
-            emoji: '☀️',
-            name: '2. parti',
-            dateRange: '14. juli - Mandag 24. juli',
-          },
-          {
-            emoji: '🐚',
-            name: '3. parti',
-            dateRange: '31. juli - Torsdag 10. august',
-          },
-        ]
-      : [],
+  getDates: () => [
+    {
+      emoji: '🦀',
+      name: '1. parti',
+      dateRange: 'Tirsdag 27. juni - Fredag 7. juli',
+    },
+    {
+      emoji: '☀️',
+      name: '2. parti',
+      dateRange: '14. juli - Mandag 24. juli',
+    },
+    {
+      emoji: '🐚',
+      name: '3. parti',
+      dateRange: '31. juli - Torsdag 10. august',
+    },
+  ],
 };
 
 export default siteConfig;
