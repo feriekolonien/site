@@ -10,17 +10,17 @@ const siteConfig = {
     {
       emoji: '🦀',
       name: '1. parti',
-      dateRange: 'Tirsdag 27. juni - Fredag 7. juli',
+      dateRange: '27. juni - 7. juli',
     },
     {
       emoji: '☀️',
       name: '2. parti',
-      dateRange: '14. juli - Mandag 24. juli',
+      dateRange: '14. juli - 24. juli',
     },
     {
       emoji: '🐚',
       name: '3. parti',
-      dateRange: '31. juli - Torsdag 10. august',
+      dateRange: '31. juli - 10. august',
     },
   ],
 };
