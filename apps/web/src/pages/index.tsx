@@ -19,7 +19,12 @@ function HomePage() {
         <div className="mx-auto mb-14 grid max-w-6xl grid-cols-1 gap-4 pt-8 md:grid-cols-2">
           <div className="order-2 p-5 md:order-2">
             <div className="group aspect-w-4 aspect-h-5 block w-full overflow-hidden rounded-lg bg-gray-100 focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 focus-within:ring-offset-gray-100 shadow-lg">
-              <video controls width="250">
+              <video
+                controls
+                width="250"
+                autoPlay
+                poster="https://cdn.sanity.io/images/bvwemm0b/production/014304e15b5b9c47f7eed9cf943f2dc6a94f1704-1080x1350.jpg"
+              >
                 <source
                   src="https://cdn.sanity.io/files/bvwemm0b/production/6ce8f5414e6697e9e653221eee8a15904e9dd97d.webm"
                   type="video/webm"
