@@ -20,6 +20,8 @@ function HomePage() {
           <div className="order-2 p-5 md:order-2">
             <div className="group aspect-w-4 aspect-h-5 block w-full overflow-hidden rounded-lg bg-gray-100 focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 focus-within:ring-offset-gray-100 shadow-lg">
               <video
+                data-splitbee-event="Play video"
+                data-splitbee-event-location="Landing page hero"
                 controls
                 width="250"
                 autoPlay
