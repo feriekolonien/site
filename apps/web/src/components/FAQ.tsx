@@ -37,12 +37,6 @@ const Answer = ({ children }: { children: React.ReactNode }) => (
 
 const FAQ = () => (
   <div className="space-y-2">
-    <FAQElement question="Blir det feriekoloni i 2023?">
-      <Answer>
-        Vi tar utgangspunkt i å arrangere normal feriekolonidrift for sommeren
-        2023. Det vil si til full kapasitet og tre partier.
-      </Answer>
-    </FAQElement>
     <FAQElement question="Feriekoloni, hva er det?">
       <Answer>
         Feriekolonien på Filtvet eies av Trefoldighetslegatet. Driften har i
