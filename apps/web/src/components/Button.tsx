@@ -38,6 +38,7 @@ export const ButtonLink = ({ children, className, href }: ButtonLinkProps) => {
           'transition-all duration-150',
           'rounded-full bg-gradient-to-tr from-[#FC9C0C] to-[#FFD930] px-8 py-2 text-[#332A00]',
           'hover:bg-yellow-300 hover:bg-blend-multiply active:bg-yellow-400 active:bg-blend-multiply',
+          'leading-8',
         ].join(' ')}
       >
         {children}
