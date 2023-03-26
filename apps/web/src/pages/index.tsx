@@ -17,18 +17,30 @@ function HomePage() {
       <Page>
         <Navigation />
         <div className="mx-auto mb-14 grid max-w-6xl grid-cols-1 gap-4 pt-8 md:grid-cols-2">
-          <div className="order-2 p-5 md:order-1">
-            <Image
-              className="mx-auto max-w-[200px] md:max-w-xs "
-              src="/static/img/logo.png"
-              width={320}
-              height={435}
-              alt="Kolomåke"
-              unoptimized
-              priority
-            />
+          <div className="order-2 p-5 md:order-2">
+            <div className="group aspect-w-4 aspect-h-5 block w-full overflow-hidden rounded-lg bg-gray-100 focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 focus-within:ring-offset-gray-100 shadow-lg">
+              <video controls width="250">
+                <source
+                  src="https://cdn.sanity.io/files/bvwemm0b/production/6ce8f5414e6697e9e653221eee8a15904e9dd97d.webm"
+                  type="video/webm"
+                />
+                <source
+                  src="https://cdn.sanity.io/files/bvwemm0b/production/19d2bab3e02d9ea1a757f5bd8e11ae69abdd0f53.mp4"
+                  type="video/mp4"
+                />
+                Download the
+                <a href="https://cdn.sanity.io/files/bvwemm0b/production/6ce8f5414e6697e9e653221eee8a15904e9dd97d.webm">
+                  WEBM
+                </a>{' '}
+                or
+                <a href="https://cdn.sanity.io/files/bvwemm0b/production/19d2bab3e02d9ea1a757f5bd8e11ae69abdd0f53.mp4">
+                  MP4
+                </a>
+                video.
+              </video>
+            </div>
           </div>
-          <div className="order-1 p-5 md:order-2 md:pl-0">
+          <div className="order-1 p-5 md:order-1 md:pl-0">
             <h1 className="mb-6 text-4xl font-semibold">
               Sommerferie på{' '}
               <span className="whitespace-nowrap">Filtvet Feriekoloni</span>
