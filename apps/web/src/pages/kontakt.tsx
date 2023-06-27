@@ -21,7 +21,7 @@ const ContactPage = () => (
           <p>Trefoldighet Feriekoloni Stranda 16</p>
           <p>Postboks 3, 3480 Filtvet</p>
           <p>
-            Tlf: <Phone title="Ring feriekoloniens fasttelefon">97337992</Phone>
+            Tlf: <Phone title="Ring feriekoloniens fasttelefon">45830235</Phone>
           </p>
           <p>
             <AddressLink href="mailTo:feriekolonien@feriekolonien.no">
