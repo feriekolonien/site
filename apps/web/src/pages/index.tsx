@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import siteConfig from '../../siteConfig';
 import Bleed from '../components/Bleed';

@@ -5,7 +5,7 @@ const CampDates = () => (
   <div className="group relative mb-11 max-w-sm text-white">
     <Card className="absolute inset-0 mx-auto rotate-[-8deg] opacity-70 transition-all duration-300 ease-in-out group-hover:-rotate-3 md:ml-0" />
     <Card className="relative mx-auto shadow-xl md:ml-0">
-      <h2 className="mb-4 text-3xl font-bold ">Datoer for 2023</h2>
+      <h2 className="mb-4 text-3xl font-bold ">Datoer for 2024</h2>
 
       {siteConfig.getDates().length ? (
         <ul className="text-base  md:text-xl">
@@ -21,7 +21,7 @@ const CampDates = () => (
           ))}
         </ul>
       ) : (
-        <p className="">Kommer snart...</p>
+        <p className="">Kommer snart...🎅</p>
       )}
     </Card>
   </div>

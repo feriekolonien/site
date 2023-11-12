@@ -7,21 +7,21 @@ const siteConfig = {
   waitingListEnabled: false,
   applicationURL: '/soknadsskjema',
   getDates: () => [
-    {
-      emoji: '🦀',
-      name: '1. parti',
-      dateRange: '27. juni - 7. juli',
-    },
-    {
-      emoji: '☀️',
-      name: '2. parti',
-      dateRange: '14. juli - 24. juli',
-    },
-    {
-      emoji: '🐚',
-      name: '3. parti',
-      dateRange: '31. juli - 10. august',
-    },
+    // {
+    //   emoji: '🦀',
+    //   name: '1. parti',
+    //   dateRange: '27. juni - 7. juli',
+    // },
+    // {
+    //   emoji: '☀️',
+    //   name: '2. parti',
+    //   dateRange: '14. juli - 24. juli',
+    // },
+    // {
+    //   emoji: '🐚',
+    //   name: '3. parti',
+    //   dateRange: '31. juli - 10. august',
+    // },
   ],
 };
 
