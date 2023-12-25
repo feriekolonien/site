@@ -53,7 +53,7 @@ function HomePage() {
               </video>
             </div>
           </div>
-          <div className="order-1 p-5 md:order-1 md:pl-0">
+          <div className="order-1 p-5 md:order-1 md:pl-0 text-white">
             <h1 className="mb-6 text-4xl font-semibold">
               Sommerferie på{' '}
               <span className="whitespace-nowrap">Filtvet Feriekoloni</span>
@@ -76,13 +76,25 @@ function HomePage() {
                   kan bli ledige plasser.
                 </p>
               )}
-              {siteConfig.openForApplication() && (
+              {siteConfig.openForApplication() ? (
                 <ButtonLink
                   href={siteConfig.applicationURL}
                   className="text-xl"
                 >
                   Søk nå
                 </ButtonLink>
+              ) : (
+                <p
+                  className={[
+                    'cursor-not-allowed',
+                    'font-bold inline-block',
+                    'transition-all duration-150',
+                    'rounded-full px-8 py-2 bg-white text-gray-800',
+                    'leading-8',
+                  ].join(' ')}
+                >
+                  Påmelding åpner snart...
+                </p>
               )}
             </div>
           </div>
