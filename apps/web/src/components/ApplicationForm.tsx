@@ -1,7 +1,7 @@
 const ApplicationForm = () => (
   <iframe
     title="Søknadsskjema"
-    src="https://docs.google.com/forms/d/e/1FAIpQLSfJ6BKRqmJa2eUIAqM-N_OT52Y62ZqRZRdC9jw9MnwTS5uAcQ/viewform?usp=sf_link"
+    src="https://docs.google.com/forms/d/e/1FAIpQLSeaoWRUBjEmPtbnIa1ZdEvhcZzam2bR2MEQvnUnox7Lwl86yQ/viewform?usp=sf_link"
     className="flex-auto"
     frameBorder="0"
     marginHeight={0}
