@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Snowfall from 'react-snowfall';
 import siteConfig from '../../siteConfig';
 import Bleed from '../components/Bleed';
 import { ButtonLink } from '../components/Button';
@@ -12,15 +11,9 @@ import Page from '../components/Page';
 import WaveDivider from '../components/WaveDivider';
 
 function HomePage() {
-  const style = {
-    '--primary-bg': '#2c72ac',
-    '--primary-hover': 'white',
-  } as React.CSSProperties;
-
   return (
-    <div style={style}>
+    <div>
       <Page>
-        <Snowfall />
         <Navigation />
         <div className="mx-auto mb-14 grid max-w-6xl grid-cols-1 gap-4 pt-8 md:grid-cols-2">
           <div className="order-2 p-5 md:order-2">
@@ -53,7 +46,7 @@ function HomePage() {
               </video>
             </div>
           </div>
-          <div className="order-1 p-5 md:order-1 md:pl-0 text-white">
+          <div className="order-1 p-5 md:order-1 md:pl-0">
             <h1 className="mb-6 text-4xl font-semibold">
               Sommerferie på{' '}
               <span className="whitespace-nowrap">Filtvet Feriekoloni</span>
