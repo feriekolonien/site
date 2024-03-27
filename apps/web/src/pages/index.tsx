@@ -65,8 +65,8 @@ function HomePage() {
             <div className="max-w-sm text-center md:text-right">
               {siteConfig.waitingListEnabled && (
                 <p className="font-bold italic mr-4 mb-5 inline-block">
-                  Vi har fulle partier, men søk gjerne og stå på venteliste. Det
-                  kan bli ledige plasser.
+                  Påmeldingsfristen har gått ut, men alle søknader etter frist
+                  vil bli vurdert hvis ledige plasser.
                 </p>
               )}
               {siteConfig.openForApplication() ? (
