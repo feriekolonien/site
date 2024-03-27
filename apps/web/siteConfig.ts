@@ -4,7 +4,7 @@ function isReleaseDate() {
 
 const siteConfig = {
   openForApplication: () => isReleaseDate(),
-  waitingListEnabled: false,
+  waitingListEnabled: true,
   applicationURL: '/soknadsskjema',
   getDates: () => [
     {
