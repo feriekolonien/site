@@ -8,6 +8,17 @@ import Page from '../../components/Page';
 import { getImageSizes } from '../../lib/sanity';
 import { sanityClient } from '../../lib/sanity.server';
 
+import Lightbox from 'yet-another-react-lightbox';
+import 'yet-another-react-lightbox/styles.css';
+
+// import optional lightbox plugins
+import Fullscreen from 'yet-another-react-lightbox/plugins/fullscreen';
+import Slideshow from 'yet-another-react-lightbox/plugins/slideshow';
+import Thumbnails from 'yet-another-react-lightbox/plugins/thumbnails';
+import Zoom from 'yet-another-react-lightbox/plugins/zoom';
+import 'yet-another-react-lightbox/plugins/thumbnails.css';
+import { useState } from 'react';
+
 type SanityAlbum = Sanity.Schema.Album;
 
 const AlbumPage = ({
@@ -17,19 +28,7 @@ const AlbumPage = ({
     album: SanityAlbum;
   };
 }) => {
-  // const imageRenderer = useCallback(({ photo, key }) => {
-  //   return (
-  //     <LazyImage
-  //       alt="Stemningsbilde fra Feriekolonien på Filtvet"
-  //       // className="gallery-image"
-  //       className="rounded-lg"
-  //       key={key}
-  //       src={photo.src}
-  //       height={photo.height}
-  //       width={photo.width}
-  //     />
-  //   );
-  // }, []);
+  const [index, setIndex] = useState(-1);
 
   if (!data.album?.images?.length) {
     return null;
@@ -59,7 +58,19 @@ const AlbumPage = ({
           </h1>
         </div>
 
-        <PhotoAlbum layout="rows" photos={responsiveImages} />
+        <PhotoAlbum
+          layout="rows"
+          photos={responsiveImages}
+          onClick={({ index }) => setIndex(index)}
+        />
+
+        <Lightbox
+          slides={responsiveImages}
+          open={index >= 0}
+          index={index}
+          close={() => setIndex(-1)}
+          plugins={[Fullscreen, Slideshow, Thumbnails, Zoom]}
+        />
 
         {goBack}
       </section>

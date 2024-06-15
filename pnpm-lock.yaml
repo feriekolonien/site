@@ -108,6 +108,9 @@ importers:
       react-youtube:
         specifier: ^7.13.1
         version: 7.14.0(react@17.0.2)
+      yet-another-react-lightbox:
+        specifier: ^3.20.0
+        version: 3.20.0(react-dom@17.0.2)(react@17.0.2)
     devDependencies:
       '@sanity-codegen/types':
         specifier: ^1.0.0-alpha.11
@@ -12903,6 +12906,17 @@ packages:
       which-module: 2.0.0
       y18n: 3.2.2
       yargs-parser: 7.0.0
+    dev: false
+
+  /yet-another-react-lightbox@3.20.0(react-dom@17.0.2)(react@17.0.2):
+    resolution: {integrity: sha512-Ty0yrqfVJ5XVq0gr1EmN31Ng5gkjC79RePrtzqGi/Xn+erwiuzEDTmKqbO9pDqrfb05xfow2NwWcp3auk4RVuQ==}
+    engines: {node: '>=14'}
+    peerDependencies:
+      react: '>=16.8.0'
+      react-dom: '>=16.8.0'
+    dependencies:
+      react: 17.0.2
+      react-dom: 17.0.2(react@17.0.2)
     dev: false
 
   /youtube-player@5.5.2:
