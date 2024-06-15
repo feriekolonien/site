@@ -55,19 +55,6 @@ const AboutPage = () => (
         to partier dersom plass er tilgjengelig.
       </p>
       <p>Tilbudet vårt er for barn i aldersgruppen 5-12 år.</p>
-      <p>Søknadsfrist for sommeren er satt til 1. april.</p>
-      <p>
-        Vi vil ta imot søknader etter denne datoen dersom det er plass, men de
-        som har søkt innen tidsfristen vil bli prioritert.
-      </p>
-
-      <p>
-        Det er hyggelig og viktig å få post hjemmefra når man er på feriekoloni.
-        Send veldig gjerne kort, pakke, et blad eller to, men ikke så mye
-        godteri. Dette kjøper barna selv i &quot;Diggbu&quot; &ndash; vår helt
-        egen godterikiosk som har åpent under spesielle arrangementer.
-      </p>
-
       <p>
         Det at foresatte ønsker å snakke med barna skjønner vi svært godt, men
         det blir problematisk for oss dersom 20-30-40 barn hver dag må hentes
