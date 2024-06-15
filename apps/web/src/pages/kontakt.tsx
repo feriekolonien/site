@@ -17,7 +17,7 @@ const ContactPage = () => (
 
       <div className="mb-11 grid grid-cols-1 gap-8 pt-8 sm:grid-cols-2">
         <div className="space-y-2">
-          <h3 className="text-2xl font-bold">Filtvet Feriekoloni</h3>
+          <h3 className="text-2xl font-bold">Besøksaddresse</h3>
           <p>Trefoldighet Feriekoloni Stranda 16</p>
           <p>Postboks 3, 3480 Filtvet</p>
           <p>
@@ -43,9 +43,14 @@ const ContactPage = () => (
             (Elin)
           </p>
         </div>
+        <div className="space-y-2">
+          <h3 className="text-2xl font-bold">Postadresse</h3>
+          <p>Trefoldighet Feriekoloni</p>
+          <p>Postboks 3, 3482 Tofte</p>
+        </div>
       </div>
       <iframe
-        title="Påmeldingsskjema"
+        title="Feriekolonien"
         src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1010.3920560176697!2d10.615535!3d59.570004!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x925117cbcb2e407!2sTrefoldighet%20Feriekoloni!5e0!3m2!1sen!2sus!4v1574633386221!5m2!1sen!2sus"
         width="100%"
         height="400"
