@@ -15,24 +15,30 @@ const urlFor = (source: Sanity.ImageObject) =>
 export function getImageSizes(image: Sanity.ImageObject): ImgSizes {
   const { aspectRatio } = image.asset.metadata.dimensions;
   return {
-    src: urlFor(image).width(900).url(),
-    width: 900,
-    height: Math.round(900 / aspectRatio),
+    src: urlFor(image).url(),
+    width: image.asset.metadata.dimensions.width,
+    height: image.asset.metadata.dimensions.height,
+
     srcSet: [
       {
-        src: urlFor(image).url(),
-        width: image.asset.metadata.dimensions.width,
-        height: image.asset.metadata.dimensions.height,
+        src: urlFor(image).width(320).url(),
+        width: 320,
+        height: Math.round(320 / aspectRatio),
       },
       {
-        src: urlFor(image).width(1024).url(),
-        width: 1024,
-        height: Math.round(1024 / aspectRatio),
+        src: urlFor(image).width(640).url(),
+        width: 640,
+        height: Math.round(640 / aspectRatio),
       },
       {
-        src: urlFor(image).height(400).url(),
-        width: 400,
-        height: Math.round(400 / aspectRatio),
+        src: urlFor(image).width(1200).url(),
+        width: 1200,
+        height: Math.round(1200 / aspectRatio),
+      },
+      {
+        src: urlFor(image).width(2048).url(),
+        width: 2048,
+        height: Math.round(2048 / aspectRatio),
       },
     ],
   };
