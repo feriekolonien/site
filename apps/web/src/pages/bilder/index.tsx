@@ -42,30 +42,33 @@ const AlbumList = ({
           role="list"
           className="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-2 xl:gap-x-8"
         >
-          {data.albums.map((album) => (
-            <li key={album.title} className="relative">
-              <Link key={album.title} href={`/bilder/${album.title}`}>
-                <a className="">
-                  {album.coverImage && (
-                    <div className="group aspect-w-10 aspect-h-7 block w-full overflow-hidden rounded-lg bg-gray-100 focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 focus-within:ring-offset-gray-100">
-                      <span className="test">
-                        <LazyImage
-                          width={400}
-                          height={280}
-                          src={getImageSizes(album.coverImage).source.regular}
-                          alt={`Albumlenke for ${album.title}`}
-                          className="pointer-events-none object-cover group-hover:opacity-75"
-                        />
-                      </span>
-                    </div>
-                  )}
-                  <p className="pointer-events-none mt-2 block truncate text-xl font-semibold text-gray-900">
-                    {album.title}
-                  </p>
-                </a>
-              </Link>
-            </li>
-          ))}
+          {data.albums.map((album) => {
+            const coverImg = getImageSizes(album.coverImage);
+            return (
+              <li key={album.title} className="relative">
+                <Link key={album.title} href={`/bilder/${album.title}`}>
+                  <a>
+                    {album.coverImage && (
+                      <div className="group aspect-w-10 aspect-h-7 block w-full overflow-hidden rounded-lg bg-gray-100 focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 focus-within:ring-offset-gray-100">
+                        <span className="test">
+                          <LazyImage
+                            width={coverImg.width}
+                            height={coverImg.height}
+                            src={coverImg.src}
+                            alt={`Albumlenke for ${album.title}`}
+                            className="pointer-events-none object-cover group-hover:opacity-75"
+                          />
+                        </span>
+                      </div>
+                    )}
+                    <p className="pointer-events-none mt-2 block truncate text-xl font-semibold text-gray-900">
+                      {album.title}
+                    </p>
+                  </a>
+                </Link>
+              </li>
+            );
+          })}
         </ul>
       </section>
       <Footer />

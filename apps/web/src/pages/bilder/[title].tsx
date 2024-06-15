@@ -1,18 +1,12 @@
 import { groq } from 'next-sanity';
-import dynamic from 'next/dynamic';
 import Link from 'next/link';
-import { useCallback } from 'react';
 import { RiArrowLeftSLine } from 'react-icons/ri';
 import Footer from '../../components/Footer';
-import LazyImage from '../../components/LazyImage';
+import PhotoAlbum from 'react-photo-album';
 import Navigation from '../../components/Navigation';
 import Page from '../../components/Page';
 import { getImageSizes } from '../../lib/sanity';
 import { sanityClient } from '../../lib/sanity.server';
-
-const DynamicGallery = dynamic(() => import('react-photo-gallery'), {
-  ssr: false,
-});
 
 type SanityAlbum = Sanity.Schema.Album;
 
@@ -23,18 +17,19 @@ const AlbumPage = ({
     album: SanityAlbum;
   };
 }) => {
-  const imageRenderer = useCallback(({ photo, key }) => {
-    return (
-      <LazyImage
-        alt="Stemningsbilde fra Feriekolonien på Filtvet"
-        // className="gallery-image"
-        key={key}
-        src={photo.src}
-        height={photo.height}
-        width={photo.width}
-      />
-    );
-  }, []);
+  // const imageRenderer = useCallback(({ photo, key }) => {
+  //   return (
+  //     <LazyImage
+  //       alt="Stemningsbilde fra Feriekolonien på Filtvet"
+  //       // className="gallery-image"
+  //       className="rounded-lg"
+  //       key={key}
+  //       src={photo.src}
+  //       height={photo.height}
+  //       width={photo.width}
+  //     />
+  //   );
+  // }, []);
 
   if (!data.album?.images?.length) {
     return null;
@@ -42,6 +37,7 @@ const AlbumPage = ({
 
   const responsiveImages = data.album.images.map(getImageSizes);
   const albumTitle = data.album.title;
+
   const goBack = (
     <Link href="/bilder">
       <a>
@@ -55,7 +51,7 @@ const AlbumPage = ({
   return (
     <Page title={`Album: ${albumTitle}`}>
       <Navigation />
-      <section className="mx-auto max-w-4xl px-4 pt-4 pb-10 sm:px-6 sm:pt-20 md:px-8">
+      <section className="px-4 pt-4 pb-10 sm:px-6 sm:pt-20 md:px-8">
         <div className="mb-6 grid grid-cols-3 items-center sm:mb-12">
           {goBack}
           <h1 className="text-center text-4xl font-extrabold sm:text-5xl lg:text-6xl">
@@ -63,14 +59,7 @@ const AlbumPage = ({
           </h1>
         </div>
 
-        <DynamicGallery
-          renderImage={imageRenderer}
-          photos={responsiveImages.map((img) => ({
-            src: img.source.thumbnail || '',
-            height: 1,
-            width: img.aspectRatio,
-          }))}
-        />
+        <PhotoAlbum layout="rows" photos={responsiveImages} />
 
         {goBack}
       </section>

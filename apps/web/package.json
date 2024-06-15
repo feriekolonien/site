@@ -25,8 +25,7 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-icons": "^4.3.1",
-    "react-photo-gallery": "^8.0.0",
-    "react-snowfall": "^1.2.1",
+    "react-photo-album": "^2.4.0",
     "react-youtube": "^7.13.1"
   },
   "devDependencies": {
