@@ -69,25 +69,13 @@ function HomePage() {
                   vil bli vurdert hvis ledige plasser.
                 </p>
               )}
-              {siteConfig.openForApplication() ? (
+              {siteConfig.openForApplication() && (
                 <ButtonLink
                   href={siteConfig.applicationURL}
                   className="text-xl"
                 >
                   Søk nå
                 </ButtonLink>
-              ) : (
-                <p
-                  className={[
-                    'cursor-not-allowed',
-                    'font-bold inline-block',
-                    'transition-all duration-150',
-                    'rounded-full px-8 py-2 bg-white text-gray-800',
-                    'leading-8',
-                  ].join(' ')}
-                >
-                  Påmelding åpner snart...
-                </p>
               )}
             </div>
           </div>
