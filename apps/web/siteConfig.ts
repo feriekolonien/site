@@ -1,5 +1,5 @@
 function isReleaseDate() {
-  return Date.now() > new Date("2024-12-26T00:00:00").getTime();
+  return Date.now() > new Date("2025-12-26T00:00:00").getTime();
 }
 
 const siteConfig = {
@@ -10,17 +10,17 @@ const siteConfig = {
     {
       emoji: "🦀",
       name: "1. parti",
-      dateRange: "25. juni - 5. juli",
+      dateRange: "24. juni - 4. juli",
     },
     {
       emoji: "☀️",
       name: "2. parti",
-      dateRange: "12. juli - 22. juli",
+      dateRange: "11. juli - 21. juli",
     },
     {
       emoji: "🐚",
       name: "3. parti",
-      dateRange: "29. juli - 8. august",
+      dateRange: "28. juli - 7. august",
     },
   ],
 };
