@@ -49,8 +49,8 @@ const AlbumList = ({
                 <Link key={album.title} href={`/bilder/${album.title}`}>
                   <a>
                     {album.coverImage && (
-                      <div className="group aspect-w-10 aspect-h-7 block w-full overflow-hidden rounded-lg bg-gray-100 focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 focus-within:ring-offset-gray-100">
-                        <span className="test">
+                      <div className="group aspect-w-10 aspect-h-6 block w-full overflow-hidden rounded-lg bg-gray-100 focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 focus-within:ring-offset-gray-100">
+                        <span className="border">
                           <LazyImage
                             width={coverImg.width}
                             height={coverImg.height}
