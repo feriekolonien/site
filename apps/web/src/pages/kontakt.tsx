@@ -19,7 +19,6 @@ const ContactPage = () => (
         <div className="space-y-2">
           <h3 className="text-2xl font-bold">Besøksaddresse</h3>
           <p>Trefoldighet Feriekoloni Stranda 16</p>
-          <p>Postboks 3, 3480 Filtvet</p>
           <p>
             Tlf: <Phone title="Ring feriekoloniens fasttelefon">45830235</Phone>
           </p>
@@ -33,7 +32,7 @@ const ContactPage = () => (
         <div className="space-y-2">
           <h3 className="text-2xl font-bold">Oslo</h3>
           <p>Trefoldighet Feriekoloni Postboks 6929</p>
-          <p>St. Olavs Plass, 0130 Oslo</p>
+          <p>0176, Oslo</p>
 
           <p>
             Tlf:{' '}
