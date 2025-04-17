@@ -23,7 +23,7 @@ const CampDates = () => (
       ) : (
         <p className="">Kommer snart...🎅</p>
       )}
-      <p className="mt-2">Påmeldingen åpner 24. desember</p>
+      {/* <p className="mt-2">Påmeldingen åpner 24. desember</p> */}
     </Card>
   </div>
 );

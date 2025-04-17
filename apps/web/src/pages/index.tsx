@@ -62,18 +62,12 @@ function HomePage() {
               </p>
               <p>
                 <strong className="block">
-                  Søknadsfrist for sommeren er satt til 1. april.
+                  Søknadsfrist for sommeren er satt til 10. april.
                 </strong>
               </p>
             </div>
             <CampDates />
             <div className="max-w-sm text-center md:text-right">
-              {siteConfig.waitingListEnabled && (
-                <p className="font-bold italic mr-4 mb-5 inline-block">
-                  Påmeldingsfristen har gått ut, men alle søknader etter frist
-                  vil bli vurdert hvis ledige plasser.
-                </p>
-              )}
               {siteConfig.openForApplication() && (
                 <ButtonLink
                   href={siteConfig.applicationURL}
@@ -82,10 +76,13 @@ function HomePage() {
                   Søk nå
                 </ButtonLink>
               )}
-              <span className="block text-sm mt-5">
-                Vi tar i mot søknader etter 1. april dersom det er plass, men de
-                som har søkt innen tidsfristen vil bli prioritert.
-              </span>
+              {siteConfig.waitingListEnabled && (
+                <span className="block text-sm mt-5">
+                  Påmeldingsfristen har gått ut, men nye søknader vil bli
+                  vurdert om det er ledige plasser. De som har søkt innen
+                  tidsfristen vil bli prioritert.
+                </span>
+              )}
             </div>
           </div>
         </div>
