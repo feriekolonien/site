@@ -56,9 +56,14 @@ function HomePage() {
                 Trefoldighet Feriekoloni er Norges eldste aktive feriekoloni –
                 eller sommerleir om du vil!
               </p>
-              <p>
+              <p className="mb-4">
                 I over 130 år har barn og unge vært på ferie hos oss. Kanskje du
                 også vil komme til sommeren?
+              </p>
+              <p>
+                <strong className="block">
+                  Søknadsfrist for sommeren er satt til 1. april.
+                </strong>
               </p>
             </div>
             <CampDates />
@@ -77,6 +82,10 @@ function HomePage() {
                   Søk nå
                 </ButtonLink>
               )}
+              <span className="block text-sm mt-5">
+                Vi tar i mot søknader etter 1. april dersom det er plass, men de
+                som har søkt innen tidsfristen vil bli prioritert.
+              </span>
             </div>
           </div>
         </div>
