@@ -48,6 +48,7 @@ const Navigation = () => (
       <NavLink href="/bilder">Bilder</NavLink>
       <NavLink href="/historien">Historien</NavLink>
       <NavLink href="/kontakt">Kontakt</NavLink>
+      <NavLink href="/grasrot">Støtte</NavLink>
       {siteConfig.openForApplication() && (
         <ButtonLink
           href={siteConfig.applicationURL}
