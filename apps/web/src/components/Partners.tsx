@@ -1,27 +1,96 @@
+import Link from 'next/link';
+
 export default function Partners() {
   return (
     <div className="py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid grid-cols-1 items-center gap-x-8 gap-y-16 lg:grid-cols-2">
           <div className="mx-auto w-full max-w-xl lg:mx-0">
-            <h2 className="text-4xl font-semibold">Våre støttespillere</h2>
+            <h2 className="text-4xl font-semibold" id="stottespillere">
+              Våre støttespillere
+            </h2>
             <p className="mt-6 text-lg">
-              Filtvet Feriekoloni hadde ikke vært mulig uten den varme og
-              trofaste støtten vi får fra våre bidragsytere. Gjennom mer enn 130
-              år har feriekolonien vært et fristed der barn og unge kan oppleve
-              sommerglede, fellesskap og natur – og denne tradisjonen kan
-              fortsette takket være våre støttespillere.
+              Vi er stolte og takknemlige for den brede støtten som gjør Filtvet
+              Feriekoloni mulig år etter år.
             </p>
             <p className="text-lg mt-5">
-              Vi er stolte av å ha både kirken, ideelle stiftelser og engasjerte
-              bedrifter i ryggen. Sammen gjør de det mulig å gi barn minner for
-              livet.
-            </p>
-            {/*<div className="mt-8 flex items-center gap-x-6">
-              <a href="#" className="font-semibold  hover:text-gray-500">
-                Les mer <span aria-hidden="true">&rarr;</span>
+              Med bidrag fra{' '}
+              <a
+                href="https://frimurer.no/index.php/velgjorenhetsdirektoriet"
+                target="_blank"
+                rel="noreferrer nofollow"
+                className="font-semibold blue-primary hover:text-gray-500 underline"
+              >
+                Stamhusets Velgjørenhetsstyre / Den Norske Frimurerorden
+              </a>{' '}
+              ved Jakob Grova,{' '}
+              <a
+                href="https://www.stiftelsen-woyen.no/"
+                target="_blank"
+                rel="noreferrer nofollow"
+                className="font-semibold blue-primary hover:text-gray-500 underline"
+              >
+                Stiftelsen Wøyen
+              </a>{' '}
+              ved Kari Paulsrud,{' '}
+              <a
+                href="https://www.eckbos-legat.no"
+                target="_blank"
+                rel="noreferrer nofollow"
+                className="font-semibold blue-primary hover:text-gray-500 underline"
+              >
+                Eckbos legat
+              </a>{' '}
+              ved Ræder Bing, og{' '}
+              <a
+                href="https://ricaeiendom.no/"
+                target="_blank"
+                rel="noreferrer nofollow"
+                className="font-semibold blue-primary hover:text-gray-500 underline"
+              >
+                Rica Eiendom
+              </a>{' '}
+              ved Jan Erik, står vi trygt plantet i en lang filantropisk
+              tradisjon. Samtidig gir støtten fra{' '}
+              <a
+                href="https://www.oslo.kommune.no/etater-foretak-og-ombud/kulturetaten/"
+                target="_blank"
+                rel="noreferrer nofollow"
+                className="font-semibold blue-primary hover:text-gray-500 underline"
+              >
+                Oslo kommune, Kulturetaten
+              </a>{' '}
+              oss kraft til å utvikle oss videre. Våre historiske bånd holdes
+              levende gjennom{' '}
+              <span className="font-semibold">Trefoldighet legatet</span> og{' '}
+              <a
+                href="https://www.kirken.no/nb-NO/fellesrad/kirkeneioslo/menigheter/oslo-domkirken/"
+                target="_blank"
+                rel="noreferrer nofollow"
+                className="font-semibold blue-primary hover:text-gray-500 underline"
+              >
+                Oslo domkirke sokn
               </a>
-            </div>*/}
+              , mens{' '}
+              <a
+                href="https://www.oslo.kommune.no/tilskudd-legater-og-stipend/legat-til-stotte-for-ferie-for-vanskeligstilte/"
+                className="font-semibold blue-primary hover:text-gray-500 underline"
+                target="_blank"
+                rel="noreferrer nofollow"
+              >
+                Boye Schlytters legat
+              </a>{' '}
+              bidrar til å sikre at nye generasjoner får oppleve den samme
+              gleden og fellesskapet ved sjøen.
+            </p>
+
+            <div className="mt-8 flex items-center gap-x-6">
+              <Link href="/grasrot">
+                <a className="font-semibold  hover:text-gray-500">
+                  Vil du støtte oss? <span aria-hidden="true">&rarr;</span>
+                </a>
+              </Link>
+            </div>
           </div>
 
           <div className="mx-auto grid w-full max-w-xl grid-cols-2 items-center gap-y-12 sm:gap-y-14 lg:mx-0 lg:max-w-none lg:pl-8 gap-x-10">
@@ -86,7 +155,7 @@ export default function Partners() {
               href="https://www.stiftelsen-woyen.no/"
               target="_blank"
               rel="noreferrer nofollow"
-              className="text-2xl lg:text-4xl font-bold italic text-[#7C7C7C]"
+              className="text-2xl lg:text-4xl font-bold italic text-[#7C7C7C] text-center"
               style={{ fontFamily: 'Times' }}
             >
               Stiftelsen Wøyen
