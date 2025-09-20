@@ -50,8 +50,8 @@ export default function Partners() {
               >
                 Rica Eiendom
               </a>{' '}
-              ved Jan Erik, står vi trygt plantet i en lang filantropisk
-              tradisjon. Samtidig gir støtten fra{' '}
+              ved Jan Erik Rivelsrud, står vi trygt plantet i en lang
+              filantropisk tradisjon. Samtidig gir støtten fra{' '}
               <a
                 href="https://www.oslo.kommune.no/etater-foretak-og-ombud/kulturetaten/"
                 target="_blank"
