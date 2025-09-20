@@ -1,5 +1,5 @@
 function isReleaseDate() {
-  return Date.now() > new Date('2024-12-24T00:00:00').getTime();
+  return Date.now() > new Date('2025-12-24T00:00:00').getTime();
 }
 
 const siteConfig = {
