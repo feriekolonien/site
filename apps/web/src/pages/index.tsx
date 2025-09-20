@@ -8,6 +8,7 @@ import Footer from '../components/Footer';
 import LandingPageVideo from '../components/LandingPageVideo';
 import Navigation from '../components/Navigation';
 import Page from '../components/Page';
+import Partners from '../components/Partners';
 import WaveDivider from '../components/WaveDivider';
 
 function HomePage() {
@@ -86,6 +87,7 @@ function HomePage() {
             </div>
           </div>
         </div>
+        <Partners />
         <Bleed className="relative bg-gradient-to-t from-[#2C72AC] to-[#46B3D9] pt-20 md:pt-40">
           <WaveDivider />
           <div className="mx-auto grid max-w-6xl gap-8 p-3 md:grid-cols-5 md:grid-rows-none md:p-0">
