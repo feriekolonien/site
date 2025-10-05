@@ -1,0 +1,113 @@
+@import "tailwindcss";
+
+/* raleway-regular - latin */
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""),
+    url("/assets/fonts/raleway-v22-latin-regular.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("/assets/fonts/raleway-v22-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* raleway-700 - latin */
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  src: local(""),
+    url("/assets/fonts/raleway-v22-latin-700.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("/assets/fonts/raleway-v22-latin-700.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* montserrat-regular - latin */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""),
+    url("/assets/fonts/montserrat-v21-latin-regular.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("/assets/fonts/montserrat-v21-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* montserrat-600 - latin */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  src: local(""),
+    url("/assets/fonts/montserrat-v21-latin-600.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("/assets/fonts/montserrat-v21-latin-600.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+:root {
+  --primary-text: #0f172a; /* slate-900 */
+  --primary-hover: #64748b; /* slate-500 */
+  --primary-bg: #ffff;
+}
+
+body {
+  font-family: "Raleway", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+summary {
+  font-family: "Raleway", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+p {
+  font-family: "Montserrat", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+.blue-primary {
+  color: #2c72ac;
+}
+.blue-dark {
+  color: #0e2e58;
+}
+.blue-secondary {
+  color: #46b3d9;
+}
+
+.blue-dark-2 {
+  color: #173a4d;
+}
+
+.error-status {
+  border-right: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.gallery-image {
+  margin: 2px !important;
+}
+
+/* Reset <summary> styles */
+
+summary {
+  list-style-image: none;
+  list-style: none;
+}
+
+summary::-webkit-details-marker {
+  background: none;
+  color: transparent;
+}
+summary::marker {
+  display: none;
+}
+summary {
+  list-style-type: none;
+}
+summary::-webkit-details-marker {
+  display: none;
+}
+
+@plugin "@tailwindcss/typography";
+@plugin "@tailwindcss/aspect-ratio";

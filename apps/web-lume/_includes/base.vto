@@ -1,0 +1,21 @@
+---
+title: Trefoldighet Feriekoloni
+language: nb-NO
+---
+<!doctype html>
+
+<html lang="{{ language }}">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ title }}</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/assets/styles.css" />
+  </head>
+
+  <body>
+    <main class="overflow-hidden px-3 bg-primary-3">
+    {{ await comp.navbar() }}
+    {{ content }}
+    </main>
+  </body>
+</html>
