@@ -17,6 +17,7 @@ import post from './documents/post';
 // https://github.com/ndimatteo/HULL/tree/main/studio/schemas/modules
 
 // Object types
+import albumGroup from './objects/albumGroup';
 import portableComplex from './objects/portableComplex';
 
 // Then we give our schema to the builder and provide the result to Sanity
@@ -34,6 +35,7 @@ export default createSchema({
     category,
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
+    albumGroup,
     portableComplex,
   ]),
 });
