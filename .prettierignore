@@ -1,9 +1,4 @@
 node_modules
-.next
-out
-/dist/
-next.config.js
-postcss.config.js
-tailwind.config.js
-.eslintrc.js
-.vscode/
+dist
+.sanity
+package-lock.json

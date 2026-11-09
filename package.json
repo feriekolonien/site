@@ -1,24 +1,33 @@
 {
-  "name": "feriekolonien-site",
-  "version": "0.0.0",
+  "name": "feriekolonien-studio",
   "private": true,
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
+  "version": "2.0.0",
+  "description": "Sanity Studio for feriekolonien.no",
+  "author": "Rikard Eide <rikardeide@gmail.com>",
+  "license": "MIT",
+  "type": "module",
   "scripts": {
-    "build": "turbo run build",
-    "dev": "turbo run dev --parallel",
-    "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
-  },
-  "devDependencies": {
-    "prettier": "^2.5.1",
-    "turbo": "latest"
+    "dev": "sanity dev",
+    "build": "sanity build",
+    "deploy": "sanity deploy",
+    "typecheck": "tsc --noEmit",
+    "upload-album": "node --env-file-if-exists=.env scripts/upload-album.mjs",
+    "backup:prod": "sanity dataset export production backups/$(date \"+%Y-%m-%d\")-prod.tar.gz"
   },
   "engines": {
-    "npm": ">=7.0.0",
-    "node": ">=14.0.0"
+    "node": ">=22.12"
   },
-  "packageManager": "pnpm@6.29.2"
+  "dependencies": {
+    "@sanity/icons": "^5.3.0",
+    "@sanity/vision": "^6.22.0",
+    "react": "^19.2.2",
+    "react-dom": "^19.2.2",
+    "sanity": "^6.22.0",
+    "sanity-plugin-media": "^6.6.2",
+    "styled-components": "^6.1.15"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.0",
+    "typescript": "^5.9.0"
+  }
 }

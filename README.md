@@ -1,104 +1,57 @@
-![Feriekolonien logo](/apps/web/public/logo.png)
+# Feriekolonien Studio
 
-This is the (new!) main repo for [Feriekolonien.no](https://feriekolonien.no)
-and it's content.
+Sanity Studio for [feriekolonien.no](https://feriekolonien.no), hosted at
+**https://feriekolonien.sanity.studio**.
 
-## What's inside?
+The website itself lives in a separate repo
+([feriekolonien/web](https://github.com/feriekolonien/web)) and reads published
+content from the `production` dataset.
 
-This turborepo uses [PNPM](https://pnpm.io/installation) as a package manager. It includes the following packages/apps:
+## Development
 
-### Apps and Packages
+Requires Node 22.12 or newer.
 
-- `apps/web`: A [Next.js](https://nextjs.org) app that's deployed to [feriekolonien.no](https://feriekolonien.no) with Vercel.
-- `apps/studio`: A [Sanity studio](https://sanity.io) that's deployed to [studio.feriekolonien.no](https://studio.feriekolonien.no) with Vercel.
-- `ui`: a stub React component library not currently used in any of the apps.
-- `config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `tsconfig`: `tsconfig.json`s used throughout the monorepo
-
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/) 🔐
-
-### Utilities
-
-This turborepo has some additional tools already setup for you:
-
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
-
-## Setup
-
-This repository is used in the `npx create-turbo` command, and selected when choosing which package manager you wish to use with your monorepo (PNPM).
-
-### Build
-
-To build all apps and packages, run the following command:
-
-```
-gh repo clone feriekolonien/site
-cd site
-pnpm run build
+```sh
+npm install
+npm run dev        # http://localhost:3333
+npm run typecheck
+npm run build
 ```
 
-### Develop
+## Deployment
 
-To develop all apps and packages, run the following command:
+Every push to `main` is type-checked, built and deployed to Sanity hosting by
+[`.github/workflows/studio.yml`](.github/workflows/studio.yml). Pull requests
+are checked but not deployed.
 
-```
-cd site
-pnpm run dev
-```
+The workflow needs a `SANITY_AUTH_TOKEN` repository secret: a token with the
+**Deploy Studio** permission from
+[sanity.io/manage](https://www.sanity.io/manage/project/bvwemm0b/api).
 
-To develop on a single app, just `cd app/` into that application and run
-commands as expected (`pnpm dev`, `pnpm add some-new-pkg` etc).
+The studio has auto-updates enabled, so it picks up new v6 releases of Sanity
+without a redeploy.
 
-**Code style**
+## Uploading photos
 
-Your environment should be automatically set up if you're using VScode with the
-Prettier and ESlint plugins installed.
+Photos are uploaded once a year with a script rather than through the Studio.
+Each subfolder becomes a group in the album (`1.PARTI` → "1. parti"):
 
-These tools can also be ran with `pnpm test` in each app. This will run:
-
-- `prettier --check`: To find code formatting issues.
-- `eslint`: To find unused variables and other ESLint issues.
-- `tsc --no-emit` To test TypeScript errors and module import issues.
-
-**Commit style**
-
-It's recommended to prefix commits with the app you are currently working on.
-E.g.
-
-`git commit -m "studio: upgrade Sanity dependencies"`
-
-This will make it easier to read the commit history.
-
-### Remote Caching
-
-⚠️ **Remote caching is currently NOT set up for Feriekolonien**
-
-Turborepo can use a technique known as [Remote Caching (Beta)](https://turborepo.org/docs/features/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching (Beta) you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
-
-```
-cd site
-npx turbo login
+```sh
+npm run upload-album -- --album 2027 --dir "~/Desktop/Bilder 2027" --dry-run
+npm run upload-album -- --album 2027 --dir "~/Desktop/Bilder 2027"
 ```
 
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
+The script converts HEIC to JPEG, skips files it can't read and lists them,
+reuses photos that are already uploaded, and saves the album after every batch,
+so it is safe to re-run. It needs `SANITY_TOKEN` (an Editor token) in `.env`.
+See the comment at the top of [`scripts/upload-album.mjs`](scripts/upload-album.mjs)
+for details.
 
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your turborepo:
+After uploading, rebuild the website (push to the web repo, or run its deploy
+workflow manually) to publish the new album.
 
+## Backups
+
+```sh
+npm run backup:prod   # exports the production dataset to backups/
 ```
-npx turbo link
-```
-
-## Useful Turborepo Links
-
-Learn more about the power of Turborepo:
-
-- [Pipelines](https://turborepo.org/docs/features/pipelines)
-- [Caching](https://turborepo.org/docs/features/caching)
-- [Remote Caching (Beta)](https://turborepo.org/docs/features/remote-caching)
-- [Scoped Tasks](https://turborepo.org/docs/features/scopes)
-- [Configuration Options](https://turborepo.org/docs/reference/configuration)
-- [CLI Usage](https://turborepo.org/docs/reference/command-line-reference)
