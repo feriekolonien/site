@@ -6,8 +6,8 @@ export default defineCliConfig({
     dataset: 'production',
   },
   // Hosted at https://feriekolonien.sanity.studio
-  studioHost: 'feriekolonien',
   deployment: {
+    appId: 'tzubdwvebmoht7vz45doxgud',
     // Serve the latest v6 Sanity Studio modules without having to redeploy.
     autoUpdates: true,
   },
