@@ -23,18 +23,11 @@ const albumGroup = {
     },
   ],
   preview: {
+    // Don't select the whole `images` array here: the studio then resolves
+    // every image asset in a single request, which fails for large groups.
     select: {
       title: 'title',
-      images: 'images',
       media: 'images.0',
-    },
-    prepare({ title, images, media }: any) {
-      const count = Array.isArray(images) ? images.length : 0;
-      return {
-        title,
-        subtitle: `${count} bilder`,
-        media,
-      };
     },
   },
 };
