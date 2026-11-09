@@ -1,0 +1,38 @@
+name: Studio
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: studio-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Check and deploy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - run: npm ci
+
+      - run: npm run typecheck
+
+      - run: npm run build
+
+      # Deploys to https://feriekolonien.sanity.studio. Needs a token with the
+      # "Deploy Studio" permission from sanity.io/manage, stored as the
+      # SANITY_AUTH_TOKEN repository secret.
+      - name: Deploy
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        run: npx sanity deploy --no-build -y
+        env:
+          SANITY_AUTH_TOKEN: ${{ secrets.SANITY_AUTH_TOKEN }}
